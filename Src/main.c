@@ -204,6 +204,7 @@ static void write_char(const uint8_t x_pos, const uint8_t y_pos, const uint32_t 
 
 int main()
 {
+    //
 
 // PortInit:
 
