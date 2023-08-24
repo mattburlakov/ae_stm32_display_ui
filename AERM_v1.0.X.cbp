@@ -50,12 +50,12 @@
 		</Linker>
 		<Unit filename="Makefile" />
 		<Unit filename="Src/Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h" />
+		<Unit filename="Src/include/Glyph.h" />
 		<Unit filename="Src/main.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Src/pictures.h" />
 		<Extensions>
-			<code_completion />
 			<debugger>
 				<remote_debugging>
 					<options conn_type="0" serial_baud="115200" ip_address="localhost" ip_port="4242" />
@@ -64,7 +64,6 @@
 					<options conn_type="0" serial_baud="115200" ip_address="localhost" ip_port="4242" />
 				</remote_debugging>
 			</debugger>
-			<envvars />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

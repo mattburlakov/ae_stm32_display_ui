@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc74Pu6s.s 			page 1
+ARM GAS  /tmp/ccxhKTgK.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc74Pu6s.s 			page 1
   26:Src/main.c    ****     GPIOB->AFR[1] &= ~( GPIO_AFRH_AFSEL13   | GPIO_AFRH_AFSEL15 ); // AF5 для PB13, PB15
   27:Src/main.c    ****     GPIOB->AFR[1] |=  ( GPIO_AFRH_AFSEL13_2 | GPIO_AFRH_AFSEL13_0 | GPIO_AFRH_AFSEL15_2 | GPIO_AFRH
   28:Src/main.c    **** 
-ARM GAS  /tmp/cc74Pu6s.s 			page 2
+ARM GAS  /tmp/ccxhKTgK.s 			page 2
 
 
   29:Src/main.c    ****     GPIOB->BSRR |= GPIO_BSRR_BR14; // шлем сброс на PB14
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc74Pu6s.s 			page 1
   54              	.L3:
   55              		.loc 1 59 8 discriminator 1 view .LVU10
   56              		.loc 1 59 16 is_stmt 0 discriminator 1 view .LVU11
-ARM GAS  /tmp/cc74Pu6s.s 			page 3
+ARM GAS  /tmp/ccxhKTgK.s 			page 3
 
 
   57 0012 9968     		ldr	r1, [r3, #8]
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc74Pu6s.s 			page 1
  102              	.LVL3:
  103              		.loc 1 70 19 view .LVU22
  104 0004 FFF7FEBF 		b	_Z14Spi_Write_Datat
-ARM GAS  /tmp/cc74Pu6s.s 			page 4
+ARM GAS  /tmp/ccxhKTgK.s 			page 4
 
 
  105              	.LVL4:
@@ -235,18 +235,18 @@ ARM GAS  /tmp/cc74Pu6s.s 			page 1
   79:Src/main.c    **** 
   80:Src/main.c    ****     SSD1322_SPI_Write_C(cmd);
  152              		.loc 1 80 5 view .LVU28
- 153              	.LBB94:
- 154              	.LBI94:
+ 153              	.LBB96:
+ 154              	.LBI96:
   73:Src/main.c    **** 
-ARM GAS  /tmp/cc74Pu6s.s 			page 5
+ARM GAS  /tmp/ccxhKTgK.s 			page 5
 
 
  155              		.loc 1 73 6 view .LVU29
- 156              	.LBB95:
+ 156              	.LBB97:
   75:Src/main.c    **** }
  157              		.loc 1 75 5 view .LVU30
- 158              	.LBE95:
- 159              	.LBE94:
+ 158              	.LBE97:
+ 159              	.LBE96:
   78:Src/main.c    **** 
  160              		.loc 1 78 52 is_stmt 0 view .LVU31
  161 0000 10B5     		push	{r4, lr}
@@ -257,16 +257,16 @@ ARM GAS  /tmp/cc74Pu6s.s 			page 1
   78:Src/main.c    **** 
  166              		.loc 1 78 52 view .LVU32
  167 0002 0C46     		mov	r4, r1
- 168              	.LBB97:
- 169              	.LBB96:
+ 168              	.LBB99:
+ 169              	.LBB98:
   75:Src/main.c    **** }
  170              		.loc 1 75 19 view .LVU33
  171 0004 FFF7FEFF 		bl	_Z14Spi_Write_Datat
  172              	.LVL8:
   75:Src/main.c    **** }
  173              		.loc 1 75 19 view .LVU34
- 174              	.LBE96:
- 175              	.LBE97:
+ 174              	.LBE98:
+ 175              	.LBE99:
   81:Src/main.c    ****     SSD1322_SPI_Write_D(D0);
  176              		.loc 1 81 5 is_stmt 1 view .LVU35
  177              		.loc 1 81 24 is_stmt 0 view .LVU36
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc74Pu6s.s 			page 1
  203              	.LFB137:
   83:Src/main.c    **** 
   84:Src/main.c    **** void SSD1322_SPI_Write_CDD(uint8_t cmd, uint8_t D0, uint8_t D1) {
-ARM GAS  /tmp/cc74Pu6s.s 			page 6
+ARM GAS  /tmp/ccxhKTgK.s 			page 6
 
 
  204              		.loc 1 84 65 is_stmt 1 view -0
@@ -308,15 +308,15 @@ ARM GAS  /tmp/cc74Pu6s.s 			page 1
   85:Src/main.c    **** 
   86:Src/main.c    ****     SSD1322_SPI_Write_C(cmd);
  208              		.loc 1 86 5 view .LVU40
- 209              	.LBB98:
- 210              	.LBI98:
+ 209              	.LBB100:
+ 210              	.LBI100:
   73:Src/main.c    **** 
  211              		.loc 1 73 6 view .LVU41
- 212              	.LBB99:
+ 212              	.LBB101:
   75:Src/main.c    **** }
  213              		.loc 1 75 5 view .LVU42
- 214              	.LBE99:
- 215              	.LBE98:
+ 214              	.LBE101:
+ 215              	.LBE100:
   84:Src/main.c    **** 
  216              		.loc 1 84 65 is_stmt 0 view .LVU43
  217 0000 38B5     		push	{r3, r4, r5, lr}
@@ -330,16 +330,16 @@ ARM GAS  /tmp/cc74Pu6s.s 			page 1
  224              		.loc 1 84 65 view .LVU44
  225 0002 0D46     		mov	r5, r1
  226 0004 1446     		mov	r4, r2
- 227              	.LBB101:
- 228              	.LBB100:
+ 227              	.LBB103:
+ 228              	.LBB102:
   75:Src/main.c    **** }
  229              		.loc 1 75 19 view .LVU45
  230 0006 FFF7FEFF 		bl	_Z14Spi_Write_Datat
  231              	.LVL11:
   75:Src/main.c    **** }
  232              		.loc 1 75 19 view .LVU46
- 233              	.LBE100:
- 234              	.LBE101:
+ 233              	.LBE102:
+ 234              	.LBE103:
   87:Src/main.c    ****     SSD1322_SPI_Write_D(D0);
  235              		.loc 1 87 5 is_stmt 1 view .LVU47
  236              		.loc 1 87 24 is_stmt 0 view .LVU48
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc74Pu6s.s 			page 1
  247              		.cfi_restore 5
  248              		.cfi_restore 4
  249              		.cfi_restore 3
-ARM GAS  /tmp/cc74Pu6s.s 			page 7
+ARM GAS  /tmp/ccxhKTgK.s 			page 7
 
 
  250              		.cfi_def_cfa_offset 0
@@ -389,15 +389,15 @@ ARM GAS  /tmp/cc74Pu6s.s 			page 1
   92:Src/main.c    **** 
   93:Src/main.c    ****     SSD1322_SPI_Write_C(cmd);
  274              		.loc 1 93 5 view .LVU54
- 275              	.LBB102:
- 276              	.LBI102:
+ 275              	.LBB104:
+ 276              	.LBI104:
   73:Src/main.c    **** 
  277              		.loc 1 73 6 view .LVU55
- 278              	.LBB103:
+ 278              	.LBB105:
   75:Src/main.c    **** }
  279              		.loc 1 75 5 view .LVU56
- 280              	.LBE103:
- 281              	.LBE102:
+ 280              	.LBE105:
+ 281              	.LBE104:
   91:Src/main.c    **** 
  282              		.loc 1 91 78 is_stmt 0 view .LVU57
  283 0000 70B5     		push	{r4, r5, r6, lr}
@@ -412,19 +412,19 @@ ARM GAS  /tmp/cc74Pu6s.s 			page 1
  291 0002 0E46     		mov	r6, r1
  292 0004 1546     		mov	r5, r2
  293 0006 1C46     		mov	r4, r3
- 294              	.LBB105:
- 295              	.LBB104:
+ 294              	.LBB107:
+ 295              	.LBB106:
   75:Src/main.c    **** }
  296              		.loc 1 75 19 view .LVU59
  297 0008 FFF7FEFF 		bl	_Z14Spi_Write_Datat
  298              	.LVL15:
-ARM GAS  /tmp/cc74Pu6s.s 			page 8
+ARM GAS  /tmp/ccxhKTgK.s 			page 8
 
 
   75:Src/main.c    **** }
  299              		.loc 1 75 19 view .LVU60
- 300              	.LBE104:
- 301              	.LBE105:
+ 300              	.LBE106:
+ 301              	.LBE107:
   94:Src/main.c    ****     SSD1322_SPI_Write_D(D0);
  302              		.loc 1 94 5 is_stmt 1 view .LVU61
  303              		.loc 1 94 24 is_stmt 0 view .LVU62
@@ -477,18 +477,18 @@ ARM GAS  /tmp/cc74Pu6s.s 			page 1
  100:Src/main.c    **** 
  101:Src/main.c    ****     SSD1322_SPI_Write_C(cmd);
  346              		.loc 1 101 5 view .LVU70
- 347              	.LBB106:
-ARM GAS  /tmp/cc74Pu6s.s 			page 9
+ 347              	.LBB108:
+ARM GAS  /tmp/ccxhKTgK.s 			page 9
 
 
- 348              	.LBI106:
+ 348              	.LBI108:
   73:Src/main.c    **** 
  349              		.loc 1 73 6 view .LVU71
- 350              	.LBB107:
+ 350              	.LBB109:
   75:Src/main.c    **** }
  351              		.loc 1 75 5 view .LVU72
- 352              	.LBE107:
- 353              	.LBE106:
+ 352              	.LBE109:
+ 353              	.LBE108:
   99:Src/main.c    **** 
  354              		.loc 1 99 91 is_stmt 0 view .LVU73
  355 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
@@ -506,16 +506,16 @@ ARM GAS  /tmp/cc74Pu6s.s 			page 1
  366 0004 1546     		mov	r5, r2
  367 0006 1C46     		mov	r4, r3
  368 0008 9DF81870 		ldrb	r7, [sp, #24]	@ zero_extendqisi2
- 369              	.LBB109:
- 370              	.LBB108:
+ 369              	.LBB111:
+ 370              	.LBB110:
   75:Src/main.c    **** }
  371              		.loc 1 75 19 view .LVU75
  372 000c FFF7FEFF 		bl	_Z14Spi_Write_Datat
  373              	.LVL20:
   75:Src/main.c    **** }
  374              		.loc 1 75 19 view .LVU76
- 375              	.LBE108:
- 376              	.LBE109:
+ 375              	.LBE110:
+ 376              	.LBE111:
  102:Src/main.c    ****     SSD1322_SPI_Write_D(D0);
  377              		.loc 1 102 5 is_stmt 1 view .LVU77
  378              		.loc 1 102 24 is_stmt 0 view .LVU78
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cc74Pu6s.s 			page 1
  392              		.loc 1 105 5 is_stmt 1 view .LVU83
  393              		.loc 1 105 24 is_stmt 0 view .LVU84
  394 0022 3846     		mov	r0, r7
-ARM GAS  /tmp/cc74Pu6s.s 			page 10
+ARM GAS  /tmp/ccxhKTgK.s 			page 10
 
 
  106:Src/main.c    **** }
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cc74Pu6s.s 			page 1
  132:Src/main.c    ****       a >>= 1;
  133:Src/main.c    ****       b >>= 1;
  134:Src/main.c    ****     }
-ARM GAS  /tmp/cc74Pu6s.s 			page 11
+ARM GAS  /tmp/ccxhKTgK.s 			page 11
 
 
  135:Src/main.c    ****   }
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cc74Pu6s.s 			page 1
  189:Src/main.c    **** 
  190:Src/main.c    **** const uint16_t OLED_Data_Length = 256*64/4;
  191:Src/main.c    **** 
-ARM GAS  /tmp/cc74Pu6s.s 			page 12
+ARM GAS  /tmp/ccxhKTgK.s 			page 12
 
 
  192:Src/main.c    **** PixU8_t OLED_Data[OLED_Data_Length] = {0};
@@ -678,24 +678,25 @@ ARM GAS  /tmp/cc74Pu6s.s 			page 1
  206:Src/main.c    **** {
  424              		.loc 1 206 1 is_stmt 1 view -0
  425              		.cfi_startproc
- 426              		@ args = 0, pretend = 0, frame = 192
+ 426              		@ args = 0, pretend = 0, frame = 224
  427              		@ frame_needed = 0, uses_anonymous_args = 0
- 207:Src/main.c    **** 
- 208:Src/main.c    **** // PortInit:
- 209:Src/main.c    **** 
- 210:Src/main.c    ****     // PB1 -- Лево
- 211:Src/main.c    ****     // PB7 -- Право
- 212:Src/main.c    **** 
- 213:Src/main.c    ****     // PB10 -- Кнопка Вверх
- 214:Src/main.c    **** 
- 215:Src/main.c    ****     RCC->AHB2ENR |= RCC_AHB2ENR_GPIOBEN;     /* включаем тактирование PortB */
- 428              		.loc 1 215 5 view .LVU88
- 429              		.loc 1 215 10 is_stmt 0 view .LVU89
- 430 0000 CD4A     		ldr	r2, .L50
+ 207:Src/main.c    ****     //
+ 208:Src/main.c    **** 
+ 209:Src/main.c    **** // PortInit:
+ 210:Src/main.c    **** 
+ 211:Src/main.c    ****     // PB1 -- Лево
+ 212:Src/main.c    ****     // PB7 -- Право
+ 213:Src/main.c    **** 
+ 214:Src/main.c    ****     // PB10 -- Кнопка Вверх
+ 215:Src/main.c    **** 
+ 216:Src/main.c    ****     RCC->AHB2ENR |= RCC_AHB2ENR_GPIOBEN;     /* включаем тактирование PortB */
+ 428              		.loc 1 216 5 view .LVU88
+ 429              		.loc 1 216 10 is_stmt 0 view .LVU89
+ 430 0000 C74A     		ldr	r2, .L46
  431 0002 D36C     		ldr	r3, [r2, #76]
- 432              		.loc 1 215 18 view .LVU90
+ 432              		.loc 1 216 18 view .LVU90
  433 0004 43F00203 		orr	r3, r3, #2
- 206:Src/main.c    **** 
+ 206:Src/main.c    ****     //
  434              		.loc 1 206 1 view .LVU91
  435 0008 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
  436              	.LCFI8:
@@ -706,50 +707,50 @@ ARM GAS  /tmp/cc74Pu6s.s 			page 1
  441              		.cfi_offset 7, -12
  442              		.cfi_offset 8, -8
  443              		.cfi_offset 14, -4
- 444              		.loc 1 215 18 view .LVU92
+ 444              		.loc 1 216 18 view .LVU92
  445 000c D364     		str	r3, [r2, #76]
- 216:Src/main.c    ****     /* настраиваем GPIO1 */
- 217:Src/main.c    ****     // GPIOB->MODER |=  GPIO_MODER_MODER1_0;    /* MODE1=01 */
- 218:Src/main.c    ****     // GPIOB->MODER &= ~GPIO_MODER_MODER1_1;    /* MODE1=01 */
- 219:Src/main.c    ****     GPIOB->MODER = (GPIOB->MODER & ~GPIO_MODER_MODER1) | GPIO_MODER_MODER1_0;    /* MODE1=01 */
- 446              		.loc 1 219 5 is_stmt 1 view .LVU93
- 447              		.loc 1 219 28 is_stmt 0 view .LVU94
- 448 000e CB4B     		ldr	r3, .L50+4
+ 217:Src/main.c    ****     /* настраиваем GPIO1 */
+ 218:Src/main.c    ****     // GPIOB->MODER |=  GPIO_MODER_MODER1_0;    /* MODE1=01 */
+ 219:Src/main.c    ****     // GPIOB->MODER &= ~GPIO_MODER_MODER1_1;    /* MODE1=01 */
+ 220:Src/main.c    ****     GPIOB->MODER = (GPIOB->MODER & ~GPIO_MODER_MODER1) | GPIO_MODER_MODER1_0;    /* MODE1=01 */
+ 446              		.loc 1 220 5 is_stmt 1 view .LVU93
+ 447              		.loc 1 220 28 is_stmt 0 view .LVU94
+ 448 000e C54B     		ldr	r3, .L46+4
  449 0010 1968     		ldr	r1, [r3]
- 450              		.loc 1 219 34 view .LVU95
+ 450              		.loc 1 220 34 view .LVU95
+ARM GAS  /tmp/ccxhKTgK.s 			page 13
+
+
  451 0012 21F00C01 		bic	r1, r1, #12
-ARM GAS  /tmp/cc74Pu6s.s 			page 13
-
-
- 452              		.loc 1 219 56 view .LVU96
+ 452              		.loc 1 220 56 view .LVU96
  453 0016 41F00401 		orr	r1, r1, #4
- 454              		.loc 1 219 18 view .LVU97
+ 454              		.loc 1 220 18 view .LVU97
  455 001a 1960     		str	r1, [r3]
- 220:Src/main.c    **** 
- 221:Src/main.c    ****     /* настраиваем GPI10 */
- 222:Src/main.c    ****     GPIOB->MODER &= ~GPIO_MODER_MODER10;      /* MODE10=00 */
- 456              		.loc 1 222 5 is_stmt 1 view .LVU98
- 457              		.loc 1 222 12 is_stmt 0 view .LVU99
+ 221:Src/main.c    **** 
+ 222:Src/main.c    ****     /* настраиваем GPI10 */
+ 223:Src/main.c    ****     GPIOB->MODER &= ~GPIO_MODER_MODER10;      /* MODE10=00 */
+ 456              		.loc 1 223 5 is_stmt 1 view .LVU98
+ 457              		.loc 1 223 12 is_stmt 0 view .LVU99
  458 001c 1968     		ldr	r1, [r3]
- 459              		.loc 1 222 18 view .LVU100
+ 459              		.loc 1 223 18 view .LVU100
  460 001e 21F44011 		bic	r1, r1, #3145728
  461 0022 1960     		str	r1, [r3]
- 223:Src/main.c    ****     GPIOB->PUPDR |=  GPIO_PUPDR_PUPD10_0;    /* PUPD10=01 */
- 462              		.loc 1 223 5 is_stmt 1 view .LVU101
- 463              		.loc 1 223 12 is_stmt 0 view .LVU102
+ 224:Src/main.c    ****     GPIOB->PUPDR |=  GPIO_PUPDR_PUPD10_0;    /* PUPD10=01 */
+ 462              		.loc 1 224 5 is_stmt 1 view .LVU101
+ 463              		.loc 1 224 12 is_stmt 0 view .LVU102
  464 0024 D968     		ldr	r1, [r3, #12]
- 465              		.loc 1 223 18 view .LVU103
+ 465              		.loc 1 224 18 view .LVU103
  466 0026 41F48011 		orr	r1, r1, #1048576
  467 002a D960     		str	r1, [r3, #12]
- 224:Src/main.c    **** 
  225:Src/main.c    **** 
- 226:Src/main.c    ****     Spi_Init();
- 468              		.loc 1 226 5 is_stmt 1 view .LVU104
- 469              	.LBB162:
- 470              	.LBI162:
+ 226:Src/main.c    **** 
+ 227:Src/main.c    ****     Spi_Init();
+ 468              		.loc 1 227 5 is_stmt 1 view .LVU104
+ 469              	.LBB159:
+ 470              	.LBI159:
   19:Src/main.c    **** {
  471              		.loc 1 19 20 view .LVU105
- 472              	.LBB163:
+ 472              	.LBB160:
   22:Src/main.c    **** 
  473              		.loc 1 22 5 view .LVU106
   22:Src/main.c    **** 
@@ -777,10 +778,10 @@ ARM GAS  /tmp/cc74Pu6s.s 			page 1
  488              		.loc 1 25 19 view .LVU114
  489 003e 41F01941 		orr	r1, r1, #-1728053248
  490 0042 1960     		str	r1, [r3]
+ARM GAS  /tmp/ccxhKTgK.s 			page 14
+
+
   26:Src/main.c    ****     GPIOB->AFR[1] |=  ( GPIO_AFRH_AFSEL13_2 | GPIO_AFRH_AFSEL13_0 | GPIO_AFRH_AFSEL15_2 | GPIO_AFRH
-ARM GAS  /tmp/cc74Pu6s.s 			page 14
-
-
  491              		.loc 1 26 5 is_stmt 1 view .LVU115
   26:Src/main.c    ****     GPIOB->AFR[1] |=  ( GPIO_AFRH_AFSEL13_2 | GPIO_AFRH_AFSEL13_0 | GPIO_AFRH_AFSEL15_2 | GPIO_AFRH
  492              		.loc 1 26 17 is_stmt 0 view .LVU116
@@ -823,24 +824,24 @@ ARM GAS  /tmp/cc74Pu6s.s 			page 1
   34:Src/main.c    ****     SPI2->CR2 |= SPI_CR2_DS_3;  // длина фрейма 9-бит
  518              		.loc 1 34 11 is_stmt 0 view .LVU128
  519 006c A2F5EC32 		sub	r2, r2, #120832
- 520              	.LBE163:
- 521              	.LBE162:
- 206:Src/main.c    **** 
+ 520              	.LBE160:
+ 521              	.LBE159:
+ 206:Src/main.c    ****     //
  522              		.loc 1 206 1 view .LVU129
- 523 0070 B0B0     		sub	sp, sp, #192
+ 523 0070 B8B0     		sub	sp, sp, #224
  524              	.LCFI9:
- 525              		.cfi_def_cfa_offset 216
- 526              	.LBB167:
- 527              	.LBB166:
+ 525              		.cfi_def_cfa_offset 248
+ 526              	.LBB164:
+ 527              	.LBB163:
   34:Src/main.c    ****     SPI2->CR2 |= SPI_CR2_DS_3;  // длина фрейма 9-бит
  528              		.loc 1 34 11 view .LVU130
  529 0072 1168     		ldr	r1, [r2]
   34:Src/main.c    ****     SPI2->CR2 |= SPI_CR2_DS_3;  // длина фрейма 9-бит
  530              		.loc 1 34 15 view .LVU131
+ARM GAS  /tmp/ccxhKTgK.s 			page 15
+
+
  531 0074 41F44771 		orr	r1, r1, #796
-ARM GAS  /tmp/cc74Pu6s.s 			page 15
-
-
  532 0078 41F00301 		orr	r1, r1, #3
  533 007c 1160     		str	r1, [r2]
   35:Src/main.c    ****     SPI2->CR2 &= ~(SPI_CR2_DS_0 | SPI_CR2_DS_1 | SPI_CR2_DS_2);
@@ -877,16 +878,16 @@ ARM GAS  /tmp/cc74Pu6s.s 			page 1
   42:Src/main.c    ****         __NOP();
  555              		.loc 1 42 5 is_stmt 1 view .LVU142
  556              	.LVL26:
- 557              	.LBB164:
+ 557              	.LBB161:
   42:Src/main.c    ****         __NOP();
  558              		.loc 1 42 31 view .LVU143
- 559              	.LBE164:
+ 559              	.LBE161:
   40:Src/main.c    **** 
  560              		.loc 1 40 15 is_stmt 0 view .LVU144
  561 009c 4FF4FA74 		mov	r4, #500
  562              	.LVL27:
  563              	.L17:
- 564              	.LBB165:
+ 564              	.LBB162:
   43:Src/main.c    ****     }
  565              		.loc 1 43 9 is_stmt 1 view .LVU145
  566              		.syntax unified
@@ -897,10 +898,10 @@ ARM GAS  /tmp/cc74Pu6s.s 			page 1
  570              		.loc 1 42 5 view .LVU146
  571              	.LVL28:
   42:Src/main.c    ****         __NOP();
+ARM GAS  /tmp/ccxhKTgK.s 			page 16
+
+
  572              		.loc 1 42 31 view .LVU147
-ARM GAS  /tmp/cc74Pu6s.s 			page 16
-
-
  573              		.thumb
  574              		.syntax unified
  575 00a2 013C     		subs	r4, r4, #1
@@ -908,7 +909,7 @@ ARM GAS  /tmp/cc74Pu6s.s 			page 1
   42:Src/main.c    ****         __NOP();
  577              		.loc 1 42 31 is_stmt 0 view .LVU148
  578 00a4 FCD1     		bne	.L17
- 579              	.LBE165:
+ 579              	.LBE162:
   46:Src/main.c    **** }
  580              		.loc 1 46 5 is_stmt 1 view .LVU149
   46:Src/main.c    **** }
@@ -921,23 +922,23 @@ ARM GAS  /tmp/cc74Pu6s.s 			page 1
  586              	.LVL30:
   46:Src/main.c    **** }
  587              		.loc 1 46 17 view .LVU152
- 588              	.LBE166:
- 589              	.LBE167:
- 227:Src/main.c    **** 
- 228:Src/main.c    ****     SSD1322_SPI_Write_CD(0xfd, 0x12);                 // unlock
- 590              		.loc 1 228 5 is_stmt 1 view .LVU153
- 591              		.loc 1 228 25 is_stmt 0 view .LVU154
+ 588              	.LBE163:
+ 589              	.LBE164:
+ 228:Src/main.c    **** 
+ 229:Src/main.c    ****     SSD1322_SPI_Write_CD(0xfd, 0x12);                 // unlock
+ 590              		.loc 1 229 5 is_stmt 1 view .LVU153
+ 591              		.loc 1 229 25 is_stmt 0 view .LVU154
  592 00ae 1221     		movs	r1, #18
  593 00b0 FD20     		movs	r0, #253
  594 00b2 FFF7FEFF 		bl	_Z20SSD1322_SPI_Write_CDhh
  595              	.LVL31:
- 229:Src/main.c    ****     SSD1322_SPI_Write_C(0xae);                        // display off
- 596              		.loc 1 229 5 is_stmt 1 view .LVU155
- 597              	.LBB168:
- 598              	.LBI168:
+ 230:Src/main.c    ****     SSD1322_SPI_Write_C(0xae);                        // display off
+ 596              		.loc 1 230 5 is_stmt 1 view .LVU155
+ 597              	.LBB165:
+ 598              	.LBI165:
   73:Src/main.c    **** 
  599              		.loc 1 73 6 view .LVU156
- 600              	.LBB169:
+ 600              	.LBB166:
   75:Src/main.c    **** }
  601              		.loc 1 75 5 view .LVU157
   75:Src/main.c    **** }
@@ -947,88 +948,88 @@ ARM GAS  /tmp/cc74Pu6s.s 			page 1
  605              	.LVL32:
   75:Src/main.c    **** }
  606              		.loc 1 75 19 view .LVU159
- 607              	.LBE169:
- 608              	.LBE168:
- 230:Src/main.c    ****     SSD1322_SPI_Write_CD(0xb3, 0x91);                 // set display clock divide ratio/oscillator 
- 609              		.loc 1 230 5 is_stmt 1 view .LVU160
- 610              		.loc 1 230 25 is_stmt 0 view .LVU161
+ 607              	.LBE166:
+ 608              	.LBE165:
+ 231:Src/main.c    ****     SSD1322_SPI_Write_CD(0xb3, 0x91);                 // set display clock divide ratio/oscillator 
+ 609              		.loc 1 231 5 is_stmt 1 view .LVU160
+ 610              		.loc 1 231 25 is_stmt 0 view .LVU161
  611 00bc 9121     		movs	r1, #145
  612 00be B320     		movs	r0, #179
  613 00c0 FFF7FEFF 		bl	_Z20SSD1322_SPI_Write_CDhh
  614              	.LVL33:
- 231:Src/main.c    ****     SSD1322_SPI_Write_CD(0xca, 0x3f);                 // multiplex ratio 1/64 Duty (0x0F~0x3F)
- 615              		.loc 1 231 5 is_stmt 1 view .LVU162
-ARM GAS  /tmp/cc74Pu6s.s 			page 17
+ 232:Src/main.c    ****     SSD1322_SPI_Write_CD(0xca, 0x3f);                 // multiplex ratio 1/64 Duty (0x0F~0x3F)
+ARM GAS  /tmp/ccxhKTgK.s 			page 17
 
 
- 616              		.loc 1 231 25 is_stmt 0 view .LVU163
+ 615              		.loc 1 232 5 is_stmt 1 view .LVU162
+ 616              		.loc 1 232 25 is_stmt 0 view .LVU163
  617 00c4 3F21     		movs	r1, #63
  618 00c6 CA20     		movs	r0, #202
  619 00c8 FFF7FEFF 		bl	_Z20SSD1322_SPI_Write_CDhh
  620              	.LVL34:
- 232:Src/main.c    ****     SSD1322_SPI_Write_CD(0xa2, 0x00);                 // display offset, shift mapping ram counter
- 621              		.loc 1 232 5 is_stmt 1 view .LVU164
- 622              		.loc 1 232 25 is_stmt 0 view .LVU165
+ 233:Src/main.c    ****     SSD1322_SPI_Write_CD(0xa2, 0x00);                 // display offset, shift mapping ram counter
+ 621              		.loc 1 233 5 is_stmt 1 view .LVU164
+ 622              		.loc 1 233 25 is_stmt 0 view .LVU165
  623 00cc 2146     		mov	r1, r4
  624 00ce A220     		movs	r0, #162
  625 00d0 FFF7FEFF 		bl	_Z20SSD1322_SPI_Write_CDhh
  626              	.LVL35:
- 233:Src/main.c    ****     SSD1322_SPI_Write_CD(0xa1, 0x00);                 // display start line
- 627              		.loc 1 233 5 is_stmt 1 view .LVU166
- 628              		.loc 1 233 25 is_stmt 0 view .LVU167
+ 234:Src/main.c    ****     SSD1322_SPI_Write_CD(0xa1, 0x00);                 // display start line
+ 627              		.loc 1 234 5 is_stmt 1 view .LVU166
+ 628              		.loc 1 234 25 is_stmt 0 view .LVU167
  629 00d4 2146     		mov	r1, r4
  630 00d6 A120     		movs	r0, #161
  631 00d8 FFF7FEFF 		bl	_Z20SSD1322_SPI_Write_CDhh
  632              	.LVL36:
- 234:Src/main.c    ****     // SSD1322_SPI_Write_CDD(0xa0, 0x14, 0x11);           // Set Re-Map / Dual COM Line Mode
- 235:Src/main.c    ****     //SSD1322_SPI_Write_CDD(0xa0, 0x06, 0x11);          // Set Re-Map / Dual COM Line Mode
- 236:Src/main.c    ****     SSD1322_SPI_Write_CDD(0xa0, 0x02, 0x11);          // Set Re-Map / Dual COM Line Mode
- 633              		.loc 1 236 5 is_stmt 1 view .LVU168
- 634              		.loc 1 236 26 is_stmt 0 view .LVU169
+ 235:Src/main.c    ****     // SSD1322_SPI_Write_CDD(0xa0, 0x14, 0x11);           // Set Re-Map / Dual COM Line Mode
+ 236:Src/main.c    ****     //SSD1322_SPI_Write_CDD(0xa0, 0x06, 0x11);          // Set Re-Map / Dual COM Line Mode
+ 237:Src/main.c    ****     SSD1322_SPI_Write_CDD(0xa0, 0x02, 0x11);          // Set Re-Map / Dual COM Line Mode
+ 633              		.loc 1 237 5 is_stmt 1 view .LVU168
+ 634              		.loc 1 237 26 is_stmt 0 view .LVU169
  635 00dc 1122     		movs	r2, #17
  636 00de 0221     		movs	r1, #2
  637 00e0 A020     		movs	r0, #160
  638 00e2 FFF7FEFF 		bl	_Z21SSD1322_SPI_Write_CDDhhh
  639              	.LVL37:
- 237:Src/main.c    ****     SSD1322_SPI_Write_CD(0xab, 0x01);                 // Enable Internal VDD Regulator
- 640              		.loc 1 237 5 is_stmt 1 view .LVU170
- 641              		.loc 1 237 25 is_stmt 0 view .LVU171
+ 238:Src/main.c    ****     SSD1322_SPI_Write_CD(0xab, 0x01);                 // Enable Internal VDD Regulator
+ 640              		.loc 1 238 5 is_stmt 1 view .LVU170
+ 641              		.loc 1 238 25 is_stmt 0 view .LVU171
  642 00e6 0121     		movs	r1, #1
  643 00e8 AB20     		movs	r0, #171
  644 00ea FFF7FEFF 		bl	_Z20SSD1322_SPI_Write_CDhh
  645              	.LVL38:
- 238:Src/main.c    ****     SSD1322_SPI_Write_CDD(0xb4, 0xa0, 0x05|0xfd);    // Display Enhancement A
- 646              		.loc 1 238 5 is_stmt 1 view .LVU172
- 647              		.loc 1 238 26 is_stmt 0 view .LVU173
+ 239:Src/main.c    ****     SSD1322_SPI_Write_CDD(0xb4, 0xa0, 0x05|0xfd);    // Display Enhancement A
+ 646              		.loc 1 239 5 is_stmt 1 view .LVU172
+ 647              		.loc 1 239 26 is_stmt 0 view .LVU173
  648 00ee FD22     		movs	r2, #253
  649 00f0 A021     		movs	r1, #160
  650 00f2 B420     		movs	r0, #180
  651 00f4 FFF7FEFF 		bl	_Z21SSD1322_SPI_Write_CDDhhh
  652              	.LVL39:
- 239:Src/main.c    ****     SSD1322_SPI_Write_CD(0xc1, 0xAf);                 // contrast
- 653              		.loc 1 239 5 is_stmt 1 view .LVU174
- 654              		.loc 1 239 25 is_stmt 0 view .LVU175
+ 240:Src/main.c    ****     SSD1322_SPI_Write_CD(0xc1, 0xAf);                 // contrast
+ 653              		.loc 1 240 5 is_stmt 1 view .LVU174
+ 654              		.loc 1 240 25 is_stmt 0 view .LVU175
  655 00f8 AF21     		movs	r1, #175
  656 00fa C120     		movs	r0, #193
  657 00fc FFF7FEFF 		bl	_Z20SSD1322_SPI_Write_CDhh
  658              	.LVL40:
- 240:Src/main.c    ****     SSD1322_SPI_Write_CD(0xc7, 0x0f);                 // Set Scale Factor of Segment Output Current
- 659              		.loc 1 240 5 is_stmt 1 view .LVU176
- 660              		.loc 1 240 25 is_stmt 0 view .LVU177
+ 241:Src/main.c    ****     SSD1322_SPI_Write_CD(0xc7, 0x0f);                 // Set Scale Factor of Segment Output Current
+ 659              		.loc 1 241 5 is_stmt 1 view .LVU176
+ 660              		.loc 1 241 25 is_stmt 0 view .LVU177
  661 0100 0F21     		movs	r1, #15
  662 0102 C720     		movs	r0, #199
+ARM GAS  /tmp/ccxhKTgK.s 			page 18
+
+
  663 0104 FFF7FEFF 		bl	_Z20SSD1322_SPI_Write_CDhh
-ARM GAS  /tmp/cc74Pu6s.s 			page 18
-
-
  664              	.LVL41:
- 241:Src/main.c    ****     SSD1322_SPI_Write_C(0xb9);                        // linear grayscale
- 665              		.loc 1 241 5 is_stmt 1 view .LVU178
- 666              	.LBB170:
- 667              	.LBI170:
+ 242:Src/main.c    ****     SSD1322_SPI_Write_C(0xb9);                        // linear grayscale
+ 665              		.loc 1 242 5 is_stmt 1 view .LVU178
+ 666              	.LBB167:
+ 667              	.LBI167:
   73:Src/main.c    **** 
  668              		.loc 1 73 6 view .LVU179
- 669              	.LBB171:
+ 669              	.LBB168:
   75:Src/main.c    **** }
  670              		.loc 1 75 5 view .LVU180
   75:Src/main.c    **** }
@@ -1038,54 +1039,54 @@ ARM GAS  /tmp/cc74Pu6s.s 			page 1
  674              	.LVL42:
   75:Src/main.c    **** }
  675              		.loc 1 75 19 view .LVU182
- 676              	.LBE171:
- 677              	.LBE170:
- 242:Src/main.c    ****     SSD1322_SPI_Write_CD(0xb1, 0xe2);                 // Phase 1 (Reset) & Phase 2 (Pre-Charge) Per
- 678              		.loc 1 242 5 is_stmt 1 view .LVU183
- 679              		.loc 1 242 25 is_stmt 0 view .LVU184
+ 676              	.LBE168:
+ 677              	.LBE167:
+ 243:Src/main.c    ****     SSD1322_SPI_Write_CD(0xb1, 0xe2);                 // Phase 1 (Reset) & Phase 2 (Pre-Charge) Per
+ 678              		.loc 1 243 5 is_stmt 1 view .LVU183
+ 679              		.loc 1 243 25 is_stmt 0 view .LVU184
  680 010e E221     		movs	r1, #226
  681 0110 B120     		movs	r0, #177
  682 0112 FFF7FEFF 		bl	_Z20SSD1322_SPI_Write_CDhh
  683              	.LVL43:
- 243:Src/main.c    ****     SSD1322_SPI_Write_CDD(0xd1, 0x82|0x20, 0x20);   // Display Enhancement B
- 684              		.loc 1 243 5 is_stmt 1 view .LVU185
- 685              		.loc 1 243 26 is_stmt 0 view .LVU186
+ 244:Src/main.c    ****     SSD1322_SPI_Write_CDD(0xd1, 0x82|0x20, 0x20);   // Display Enhancement B
+ 684              		.loc 1 244 5 is_stmt 1 view .LVU185
+ 685              		.loc 1 244 26 is_stmt 0 view .LVU186
  686 0116 2022     		movs	r2, #32
  687 0118 A221     		movs	r1, #162
  688 011a D120     		movs	r0, #209
  689 011c FFF7FEFF 		bl	_Z21SSD1322_SPI_Write_CDDhhh
  690              	.LVL44:
- 244:Src/main.c    ****     SSD1322_SPI_Write_CD(0xbb, 0x1f);                 // precharge  voltage
- 691              		.loc 1 244 5 is_stmt 1 view .LVU187
- 692              		.loc 1 244 25 is_stmt 0 view .LVU188
+ 245:Src/main.c    ****     SSD1322_SPI_Write_CD(0xbb, 0x1f);                 // precharge  voltage
+ 691              		.loc 1 245 5 is_stmt 1 view .LVU187
+ 692              		.loc 1 245 25 is_stmt 0 view .LVU188
  693 0120 1F21     		movs	r1, #31
  694 0122 BB20     		movs	r0, #187
  695 0124 FFF7FEFF 		bl	_Z20SSD1322_SPI_Write_CDhh
  696              	.LVL45:
- 245:Src/main.c    ****     SSD1322_SPI_Write_CD(0xb6, 0x08);                 // precharge  period
- 697              		.loc 1 245 5 is_stmt 1 view .LVU189
- 698              		.loc 1 245 25 is_stmt 0 view .LVU190
+ 246:Src/main.c    ****     SSD1322_SPI_Write_CD(0xb6, 0x08);                 // precharge  period
+ 697              		.loc 1 246 5 is_stmt 1 view .LVU189
+ 698              		.loc 1 246 25 is_stmt 0 view .LVU190
  699 0128 0821     		movs	r1, #8
  700 012a B620     		movs	r0, #182
  701 012c FFF7FEFF 		bl	_Z20SSD1322_SPI_Write_CDhh
  702              	.LVL46:
- 246:Src/main.c    ****     SSD1322_SPI_Write_CD(0xbe, 0x07);                 // vcomh
- 703              		.loc 1 246 5 is_stmt 1 view .LVU191
- 704              		.loc 1 246 25 is_stmt 0 view .LVU192
+ 247:Src/main.c    ****     SSD1322_SPI_Write_CD(0xbe, 0x07);                 // vcomh
+ 703              		.loc 1 247 5 is_stmt 1 view .LVU191
+ 704              		.loc 1 247 25 is_stmt 0 view .LVU192
  705 0130 0721     		movs	r1, #7
  706 0132 BE20     		movs	r0, #190
  707 0134 FFF7FEFF 		bl	_Z20SSD1322_SPI_Write_CDhh
  708              	.LVL47:
- 247:Src/main.c    ****     SSD1322_SPI_Write_C(0xa6);                        // normal display
- 709              		.loc 1 247 5 is_stmt 1 view .LVU193
-ARM GAS  /tmp/cc74Pu6s.s 			page 19
+ 248:Src/main.c    ****     SSD1322_SPI_Write_C(0xa6);                        // normal display
+ARM GAS  /tmp/ccxhKTgK.s 			page 19
 
 
- 710              	.LBB172:
- 711              	.LBI172:
+ 709              		.loc 1 248 5 is_stmt 1 view .LVU193
+ 710              	.LBB169:
+ 711              	.LBI169:
   73:Src/main.c    **** 
  712              		.loc 1 73 6 view .LVU194
- 713              	.LBB173:
+ 713              	.LBB170:
   75:Src/main.c    **** }
  714              		.loc 1 75 5 view .LVU195
   75:Src/main.c    **** }
@@ -1095,15 +1096,15 @@ ARM GAS  /tmp/cc74Pu6s.s 			page 1
  718              	.LVL48:
   75:Src/main.c    **** }
  719              		.loc 1 75 19 view .LVU197
- 720              	.LBE173:
- 721              	.LBE172:
- 248:Src/main.c    ****     SSD1322_SPI_Write_C(0xa9);                        // exit partial display
- 722              		.loc 1 248 5 is_stmt 1 view .LVU198
- 723              	.LBB174:
- 724              	.LBI174:
+ 720              	.LBE170:
+ 721              	.LBE169:
+ 249:Src/main.c    ****     SSD1322_SPI_Write_C(0xa9);                        // exit partial display
+ 722              		.loc 1 249 5 is_stmt 1 view .LVU198
+ 723              	.LBB171:
+ 724              	.LBI171:
   73:Src/main.c    **** 
  725              		.loc 1 73 6 view .LVU199
- 726              	.LBB175:
+ 726              	.LBB172:
   75:Src/main.c    **** }
  727              		.loc 1 75 5 view .LVU200
   75:Src/main.c    **** }
@@ -1113,16 +1114,16 @@ ARM GAS  /tmp/cc74Pu6s.s 			page 1
  731              	.LVL49:
   75:Src/main.c    **** }
  732              		.loc 1 75 19 view .LVU202
- 733              	.LBE175:
- 734              	.LBE174:
- 249:Src/main.c    **** 
- 250:Src/main.c    ****     SSD1322_SPI_Write_C(0xAF);                        // Включаем экран
- 735              		.loc 1 250 5 is_stmt 1 view .LVU203
- 736              	.LBB176:
- 737              	.LBI176:
+ 733              	.LBE172:
+ 734              	.LBE171:
+ 250:Src/main.c    **** 
+ 251:Src/main.c    ****     SSD1322_SPI_Write_C(0xAF);                        // Включаем экран
+ 735              		.loc 1 251 5 is_stmt 1 view .LVU203
+ 736              	.LBB173:
+ 737              	.LBI173:
   73:Src/main.c    **** 
  738              		.loc 1 73 6 view .LVU204
- 739              	.LBB177:
+ 739              	.LBB174:
   75:Src/main.c    **** }
  740              		.loc 1 75 5 view .LVU205
   75:Src/main.c    **** }
@@ -1132,19 +1133,19 @@ ARM GAS  /tmp/cc74Pu6s.s 			page 1
  744              	.LVL50:
   75:Src/main.c    **** }
  745              		.loc 1 75 19 view .LVU207
- 746              	.LBE177:
- 747              	.LBE176:
- 251:Src/main.c    **** 
- 252:Src/main.c    ****     for(uint32_t i = 0; i<1000; i++) {
- 748              		.loc 1 252 5 is_stmt 1 view .LVU208
- 749              	.LBB179:
-ARM GAS  /tmp/cc74Pu6s.s 			page 20
+ 746              	.LBE174:
+ 747              	.LBE173:
+ 252:Src/main.c    **** 
+ 253:Src/main.c    ****     for(uint32_t i = 0; i<1000; i++) {
+ 748              		.loc 1 253 5 is_stmt 1 view .LVU208
+ARM GAS  /tmp/ccxhKTgK.s 			page 20
 
 
- 750              		.loc 1 252 26 view .LVU209
- 751              	.LBE179:
- 752              	.LBB180:
- 753              	.LBB178:
+ 749              	.LBB176:
+ 750              		.loc 1 253 26 view .LVU209
+ 751              	.LBE176:
+ 752              	.LBB177:
+ 753              	.LBB175:
   75:Src/main.c    **** }
  754              		.loc 1 75 19 is_stmt 0 view .LVU210
  755 014a 4FF47A74 		mov	r4, #1000
@@ -1152,1208 +1153,1100 @@ ARM GAS  /tmp/cc74Pu6s.s 			page 1
  757              	.L18:
   75:Src/main.c    **** }
  758              		.loc 1 75 19 view .LVU211
- 759              	.LBE178:
- 760              	.LBE180:
- 761              	.LBB181:
- 253:Src/main.c    ****         __NOP();
- 762              		.loc 1 253 9 is_stmt 1 discriminator 3 view .LVU212
+ 759              	.LBE175:
+ 760              	.LBE177:
+ 761              	.LBB178:
+ 254:Src/main.c    ****         __NOP();
+ 762              		.loc 1 254 9 is_stmt 1 discriminator 3 view .LVU212
  763              		.syntax unified
- 764              	@ 253 "Src/main.c" 1
+ 764              	@ 254 "Src/main.c" 1
  765 014e 00BF     		nop
  766              	@ 0 "" 2
- 252:Src/main.c    ****         __NOP();
- 767              		.loc 1 252 5 discriminator 3 view .LVU213
+ 253:Src/main.c    ****         __NOP();
+ 767              		.loc 1 253 5 discriminator 3 view .LVU213
  768              	.LVL52:
- 252:Src/main.c    ****         __NOP();
- 769              		.loc 1 252 26 discriminator 3 view .LVU214
+ 253:Src/main.c    ****         __NOP();
+ 769              		.loc 1 253 26 discriminator 3 view .LVU214
  770              		.thumb
  771              		.syntax unified
  772 0150 013C     		subs	r4, r4, #1
  773              	.LVL53:
- 252:Src/main.c    ****         __NOP();
- 774              		.loc 1 252 26 is_stmt 0 discriminator 3 view .LVU215
+ 253:Src/main.c    ****         __NOP();
+ 774              		.loc 1 253 26 is_stmt 0 discriminator 3 view .LVU215
  775 0152 FCD1     		bne	.L18
- 776              	.LBE181:
- 254:Src/main.c    ****     }
- 255:Src/main.c    **** 
- 256:Src/main.c    ****     SSD1322_SPI_Write_CDD(0x15, 28, 91);// set column address, start, end
- 777              		.loc 1 256 5 is_stmt 1 view .LVU216
- 778              		.loc 1 256 26 is_stmt 0 view .LVU217
+ 776              	.LBE178:
+ 255:Src/main.c    ****     }
+ 256:Src/main.c    **** 
+ 257:Src/main.c    ****     SSD1322_SPI_Write_CDD(0x15, 28, 91);// set column address, start, end
+ 777              		.loc 1 257 5 is_stmt 1 view .LVU216
+ 778              		.loc 1 257 26 is_stmt 0 view .LVU217
  779 0154 5B22     		movs	r2, #91
  780 0156 1C21     		movs	r1, #28
  781 0158 1520     		movs	r0, #21
  782 015a FFF7FEFF 		bl	_Z21SSD1322_SPI_Write_CDDhhh
  783              	.LVL54:
- 257:Src/main.c    ****     SSD1322_SPI_Write_CDD(0x75, 0, 63); // set row address, moved out of the loop (issue 302)
- 784              		.loc 1 257 5 is_stmt 1 view .LVU218
- 785              		.loc 1 257 26 is_stmt 0 view .LVU219
+ 258:Src/main.c    ****     SSD1322_SPI_Write_CDD(0x75, 0, 63); // set row address, moved out of the loop (issue 302)
+ 784              		.loc 1 258 5 is_stmt 1 view .LVU218
+ 785              		.loc 1 258 26 is_stmt 0 view .LVU219
  786 015e 3F22     		movs	r2, #63
  787 0160 2146     		mov	r1, r4
  788 0162 7520     		movs	r0, #117
  789 0164 FFF7FEFF 		bl	_Z21SSD1322_SPI_Write_CDDhhh
  790              	.LVL55:
- 258:Src/main.c    ****     SSD1322_SPI_Write_C(0x5C); // Запись в RAM
- 791              		.loc 1 258 5 is_stmt 1 view .LVU220
- 792              	.LBB182:
- 793              	.LBI182:
+ 259:Src/main.c    ****     SSD1322_SPI_Write_C(0x5C); // Запись в RAM
+ 791              		.loc 1 259 5 is_stmt 1 view .LVU220
+ 792              	.LBB179:
+ 793              	.LBI179:
   73:Src/main.c    **** 
+ARM GAS  /tmp/ccxhKTgK.s 			page 21
+
+
  794              		.loc 1 73 6 view .LVU221
-ARM GAS  /tmp/cc74Pu6s.s 			page 21
-
-
- 795              	.LBB183:
+ 795              	.LBB180:
   75:Src/main.c    **** }
  796              		.loc 1 75 5 view .LVU222
   75:Src/main.c    **** }
  797              		.loc 1 75 19 is_stmt 0 view .LVU223
  798 0168 5C20     		movs	r0, #92
- 799 016a 754D     		ldr	r5, .L50+8
+ 799 016a 6F4F     		ldr	r7, .L46+8
  800 016c FFF7FEFF 		bl	_Z14Spi_Write_Datat
  801              	.LVL56:
   75:Src/main.c    **** }
  802              		.loc 1 75 19 view .LVU224
- 803              	.LBE183:
- 804              	.LBE182:
- 259:Src/main.c    **** 
+ 803              	.LBE180:
+ 804              	.LBE179:
  260:Src/main.c    **** 
- 261:Src/main.c    ****     for(uint16_t pos=0;pos<OLED_Data_Length;pos++) {
- 805              		.loc 1 261 5 is_stmt 1 view .LVU225
- 806              	.LBB185:
- 807              		.loc 1 261 27 view .LVU226
- 808              	.LBE185:
- 809              	.LBB186:
- 810              	.LBB184:
+ 261:Src/main.c    **** 
+ 262:Src/main.c    ****     for(uint16_t pos=0;pos<OLED_Data_Length;pos++) { //?
+ 805              		.loc 1 262 5 is_stmt 1 view .LVU225
+ 806              	.LBB182:
+ 807              		.loc 1 262 27 view .LVU226
+ 808              	.LBE182:
+ 809              	.LBB183:
+ 810              	.LBB181:
   75:Src/main.c    **** }
  811              		.loc 1 75 19 is_stmt 0 view .LVU227
- 812 0170 2E46     		mov	r6, r5
+ 812 0170 3D46     		mov	r5, r7
  813              	.LVL57:
  814              	.L19:
   75:Src/main.c    **** }
  815              		.loc 1 75 19 view .LVU228
- 816              	.LBE184:
- 817              	.LBE186:
- 818              	.LBB187:
- 262:Src/main.c    ****         SSD1322_SPI_Write_D(OLED_Data[pos].Data[1]); // Пишем два пикселя
- 819              		.loc 1 262 9 is_stmt 1 discriminator 3 view .LVU229
- 820              		.loc 1 262 28 is_stmt 0 discriminator 3 view .LVU230
- 821 0172 7078     		ldrb	r0, [r6, #1]	@ zero_extendqisi2
+ 816              	.LBE181:
+ 817              	.LBE183:
+ 818              	.LBB184:
+ 263:Src/main.c    ****         SSD1322_SPI_Write_D(OLED_Data[pos].Data[1]); // Пишем два пикселя
+ 819              		.loc 1 263 9 is_stmt 1 discriminator 3 view .LVU229
+ 820              		.loc 1 263 28 is_stmt 0 discriminator 3 view .LVU230
+ 821 0172 6878     		ldrb	r0, [r5, #1]	@ zero_extendqisi2
  822 0174 FFF7FEFF 		bl	_Z19SSD1322_SPI_Write_Dh
  823              	.LVL58:
- 263:Src/main.c    ****         SSD1322_SPI_Write_D(OLED_Data[pos].Data[0]); // Пишем два пикселя
- 824              		.loc 1 263 9 is_stmt 1 discriminator 3 view .LVU231
- 261:Src/main.c    ****         SSD1322_SPI_Write_D(OLED_Data[pos].Data[1]); // Пишем два пикселя
- 825              		.loc 1 261 27 is_stmt 0 discriminator 3 view .LVU232
+ 264:Src/main.c    ****         SSD1322_SPI_Write_D(OLED_Data[pos].Data[0]); // Пишем два пикселя
+ 824              		.loc 1 264 9 is_stmt 1 discriminator 3 view .LVU231
+ 262:Src/main.c    ****         SSD1322_SPI_Write_D(OLED_Data[pos].Data[1]); // Пишем два пикселя
+ 825              		.loc 1 262 27 is_stmt 0 discriminator 3 view .LVU232
  826 0178 0134     		adds	r4, r4, #1
  827              	.LVL59:
- 828              		.loc 1 263 28 discriminator 3 view .LVU233
- 829 017a 16F8020B 		ldrb	r0, [r6], #2	@ zero_extendqisi2
+ 828              		.loc 1 264 28 discriminator 3 view .LVU233
+ 829 017a 15F8020B 		ldrb	r0, [r5], #2	@ zero_extendqisi2
  830 017e FFF7FEFF 		bl	_Z19SSD1322_SPI_Write_Dh
  831              	.LVL60:
- 261:Src/main.c    ****         SSD1322_SPI_Write_D(OLED_Data[pos].Data[1]); // Пишем два пикселя
- 832              		.loc 1 261 5 is_stmt 1 discriminator 3 view .LVU234
- 261:Src/main.c    ****         SSD1322_SPI_Write_D(OLED_Data[pos].Data[1]); // Пишем два пикселя
- 833              		.loc 1 261 27 discriminator 3 view .LVU235
+ 262:Src/main.c    ****         SSD1322_SPI_Write_D(OLED_Data[pos].Data[1]); // Пишем два пикселя
+ 832              		.loc 1 262 5 is_stmt 1 discriminator 3 view .LVU234
+ 262:Src/main.c    ****         SSD1322_SPI_Write_D(OLED_Data[pos].Data[1]); // Пишем два пикселя
+ 833              		.loc 1 262 27 discriminator 3 view .LVU235
  834 0182 B4F5805F 		cmp	r4, #4096
  835 0186 F4D1     		bne	.L19
- 836              	.LBE187:
- 264:Src/main.c    ****     }
- 265:Src/main.c    **** 
-ARM GAS  /tmp/cc74Pu6s.s 			page 22
+ 836              	.LBE184:
+ 265:Src/main.c    ****     }
+ARM GAS  /tmp/ccxhKTgK.s 			page 22
 
 
- 266:Src/main.c    ****     // SSD1322_SPI_Write_C(0xAF);                        // Включаем экран
- 267:Src/main.c    **** 
- 268:Src/main.c    ****     /*
- 269:Src/main.c    ****     for(uint16_t pos=0;pos<sizeof(OLED_Data_t);pos++) {
- 270:Src/main.c    ****         OLED_Data[pos].pix
- 271:Src/main.c    ****     }
- 272:Src/main.c    ****     */
- 273:Src/main.c    ****     // Точки по углам
- 274:Src/main.c    ****     OLED_Data[0].pix0 = 0x0F;
- 837              		.loc 1 274 5 view .LVU236
- 275:Src/main.c    ****     OLED_Data[0].pix1 = 0x09;
- 838              		.loc 1 275 5 view .LVU237
- 276:Src/main.c    ****     OLED_Data[0].pix2 = 0x05;
- 839              		.loc 1 276 5 view .LVU238
- 277:Src/main.c    ****     OLED_Data[0].pix3 = 0x01;
- 840              		.loc 1 277 5 view .LVU239
- 274:Src/main.c    ****     OLED_Data[0].pix1 = 0x09;
- 841              		.loc 1 274 23 is_stmt 0 view .LVU240
- 842 0188 41F29F53 		movw	r3, #5535
- 843 018c 2B80     		strh	r3, [r5]	@ movhi
- 278:Src/main.c    ****     OLED_Data[256/4-1].pix3 = 0x0F;
- 844              		.loc 1 278 5 is_stmt 1 view .LVU241
- 845              		.loc 1 278 29 is_stmt 0 view .LVU242
- 846 018e 95F87F30 		ldrb	r3, [r5, #127]	@ zero_extendqisi2
- 847 0192 43F0F003 		orr	r3, r3, #240
- 848 0196 85F87F30 		strb	r3, [r5, #127]
- 279:Src/main.c    ****     OLED_Data[256/4].pix0 = 0x09;
- 849              		.loc 1 279 5 is_stmt 1 view .LVU243
- 850              		.loc 1 279 27 is_stmt 0 view .LVU244
- 851 019a 95F88030 		ldrb	r3, [r5, #128]	@ zero_extendqisi2
- 852 019e 0922     		movs	r2, #9
- 853 01a0 62F30303 		bfi	r3, r2, #0, #4
- 854 01a4 85F88030 		strb	r3, [r5, #128]
- 280:Src/main.c    ****     OLED_Data[2*256/4].pix0 = 0x05;
- 855              		.loc 1 280 5 is_stmt 1 view .LVU245
- 856              		.loc 1 280 29 is_stmt 0 view .LVU246
- 857 01a8 95F80031 		ldrb	r3, [r5, #256]	@ zero_extendqisi2
- 858 01ac 0522     		movs	r2, #5
- 859 01ae 62F30303 		bfi	r3, r2, #0, #4
- 860 01b2 85F80031 		strb	r3, [r5, #256]
- 281:Src/main.c    ****     OLED_Data[3*256/4].pix0 = 0x01;
- 861              		.loc 1 281 5 is_stmt 1 view .LVU247
- 862              		.loc 1 281 29 is_stmt 0 view .LVU248
- 863 01b6 95F88031 		ldrb	r3, [r5, #384]	@ zero_extendqisi2
- 864 01ba 0122     		movs	r2, #1
- 865 01bc 62F30303 		bfi	r3, r2, #0, #4
- 866 01c0 85F88031 		strb	r3, [r5, #384]
- 282:Src/main.c    ****     //OLED_Data[(256/4)*63].pix0 = 0x0F;
- 283:Src/main.c    ****     //OLED_Data[(256/4)*64-1].pix3 = 0x0F;
- 284:Src/main.c    **** 
- 285:Src/main.c    **** 
- 286:Src/main.c    ****     for(uint8_t x=0;x<256/4;x++) {
- 867              		.loc 1 286 5 is_stmt 1 view .LVU249
- 868              	.LVL61:
- 869              	.LBB188:
- 870              		.loc 1 286 22 view .LVU250
- 871              	.LBB189:
-ARM GAS  /tmp/cc74Pu6s.s 			page 23
+ 266:Src/main.c    **** 
+ 267:Src/main.c    ****     // SSD1322_SPI_Write_C(0xAF);                        // Включаем экран
+ 268:Src/main.c    **** 
+ 269:Src/main.c    ****     /*
+ 270:Src/main.c    ****     for(uint16_t pos=0;pos<sizeof(OLED_Data_t);pos++) {
+ 271:Src/main.c    ****         OLED_Data[pos].pix
+ 272:Src/main.c    ****     }
+ 273:Src/main.c    ****     */
+ 274:Src/main.c    ****     // Точки по углам
+ 275:Src/main.c    ****     /*
+ 276:Src/main.c    ****     OLED_Data[0].pix0 = 0x0F;
+ 277:Src/main.c    ****     OLED_Data[0].pix1 = 0x09;
+ 278:Src/main.c    ****     OLED_Data[0].pix2 = 0x05;
+ 279:Src/main.c    ****     OLED_Data[0].pix3 = 0x01;
+ 280:Src/main.c    ****     OLED_Data[256/4-1].pix3 = 0x0F;
+ 281:Src/main.c    ****     OLED_Data[256/4].pix0 = 0x09;
+ 282:Src/main.c    ****     OLED_Data[2*256/4].pix0 = 0x05;
+ 283:Src/main.c    ****     OLED_Data[3*256/4].pix0 = 0x01;
+ 284:Src/main.c    ****     //OLED_Data[(256/4)*63].pix0 = 0x0F;
+ 285:Src/main.c    ****     //OLED_Data[(256/4)*64-1].pix3 = 0x0F;
+ 286:Src/main.c    ****     */
+ 287:Src/main.c    **** 
+ 288:Src/main.c    **** 
+ 289:Src/main.c    ****     for(uint8_t x=0;x<256/4;x++) { //top border
+ 837              		.loc 1 289 22 view .LVU236
+ 290:Src/main.c    ****         uint16_t pos_x = (256/4)*10;
+ 291:Src/main.c    ****         /*
+ 292:Src/main.c    ****         OLED_Data[pos_x + x].pix0 = 0x0F;
+ 293:Src/main.c    ****         OLED_Data[pos_x + x].pix1 = 0x0F;
+ 294:Src/main.c    ****         OLED_Data[pos_x + x].pix2 = 0x0F;
+ 295:Src/main.c    ****         OLED_Data[pos_x + x].pix3 = 0x0F;
+ 296:Src/main.c    ****         */
+ 297:Src/main.c    ****     }
+ 298:Src/main.c    **** 
+ 299:Src/main.c    ****     for(uint8_t x=0;x<256/4;x++) { //bottom border
+ 838              		.loc 1 299 22 view .LVU237
+ 300:Src/main.c    ****         uint16_t pos_x = (256/4)*0;
+ 301:Src/main.c    ****         /*
+ 302:Src/main.c    ****         OLED_Data[pos_x + x].pix0 = 0x0F;
+ 303:Src/main.c    ****         OLED_Data[pos_x + x].pix1 = 0x0F;
+ 304:Src/main.c    ****         OLED_Data[pos_x + x].pix2 = 0x0F;
+ 305:Src/main.c    ****         OLED_Data[pos_x + x].pix3 = 0x0F;
+ 306:Src/main.c    ****         */
+ 307:Src/main.c    ****     }
+ 308:Src/main.c    **** 
+ 309:Src/main.c    **** 
+ 310:Src/main.c    ****     for(uint8_t x=0;x<10;x++) { //table separators
+ 839              		.loc 1 310 22 view .LVU238
+ 311:Src/main.c    ****         uint16_t pos = (256/4)*x;
+ 312:Src/main.c    ****         /*
+ 313:Src/main.c    ****         OLED_Data[pos].pix0 = 0x0F;
+ 314:Src/main.c    ****         OLED_Data[pos+12].pix0 = 0x0F;
+ 315:Src/main.c    ****         OLED_Data[pos+25].pix0 = 0x0F;
+ 316:Src/main.c    ****         OLED_Data[pos+38].pix0 = 0x0F;
+ 317:Src/main.c    ****         OLED_Data[pos+51].pix3 = 0x0F;
+ 318:Src/main.c    ****         OLED_Data[pos+63].pix3 = 0x0F;
+ 319:Src/main.c    ****         */
+ARM GAS  /tmp/ccxhKTgK.s 			page 23
 
 
- 287:Src/main.c    ****         uint16_t pos_x = (256/4)*10;
- 288:Src/main.c    ****         OLED_Data[pos_x + x].pix0 = 0x0F;
- 872              		.loc 1 288 35 is_stmt 0 view .LVU251
- 873 01c4 4FF6FF72 		movw	r2, #65535
- 874              	.LBE189:
- 875              	.LBE188:
- 281:Src/main.c    ****     //OLED_Data[(256/4)*63].pix0 = 0x0F;
- 876              		.loc 1 281 29 view .LVU252
- 877 01c8 4FF42073 		mov	r3, #640
- 878              	.LVL62:
- 879              	.L20:
- 880              	.LBB191:
- 881              	.LBB190:
- 287:Src/main.c    ****         uint16_t pos_x = (256/4)*10;
- 882              		.loc 1 287 9 is_stmt 1 discriminator 3 view .LVU253
- 883              		.loc 1 288 9 discriminator 3 view .LVU254
- 289:Src/main.c    ****         OLED_Data[pos_x + x].pix1 = 0x0F;
- 884              		.loc 1 289 9 discriminator 3 view .LVU255
- 290:Src/main.c    ****         OLED_Data[pos_x + x].pix2 = 0x0F;
- 885              		.loc 1 290 9 discriminator 3 view .LVU256
- 291:Src/main.c    ****         OLED_Data[pos_x + x].pix3 = 0x0F;
- 886              		.loc 1 291 9 discriminator 3 view .LVU257
- 288:Src/main.c    ****         OLED_Data[pos_x + x].pix1 = 0x0F;
- 887              		.loc 1 288 35 is_stmt 0 discriminator 3 view .LVU258
- 888 01cc 25F81320 		strh	r2, [r5, r3, lsl #1]	@ movhi
- 889              	.LBE190:
- 286:Src/main.c    ****         uint16_t pos_x = (256/4)*10;
- 890              		.loc 1 286 5 is_stmt 1 discriminator 3 view .LVU259
- 891              	.LVL63:
- 286:Src/main.c    ****         uint16_t pos_x = (256/4)*10;
- 892              		.loc 1 286 22 discriminator 3 view .LVU260
- 893 01d0 0133     		adds	r3, r3, #1
- 894              	.LVL64:
- 286:Src/main.c    ****         uint16_t pos_x = (256/4)*10;
- 895              		.loc 1 286 22 is_stmt 0 discriminator 3 view .LVU261
- 896 01d2 B3F5307F 		cmp	r3, #704
- 897 01d6 F9D1     		bne	.L20
- 898 01d8 0023     		movs	r3, #0
- 899              	.LBE191:
- 900              	.LBB192:
- 901              	.LBB193:
- 292:Src/main.c    ****     }
- 293:Src/main.c    **** 
- 294:Src/main.c    ****     for(uint8_t x=0;x<256/4;x++) {
- 295:Src/main.c    ****         uint16_t pos_x = (256/4)*0;
- 296:Src/main.c    ****         OLED_Data[pos_x + x].pix0 = 0x0F;
- 902              		.loc 1 296 35 view .LVU262
- 903 01da 4FF6FF72 		movw	r2, #65535
- 904              	.L21:
- 905              	.LVL65:
- 295:Src/main.c    ****         OLED_Data[pos_x + x].pix0 = 0x0F;
- 906              		.loc 1 295 9 is_stmt 1 discriminator 3 view .LVU263
- 907              		.loc 1 296 9 discriminator 3 view .LVU264
- 297:Src/main.c    ****         OLED_Data[pos_x + x].pix1 = 0x0F;
- 908              		.loc 1 297 9 discriminator 3 view .LVU265
- 298:Src/main.c    ****         OLED_Data[pos_x + x].pix2 = 0x0F;
- 909              		.loc 1 298 9 discriminator 3 view .LVU266
-ARM GAS  /tmp/cc74Pu6s.s 			page 24
-
-
- 299:Src/main.c    ****         OLED_Data[pos_x + x].pix3 = 0x0F;
- 910              		.loc 1 299 9 discriminator 3 view .LVU267
- 296:Src/main.c    ****         OLED_Data[pos_x + x].pix1 = 0x0F;
- 911              		.loc 1 296 35 is_stmt 0 discriminator 3 view .LVU268
- 912 01de 25F81320 		strh	r2, [r5, r3, lsl #1]	@ movhi
- 913              	.LBE193:
- 294:Src/main.c    ****         uint16_t pos_x = (256/4)*0;
- 914              		.loc 1 294 5 is_stmt 1 discriminator 3 view .LVU269
- 915              	.LVL66:
- 294:Src/main.c    ****         uint16_t pos_x = (256/4)*0;
- 916              		.loc 1 294 22 discriminator 3 view .LVU270
- 917 01e2 0133     		adds	r3, r3, #1
- 918              	.LVL67:
- 294:Src/main.c    ****         uint16_t pos_x = (256/4)*0;
- 919              		.loc 1 294 22 is_stmt 0 discriminator 3 view .LVU271
- 920 01e4 402B     		cmp	r3, #64
- 921 01e6 FAD1     		bne	.L21
- 922 01e8 0023     		movs	r3, #0
- 923              	.L22:
- 924              	.LVL68:
- 294:Src/main.c    ****         uint16_t pos_x = (256/4)*0;
- 925              		.loc 1 294 22 discriminator 3 view .LVU272
- 926              	.LBE192:
- 927              	.LBB194:
- 928              	.LBB195:
- 300:Src/main.c    ****     }
- 301:Src/main.c    **** 
- 302:Src/main.c    **** 
- 303:Src/main.c    ****     for(uint8_t x=0;x<10;x++) {
- 304:Src/main.c    ****         uint16_t pos = (256/4)*x;
- 929              		.loc 1 304 9 is_stmt 1 discriminator 3 view .LVU273
- 305:Src/main.c    ****         OLED_Data[pos].pix0 = 0x0F;
- 930              		.loc 1 305 9 discriminator 3 view .LVU274
- 931              		.loc 1 305 29 is_stmt 0 discriminator 3 view .LVU275
- 932 01ea 15F81320 		ldrb	r2, [r5, r3, lsl #1]	@ zero_extendqisi2
- 933 01ee 42F00F02 		orr	r2, r2, #15
- 934 01f2 05F81320 		strb	r2, [r5, r3, lsl #1]
- 306:Src/main.c    ****         OLED_Data[pos+12].pix0 = 0x0F;
- 935              		.loc 1 306 9 is_stmt 1 discriminator 3 view .LVU276
- 936              		.loc 1 306 32 is_stmt 0 discriminator 3 view .LVU277
- 937 01f6 03F10C01 		add	r1, r3, #12
- 938 01fa 15F81120 		ldrb	r2, [r5, r1, lsl #1]	@ zero_extendqisi2
- 939 01fe 42F00F02 		orr	r2, r2, #15
- 940 0202 05F81120 		strb	r2, [r5, r1, lsl #1]
- 307:Src/main.c    ****         OLED_Data[pos+25].pix0 = 0x0F;
- 941              		.loc 1 307 9 is_stmt 1 discriminator 3 view .LVU278
- 942              		.loc 1 307 32 is_stmt 0 discriminator 3 view .LVU279
- 943 0206 03F11901 		add	r1, r3, #25
- 944 020a 15F81120 		ldrb	r2, [r5, r1, lsl #1]	@ zero_extendqisi2
- 945 020e 42F00F02 		orr	r2, r2, #15
- 946 0212 05F81120 		strb	r2, [r5, r1, lsl #1]
- 308:Src/main.c    ****         OLED_Data[pos+38].pix0 = 0x0F;
- 947              		.loc 1 308 9 is_stmt 1 discriminator 3 view .LVU280
- 948              		.loc 1 308 32 is_stmt 0 discriminator 3 view .LVU281
- 949 0216 03F12601 		add	r1, r3, #38
- 950 021a 15F81120 		ldrb	r2, [r5, r1, lsl #1]	@ zero_extendqisi2
- 951 021e 42F00F02 		orr	r2, r2, #15
-ARM GAS  /tmp/cc74Pu6s.s 			page 25
-
-
- 952 0222 05F81120 		strb	r2, [r5, r1, lsl #1]
- 309:Src/main.c    ****         OLED_Data[pos+51].pix3 = 0x0F;
- 953              		.loc 1 309 9 is_stmt 1 discriminator 3 view .LVU282
- 954              		.loc 1 309 32 is_stmt 0 discriminator 3 view .LVU283
- 955 0226 03F13302 		add	r2, r3, #51
- 956 022a 05EB4202 		add	r2, r5, r2, lsl #1
- 957 022e 5178     		ldrb	r1, [r2, #1]	@ zero_extendqisi2
- 958 0230 41F0F001 		orr	r1, r1, #240
- 959 0234 5170     		strb	r1, [r2, #1]
- 310:Src/main.c    ****         OLED_Data[pos+63].pix3 = 0x0F;
- 960              		.loc 1 310 9 is_stmt 1 discriminator 3 view .LVU284
- 961              		.loc 1 310 32 is_stmt 0 discriminator 3 view .LVU285
- 962 0236 03F13F02 		add	r2, r3, #63
- 963 023a 05EB4202 		add	r2, r5, r2, lsl #1
- 964              	.LBE195:
- 303:Src/main.c    ****         uint16_t pos = (256/4)*x;
- 965              		.loc 1 303 22 discriminator 3 view .LVU286
- 966 023e 4033     		adds	r3, r3, #64
- 967              	.LVL69:
- 968              	.LBB196:
- 969              		.loc 1 310 32 discriminator 3 view .LVU287
- 970 0240 5178     		ldrb	r1, [r2, #1]	@ zero_extendqisi2
- 971              	.LBE196:
- 303:Src/main.c    ****         uint16_t pos = (256/4)*x;
- 972              		.loc 1 303 22 discriminator 3 view .LVU288
- 973 0242 B3F5207F 		cmp	r3, #640
- 974              	.LBB197:
- 975              		.loc 1 310 32 discriminator 3 view .LVU289
- 976 0246 41F0F001 		orr	r1, r1, #240
- 977 024a 5170     		strb	r1, [r2, #1]
- 978              	.LBE197:
- 303:Src/main.c    ****         uint16_t pos = (256/4)*x;
- 979              		.loc 1 303 5 is_stmt 1 discriminator 3 view .LVU290
- 980              	.LVL70:
- 303:Src/main.c    ****         uint16_t pos = (256/4)*x;
- 981              		.loc 1 303 22 discriminator 3 view .LVU291
- 982 024c CDD1     		bne	.L22
- 983              	.LBE194:
- 311:Src/main.c    ****     }
- 312:Src/main.c    **** 
- 313:Src/main.c    ****     const uint32_t Char_R[] = {
- 984              		.loc 1 313 5 view .LVU292
- 985              		.loc 1 313 20 is_stmt 0 view .LVU293
- 986 024e 3D4C     		ldr	r4, .L50+12
- 987 0250 0FCC     		ldmia	r4!, {r0, r1, r2, r3}
- 988 0252 6E46     		mov	r6, sp
- 989 0254 0FC6     		stmia	r6!, {r0, r1, r2, r3}
- 990 0256 94E80F00 		ldm	r4, {r0, r1, r2, r3}
- 314:Src/main.c    ****         0x00000000,
- 315:Src/main.c    ****         0xFFFF0000,
- 316:Src/main.c    ****         0xF000F000,
- 317:Src/main.c    ****         0xF000F000,
- 318:Src/main.c    ****         0xFFFF0000,
- 319:Src/main.c    ****         0xF0F00000,
- 320:Src/main.c    ****         0xF00F0000,
- 321:Src/main.c    ****         0xF000F000
- 322:Src/main.c    ****     };
-ARM GAS  /tmp/cc74Pu6s.s 			page 26
-
-
- 323:Src/main.c    **** 
- 324:Src/main.c    ****     const uint32_t Char_E[] = {
- 991              		.loc 1 324 20 view .LVU294
- 992 025a 04F11007 		add	r7, r4, #16
- 313:Src/main.c    ****         0x00000000,
- 993              		.loc 1 313 20 view .LVU295
- 994 025e 86E80F00 		stm	r6, {r0, r1, r2, r3}
- 995              		.loc 1 324 5 is_stmt 1 view .LVU296
- 996              		.loc 1 324 20 is_stmt 0 view .LVU297
- 997 0262 0FCF     		ldmia	r7!, {r0, r1, r2, r3}
- 998 0264 08AE     		add	r6, sp, #32
- 999 0266 0FC6     		stmia	r6!, {r0, r1, r2, r3}
- 1000 0268 97E80F00 		ldm	r7, {r0, r1, r2, r3}
- 325:Src/main.c    ****         0x00000000,
- 326:Src/main.c    ****         0xFFFFF000,
- 327:Src/main.c    ****         0xF0000000,
- 328:Src/main.c    ****         0xF0000000,
- 329:Src/main.c    ****         0xFFFFF000,
- 330:Src/main.c    ****         0xF0000000,
- 331:Src/main.c    ****         0xF0000000,
- 332:Src/main.c    ****         0xFFFFF000
- 333:Src/main.c    ****     };
- 334:Src/main.c    **** 
- 335:Src/main.c    ****     const uint32_t Char_G[] = {
- 1001              		.loc 1 335 20 view .LVU298
- 1002 026c 04F13007 		add	r7, r4, #48
- 324:Src/main.c    ****         0x00000000,
- 1003              		.loc 1 324 20 view .LVU299
- 1004 0270 86E80F00 		stm	r6, {r0, r1, r2, r3}
- 1005              		.loc 1 335 5 is_stmt 1 view .LVU300
- 1006              		.loc 1 335 20 is_stmt 0 view .LVU301
- 1007 0274 0FCF     		ldmia	r7!, {r0, r1, r2, r3}
- 1008 0276 10AE     		add	r6, sp, #64
- 1009 0278 0FC6     		stmia	r6!, {r0, r1, r2, r3}
- 1010 027a 97E80F00 		ldm	r7, {r0, r1, r2, r3}
- 336:Src/main.c    ****         0x00000000,
- 337:Src/main.c    ****         0x0FFF0000,
- 338:Src/main.c    ****         0xF000F000,
+ 320:Src/main.c    ****     }
+ 321:Src/main.c    **** 
+ 322:Src/main.c    ****     const uint32_t Char_R[] = {
+ 840              		.loc 1 322 5 view .LVU239
+ 841              		.loc 1 322 20 is_stmt 0 view .LVU240
+ 842 0188 684C     		ldr	r4, .L46+12
+ 843 018a 0FCC     		ldmia	r4!, {r0, r1, r2, r3}
+ 844 018c 6D46     		mov	r5, sp
+ 845 018e 0FC5     		stmia	r5!, {r0, r1, r2, r3}
+ 846 0190 94E80F00 		ldm	r4, {r0, r1, r2, r3}
+ 323:Src/main.c    ****         0x00000000,
+ 324:Src/main.c    ****         0xFFFF0000,
+ 325:Src/main.c    ****         0xF000F000,
+ 326:Src/main.c    ****         0xF000F000,
+ 327:Src/main.c    ****         0xFFFF0000,
+ 328:Src/main.c    ****         0xF0F00000,
+ 329:Src/main.c    ****         0xF00F0000,
+ 330:Src/main.c    ****         0xF000F000
+ 331:Src/main.c    ****     };
+ 332:Src/main.c    **** 
+ 333:Src/main.c    ****     const uint32_t Char_E[] = {
+ 847              		.loc 1 333 20 view .LVU241
+ 848 0194 04F11006 		add	r6, r4, #16
+ 322:Src/main.c    ****         0x00000000,
+ 849              		.loc 1 322 20 view .LVU242
+ 850 0198 85E80F00 		stm	r5, {r0, r1, r2, r3}
+ 851              		.loc 1 333 5 is_stmt 1 view .LVU243
+ 852              		.loc 1 333 20 is_stmt 0 view .LVU244
+ 853 019c 0FCE     		ldmia	r6!, {r0, r1, r2, r3}
+ 854 019e 08AD     		add	r5, sp, #32
+ 855 01a0 0FC5     		stmia	r5!, {r0, r1, r2, r3}
+ 856 01a2 96E80F00 		ldm	r6, {r0, r1, r2, r3}
+ 334:Src/main.c    ****         0x00000000,
+ 335:Src/main.c    ****         0xFFFFF000,
+ 336:Src/main.c    ****         0xF0000000,
+ 337:Src/main.c    ****         0xF0000000,
+ 338:Src/main.c    ****         0xFFFFF000,
  339:Src/main.c    ****         0xF0000000,
  340:Src/main.c    ****         0xF0000000,
- 341:Src/main.c    ****         0xF00FF000,
- 342:Src/main.c    ****         0xF000F000,
- 343:Src/main.c    ****         0x0FFF0000
- 344:Src/main.c    ****     };
- 345:Src/main.c    **** 
- 346:Src/main.c    ****     const uint32_t Char_CLN[] = {
- 1011              		.loc 1 346 20 view .LVU302
- 1012 027e 04F15007 		add	r7, r4, #80
- 335:Src/main.c    ****         0x00000000,
- 1013              		.loc 1 335 20 view .LVU303
- 1014 0282 86E80F00 		stm	r6, {r0, r1, r2, r3}
- 1015              		.loc 1 346 5 is_stmt 1 view .LVU304
- 1016              		.loc 1 346 20 is_stmt 0 view .LVU305
- 1017 0286 0FCF     		ldmia	r7!, {r0, r1, r2, r3}
- 1018 0288 18AE     		add	r6, sp, #96
- 1019 028a 0FC6     		stmia	r6!, {r0, r1, r2, r3}
- 1020 028c 97E80F00 		ldm	r7, {r0, r1, r2, r3}
-ARM GAS  /tmp/cc74Pu6s.s 			page 27
+ 341:Src/main.c    ****         0xFFFFF000
+ 342:Src/main.c    ****     };
+ 343:Src/main.c    **** 
+ 344:Src/main.c    ****     const uint32_t Char_G[] = {
+ 857              		.loc 1 344 20 view .LVU245
+ 858 01a6 04F13006 		add	r6, r4, #48
+ 333:Src/main.c    ****         0x00000000,
+ 859              		.loc 1 333 20 view .LVU246
+ 860 01aa 85E80F00 		stm	r5, {r0, r1, r2, r3}
+ 861              		.loc 1 344 5 is_stmt 1 view .LVU247
+ 862              		.loc 1 344 20 is_stmt 0 view .LVU248
+ 863 01ae 0FCE     		ldmia	r6!, {r0, r1, r2, r3}
+ 864 01b0 10AD     		add	r5, sp, #64
+ 865 01b2 0FC5     		stmia	r5!, {r0, r1, r2, r3}
+ 866 01b4 96E80F00 		ldm	r6, {r0, r1, r2, r3}
+ 345:Src/main.c    ****         0x00000000,
+ 346:Src/main.c    ****         0x0FFF0000,
+ 347:Src/main.c    ****         0xF000F000,
+ARM GAS  /tmp/ccxhKTgK.s 			page 24
 
 
- 347:Src/main.c    ****         0x00000000,
- 348:Src/main.c    ****         0x00000000,
- 349:Src/main.c    ****         0x00FF0000,
- 350:Src/main.c    ****         0x00FF0000,
- 351:Src/main.c    ****         0x00000000,
- 352:Src/main.c    ****         0x00FF0000,
- 353:Src/main.c    ****         0x00FF0000,
- 354:Src/main.c    ****         0x00000000
- 355:Src/main.c    ****     };
- 356:Src/main.c    **** 
- 357:Src/main.c    ****     const uint32_t Char_U[] = {
- 358:Src/main.c    ****         0x00000000,
- 359:Src/main.c    ****         0xF000F000,
- 360:Src/main.c    ****         0xF000F000,
- 361:Src/main.c    ****         0xF000F000,
- 362:Src/main.c    ****         0xF000F000,
- 363:Src/main.c    ****         0xF000F000,
- 364:Src/main.c    ****         0xF000F000,
- 365:Src/main.c    ****         0x0FFF0000
- 366:Src/main.c    ****     };
- 367:Src/main.c    **** 
- 368:Src/main.c    ****     const uint32_t Char_I[] = {
- 1021              		.loc 1 368 20 view .LVU306
- 1022 0290 04F17007 		add	r7, r4, #112
- 346:Src/main.c    ****         0x00000000,
- 1023              		.loc 1 346 20 view .LVU307
- 1024 0294 86E80F00 		stm	r6, {r0, r1, r2, r3}
+ 348:Src/main.c    ****         0xF0000000,
+ 349:Src/main.c    ****         0xF0000000,
+ 350:Src/main.c    ****         0xF00FF000,
+ 351:Src/main.c    ****         0xF000F000,
+ 352:Src/main.c    ****         0x0FFF0000
+ 353:Src/main.c    ****     };
+ 354:Src/main.c    **** 
+ 355:Src/main.c    ****     const uint32_t Char_CLN[] = {
+ 867              		.loc 1 355 20 view .LVU249
+ 868 01b8 04F15006 		add	r6, r4, #80
+ 344:Src/main.c    ****         0x00000000,
+ 869              		.loc 1 344 20 view .LVU250
+ 870 01bc 85E80F00 		stm	r5, {r0, r1, r2, r3}
+ 871              		.loc 1 355 5 is_stmt 1 view .LVU251
+ 872              		.loc 1 355 20 is_stmt 0 view .LVU252
+ 873 01c0 0FCE     		ldmia	r6!, {r0, r1, r2, r3}
+ 874 01c2 18AD     		add	r5, sp, #96
+ 875 01c4 0FC5     		stmia	r5!, {r0, r1, r2, r3}
+ 876 01c6 96E80F00 		ldm	r6, {r0, r1, r2, r3}
+ 356:Src/main.c    ****         0x00000000,
  357:Src/main.c    ****         0x00000000,
- 1025              		.loc 1 357 5 is_stmt 1 view .LVU308
- 1026              		.loc 1 368 5 view .LVU309
- 1027              		.loc 1 368 20 is_stmt 0 view .LVU310
- 1028 0298 0FCF     		ldmia	r7!, {r0, r1, r2, r3}
- 1029 029a 20AE     		add	r6, sp, #128
- 1030 029c 0FC6     		stmia	r6!, {r0, r1, r2, r3}
- 1031 029e 97E80F00 		ldm	r7, {r0, r1, r2, r3}
- 369:Src/main.c    ****         0x00000000,
- 370:Src/main.c    ****         0x0FFF0000,
- 371:Src/main.c    ****         0x00F00000,
- 372:Src/main.c    ****         0x00F00000,
- 373:Src/main.c    ****         0x00F00000,
- 374:Src/main.c    ****         0x00F00000,
- 375:Src/main.c    ****         0x00F00000,
- 376:Src/main.c    ****         0x0FFF0000
- 377:Src/main.c    ****     };
- 378:Src/main.c    **** 
- 379:Src/main.c    ****     const uint32_t Char_P[] = {
- 1032              		.loc 1 379 20 view .LVU311
- 1033 02a2 9034     		adds	r4, r4, #144
- 368:Src/main.c    ****         0x00000000,
- 1034              		.loc 1 368 20 view .LVU312
- 1035 02a4 86E80F00 		stm	r6, {r0, r1, r2, r3}
- 1036              		.loc 1 379 5 is_stmt 1 view .LVU313
- 1037              		.loc 1 379 20 is_stmt 0 view .LVU314
- 1038 02a8 0FCC     		ldmia	r4!, {r0, r1, r2, r3}
- 1039 02aa 28AE     		add	r6, sp, #160
- 1040 02ac 0FC6     		stmia	r6!, {r0, r1, r2, r3}
- 1041 02ae 94E80F00 		ldm	r4, {r0, r1, r2, r3}
-ARM GAS  /tmp/cc74Pu6s.s 			page 28
+ 358:Src/main.c    ****         0x00FF0000,
+ 359:Src/main.c    ****         0x00FF0000,
+ 360:Src/main.c    ****         0x00000000,
+ 361:Src/main.c    ****         0x00FF0000,
+ 362:Src/main.c    ****         0x00FF0000,
+ 363:Src/main.c    ****         0x00000000
+ 364:Src/main.c    ****     };
+ 365:Src/main.c    **** 
+ 366:Src/main.c    ****     const uint32_t Char_U[] = {
+ 367:Src/main.c    ****         0x00000000,
+ 368:Src/main.c    ****         0xF000F000,
+ 369:Src/main.c    ****         0xF000F000,
+ 370:Src/main.c    ****         0xF000F000,
+ 371:Src/main.c    ****         0xF000F000,
+ 372:Src/main.c    ****         0xF000F000,
+ 373:Src/main.c    ****         0xF000F000,
+ 374:Src/main.c    ****         0x0FFF0000
+ 375:Src/main.c    ****     };
+ 376:Src/main.c    **** 
+ 377:Src/main.c    ****     const uint32_t Char_I[] = {
+ 877              		.loc 1 377 20 view .LVU253
+ 878 01ca 04F17006 		add	r6, r4, #112
+ 355:Src/main.c    ****         0x00000000,
+ 879              		.loc 1 355 20 view .LVU254
+ 880 01ce 85E80F00 		stm	r5, {r0, r1, r2, r3}
+ 366:Src/main.c    ****         0x00000000,
+ 881              		.loc 1 366 5 is_stmt 1 view .LVU255
+ 882              		.loc 1 377 5 view .LVU256
+ 883              		.loc 1 377 20 is_stmt 0 view .LVU257
+ 884 01d2 0FCE     		ldmia	r6!, {r0, r1, r2, r3}
+ 885 01d4 20AD     		add	r5, sp, #128
+ 886 01d6 0FC5     		stmia	r5!, {r0, r1, r2, r3}
+ 887 01d8 96E80F00 		ldm	r6, {r0, r1, r2, r3}
+ 378:Src/main.c    ****         0x00000000,
+ 379:Src/main.c    ****         0x0FFF0000,
+ 380:Src/main.c    ****         0x00F00000,
+ARM GAS  /tmp/ccxhKTgK.s 			page 25
 
 
- 1042 02b2 86E80F00 		stm	r6, {r0, r1, r2, r3}
- 380:Src/main.c    ****         0x00000000,
- 381:Src/main.c    ****         0xFFFF0000,
- 382:Src/main.c    ****         0xF000F000,
- 383:Src/main.c    ****         0xF000F000,
- 384:Src/main.c    ****         0xFFFF0000,
- 385:Src/main.c    ****         0xF0000000,
- 386:Src/main.c    ****         0xF0000000,
- 387:Src/main.c    ****         0xF0000000
- 388:Src/main.c    ****     };
- 389:Src/main.c    **** 
- 390:Src/main.c    ****     write_char(3,2, Char_R);
- 1043              		.loc 1 390 5 is_stmt 1 view .LVU315
- 1044              	.LVL71:
- 1045              	.LBB198:
- 1046              	.LBI198:
- 194:Src/main.c    **** 
- 1047              		.loc 1 194 13 view .LVU316
- 1048              	.LBB199:
- 196:Src/main.c    ****     // Выводим символ
- 1049              		.loc 1 196 5 view .LVU317
- 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
- 1050              		.loc 1 198 5 view .LVU318
- 1051              	.LBB200:
- 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
- 1052              		.loc 1 198 22 view .LVU319
- 1053              	.LBE200:
- 1054              	.LBE199:
- 1055              	.LBE198:
- 379:Src/main.c    ****         0x00000000,
- 1056              		.loc 1 379 20 is_stmt 0 view .LVU320
- 1057 02b6 224B     		ldr	r3, .L50+8
- 1058 02b8 6846     		mov	r0, sp
- 1059 02ba 0022     		movs	r2, #0
- 1060              	.LVL72:
- 1061              	.L23:
- 1062              	.LBB206:
- 1063              	.LBB205:
- 1064              	.LBB204:
- 1065              	.LBB201:
- 199:Src/main.c    ****         OLED_Data[pos+1].DataW = Char[char_pos]>>16;
- 1066              		.loc 1 199 9 is_stmt 1 view .LVU321
- 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
- 1067              		.loc 1 200 9 view .LVU322
- 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
- 1068              		.loc 1 200 47 is_stmt 0 view .LVU323
- 1069 02bc 50F8041B 		ldr	r1, [r0], #4
- 201:Src/main.c    ****     }
- 1070              		.loc 1 201 30 view .LVU324
- 1071 02c0 A3F8FA14 		strh	r1, [r3, #1274]	@ movhi
- 1072              	.LBE201:
- 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
- 1073              		.loc 1 198 22 view .LVU325
- 1074 02c4 0132     		adds	r2, r2, #1
- 1075              	.LVL73:
- 1076              	.LBB202:
- 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
-ARM GAS  /tmp/cc74Pu6s.s 			page 29
-
-
- 1077              		.loc 1 200 48 view .LVU326
- 1078 02c6 0C0C     		lsrs	r4, r1, #16
- 1079              	.LBE202:
- 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
- 1080              		.loc 1 198 22 view .LVU327
- 1081 02c8 082A     		cmp	r2, #8
- 1082              	.LBB203:
- 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
- 1083              		.loc 1 200 32 view .LVU328
- 1084 02ca A3F8FC44 		strh	r4, [r3, #1276]	@ movhi
- 201:Src/main.c    ****     }
- 1085              		.loc 1 201 9 is_stmt 1 view .LVU329
- 201:Src/main.c    ****     }
- 1086              		.loc 1 201 9 is_stmt 0 view .LVU330
- 1087              	.LBE203:
- 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
- 1088              		.loc 1 198 5 is_stmt 1 view .LVU331
- 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
- 1089              		.loc 1 198 22 view .LVU332
- 1090 02ce A3F18003 		sub	r3, r3, #128
- 1091 02d2 F3D1     		bne	.L23
- 1092 02d4 1A4B     		ldr	r3, .L50+8
- 1093 02d6 08A8     		add	r0, sp, #32
- 1094 02d8 0022     		movs	r2, #0
- 1095              	.LVL74:
- 1096              	.L24:
- 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
- 1097              		.loc 1 198 22 is_stmt 0 view .LVU333
- 1098              	.LBE204:
- 1099              	.LBE205:
- 1100              	.LBE206:
- 1101              	.LBB207:
- 1102              	.LBB208:
- 1103              	.LBB209:
- 1104              	.LBB210:
- 199:Src/main.c    ****         OLED_Data[pos+1].DataW = Char[char_pos]>>16;
- 1105              		.loc 1 199 9 is_stmt 1 view .LVU334
- 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
- 1106              		.loc 1 200 9 view .LVU335
- 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
- 1107              		.loc 1 200 47 is_stmt 0 view .LVU336
- 1108 02da 50F8041B 		ldr	r1, [r0], #4
- 201:Src/main.c    ****     }
- 1109              		.loc 1 201 30 view .LVU337
- 1110 02de A3F8F614 		strh	r1, [r3, #1270]	@ movhi
- 1111              	.LBE210:
- 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
- 1112              		.loc 1 198 22 view .LVU338
- 1113 02e2 0132     		adds	r2, r2, #1
- 1114              	.LVL75:
- 1115              	.LBB211:
- 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
- 1116              		.loc 1 200 48 view .LVU339
- 1117 02e4 0C0C     		lsrs	r4, r1, #16
- 1118              	.LBE211:
- 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
- 1119              		.loc 1 198 22 view .LVU340
-ARM GAS  /tmp/cc74Pu6s.s 			page 30
-
-
- 1120 02e6 082A     		cmp	r2, #8
- 1121              	.LBB212:
- 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
- 1122              		.loc 1 200 32 view .LVU341
- 1123 02e8 A3F8F844 		strh	r4, [r3, #1272]	@ movhi
- 201:Src/main.c    ****     }
- 1124              		.loc 1 201 9 is_stmt 1 view .LVU342
- 201:Src/main.c    ****     }
- 1125              		.loc 1 201 9 is_stmt 0 view .LVU343
- 1126              	.LBE212:
- 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
- 1127              		.loc 1 198 5 is_stmt 1 view .LVU344
- 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
- 1128              		.loc 1 198 22 view .LVU345
- 1129 02ec A3F18003 		sub	r3, r3, #128
- 1130 02f0 F3D1     		bne	.L24
- 1131 02f2 134B     		ldr	r3, .L50+8
- 1132 02f4 10A8     		add	r0, sp, #64
- 1133 02f6 0022     		movs	r2, #0
- 1134              	.LVL76:
- 1135              	.L25:
- 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
- 1136              		.loc 1 198 22 is_stmt 0 view .LVU346
- 1137              	.LBE209:
- 1138              	.LBE208:
- 1139              	.LBE207:
- 1140              	.LBB213:
- 1141              	.LBB214:
- 1142              	.LBB215:
- 1143              	.LBB216:
- 199:Src/main.c    ****         OLED_Data[pos+1].DataW = Char[char_pos]>>16;
- 1144              		.loc 1 199 9 is_stmt 1 view .LVU347
- 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
- 1145              		.loc 1 200 9 view .LVU348
- 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
- 1146              		.loc 1 200 47 is_stmt 0 view .LVU349
- 1147 02f8 50F8041B 		ldr	r1, [r0], #4
- 201:Src/main.c    ****     }
- 1148              		.loc 1 201 30 view .LVU350
- 1149 02fc A3F8F214 		strh	r1, [r3, #1266]	@ movhi
- 1150              	.LBE216:
- 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
- 1151              		.loc 1 198 22 view .LVU351
- 1152 0300 0132     		adds	r2, r2, #1
- 1153              	.LVL77:
- 1154              	.LBB217:
- 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
- 1155              		.loc 1 200 48 view .LVU352
- 1156 0302 0C0C     		lsrs	r4, r1, #16
- 1157              	.LBE217:
- 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
- 1158              		.loc 1 198 22 view .LVU353
- 1159 0304 082A     		cmp	r2, #8
- 1160              	.LBB218:
- 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
- 1161              		.loc 1 200 32 view .LVU354
- 1162 0306 A3F8F444 		strh	r4, [r3, #1268]	@ movhi
-ARM GAS  /tmp/cc74Pu6s.s 			page 31
-
-
- 201:Src/main.c    ****     }
- 1163              		.loc 1 201 9 is_stmt 1 view .LVU355
- 201:Src/main.c    ****     }
- 1164              		.loc 1 201 9 is_stmt 0 view .LVU356
- 1165              	.LBE218:
- 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
- 1166              		.loc 1 198 5 is_stmt 1 view .LVU357
- 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
- 1167              		.loc 1 198 22 view .LVU358
- 1168 030a A3F18003 		sub	r3, r3, #128
- 1169 030e F3D1     		bne	.L25
- 1170 0310 0B4B     		ldr	r3, .L50+8
- 1171 0312 18A8     		add	r0, sp, #96
- 1172 0314 0022     		movs	r2, #0
- 1173              	.LVL78:
- 1174              	.L26:
- 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
- 1175              		.loc 1 198 22 is_stmt 0 view .LVU359
- 1176              	.LBE215:
- 1177              	.LBE214:
- 1178              	.LBE213:
- 1179              	.LBB219:
- 1180              	.LBB220:
- 1181              	.LBB221:
- 1182              	.LBB222:
- 199:Src/main.c    ****         OLED_Data[pos+1].DataW = Char[char_pos]>>16;
- 1183              		.loc 1 199 9 is_stmt 1 view .LVU360
- 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
- 1184              		.loc 1 200 9 view .LVU361
- 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
- 1185              		.loc 1 200 47 is_stmt 0 view .LVU362
- 1186 0316 50F8041B 		ldr	r1, [r0], #4
- 201:Src/main.c    ****     }
- 1187              		.loc 1 201 30 view .LVU363
- 1188 031a A3F8EE14 		strh	r1, [r3, #1262]	@ movhi
- 1189              	.LBE222:
- 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
- 1190              		.loc 1 198 22 view .LVU364
- 1191 031e 0132     		adds	r2, r2, #1
- 1192              	.LVL79:
- 1193              	.LBB223:
- 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
- 1194              		.loc 1 200 48 view .LVU365
- 1195 0320 0C0C     		lsrs	r4, r1, #16
- 1196              	.LBE223:
- 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
- 1197              		.loc 1 198 22 view .LVU366
- 1198 0322 082A     		cmp	r2, #8
- 1199              	.LBB224:
- 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
- 1200              		.loc 1 200 32 view .LVU367
- 1201 0324 A3F8F044 		strh	r4, [r3, #1264]	@ movhi
- 201:Src/main.c    ****     }
- 1202              		.loc 1 201 9 is_stmt 1 view .LVU368
- 201:Src/main.c    ****     }
- 1203              		.loc 1 201 9 is_stmt 0 view .LVU369
- 1204              	.LBE224:
-ARM GAS  /tmp/cc74Pu6s.s 			page 32
-
-
- 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
- 1205              		.loc 1 198 5 is_stmt 1 view .LVU370
- 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
- 1206              		.loc 1 198 22 view .LVU371
- 1207 0328 A3F18003 		sub	r3, r3, #128
- 1208 032c F3D1     		bne	.L26
- 1209 032e 044B     		ldr	r3, .L50+8
- 1210 0330 20A8     		add	r0, sp, #128
- 1211 0332 0022     		movs	r2, #0
- 1212 0334 08E0     		b	.L51
- 1213              	.L52:
- 1214 0336 00BF     		.align	2
- 1215              	.L50:
- 1216 0338 00100240 		.word	1073876992
- 1217 033c 00040048 		.word	1207960576
- 1218 0340 00000000 		.word	OLED_Data
- 1219 0344 00000000 		.word	.LANCHOR0
- 1220              	.L51:
- 1221              	.LVL80:
- 1222              	.L27:
- 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
- 1223              		.loc 1 198 22 is_stmt 0 view .LVU372
- 1224              	.LBE221:
- 1225              	.LBE220:
- 1226              	.LBE219:
- 1227              	.LBB225:
- 1228              	.LBB226:
- 1229              	.LBB227:
- 1230              	.LBB228:
- 199:Src/main.c    ****         OLED_Data[pos+1].DataW = Char[char_pos]>>16;
- 1231              		.loc 1 199 9 is_stmt 1 view .LVU373
- 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
- 1232              		.loc 1 200 9 view .LVU374
- 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
- 1233              		.loc 1 200 47 is_stmt 0 view .LVU375
- 1234 0348 50F8041B 		ldr	r1, [r0], #4
- 201:Src/main.c    ****     }
- 1235              		.loc 1 201 30 view .LVU376
- 1236 034c A3F8EA14 		strh	r1, [r3, #1258]	@ movhi
- 1237              	.LBE228:
- 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
- 1238              		.loc 1 198 22 view .LVU377
- 1239 0350 0132     		adds	r2, r2, #1
- 1240              	.LVL81:
- 1241              	.LBB229:
- 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
- 1242              		.loc 1 200 48 view .LVU378
- 1243 0352 0C0C     		lsrs	r4, r1, #16
- 1244              	.LBE229:
- 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
- 1245              		.loc 1 198 22 view .LVU379
- 1246 0354 082A     		cmp	r2, #8
- 1247              	.LBB230:
- 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
- 1248              		.loc 1 200 32 view .LVU380
- 1249 0356 A3F8EC44 		strh	r4, [r3, #1260]	@ movhi
- 201:Src/main.c    ****     }
-ARM GAS  /tmp/cc74Pu6s.s 			page 33
-
-
- 1250              		.loc 1 201 9 is_stmt 1 view .LVU381
- 201:Src/main.c    ****     }
- 1251              		.loc 1 201 9 is_stmt 0 view .LVU382
- 1252              	.LBE230:
- 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
- 1253              		.loc 1 198 5 is_stmt 1 view .LVU383
- 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
- 1254              		.loc 1 198 22 view .LVU384
- 1255 035a A3F18003 		sub	r3, r3, #128
- 1256 035e F3D1     		bne	.L27
- 1257 0360 274B     		ldr	r3, .L53
- 1258 0362 28A8     		add	r0, sp, #160
- 1259 0364 0022     		movs	r2, #0
- 1260              	.LVL82:
- 1261              	.L28:
- 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
- 1262              		.loc 1 198 22 is_stmt 0 view .LVU385
- 1263              	.LBE227:
- 1264              	.LBE226:
- 1265              	.LBE225:
- 1266              	.LBB231:
- 1267              	.LBB232:
- 1268              	.LBB233:
- 1269              	.LBB234:
- 199:Src/main.c    ****         OLED_Data[pos+1].DataW = Char[char_pos]>>16;
- 1270              		.loc 1 199 9 is_stmt 1 view .LVU386
- 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
- 1271              		.loc 1 200 9 view .LVU387
- 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
- 1272              		.loc 1 200 47 is_stmt 0 view .LVU388
- 1273 0366 50F8041B 		ldr	r1, [r0], #4
- 201:Src/main.c    ****     }
- 1274              		.loc 1 201 30 view .LVU389
- 1275 036a A3F8E614 		strh	r1, [r3, #1254]	@ movhi
- 1276              	.LBE234:
- 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
- 1277              		.loc 1 198 22 view .LVU390
- 1278 036e 0132     		adds	r2, r2, #1
- 1279              	.LVL83:
- 1280              	.LBB235:
- 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
- 1281              		.loc 1 200 48 view .LVU391
- 1282 0370 0C0C     		lsrs	r4, r1, #16
- 1283              	.LBE235:
- 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
- 1284              		.loc 1 198 22 view .LVU392
- 1285 0372 082A     		cmp	r2, #8
- 1286              	.LBB236:
- 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
- 1287              		.loc 1 200 32 view .LVU393
- 1288 0374 A3F8E844 		strh	r4, [r3, #1256]	@ movhi
- 201:Src/main.c    ****     }
- 1289              		.loc 1 201 9 is_stmt 1 view .LVU394
- 201:Src/main.c    ****     }
- 1290              		.loc 1 201 9 is_stmt 0 view .LVU395
- 1291              	.LBE236:
- 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
-ARM GAS  /tmp/cc74Pu6s.s 			page 34
-
-
- 1292              		.loc 1 198 5 is_stmt 1 view .LVU396
- 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
- 1293              		.loc 1 198 22 view .LVU397
- 1294 0378 A3F18003 		sub	r3, r3, #128
- 1295 037c F3D1     		bne	.L28
- 1296              	.LBE233:
- 1297              	.LBE232:
- 1298              	.LBE231:
- 391:Src/main.c    ****     write_char(5,2, Char_E);
- 392:Src/main.c    ****     write_char(7,2, Char_G);
- 393:Src/main.c    ****     write_char(9,2, Char_CLN);
- 394:Src/main.c    ****     write_char(11,2, Char_I);
- 395:Src/main.c    ****     write_char(13, 2, Char_P);
- 396:Src/main.c    **** 
- 397:Src/main.c    ****     static uint32_t Top = 50000;
+ 381:Src/main.c    ****         0x00F00000,
+ 382:Src/main.c    ****         0x00F00000,
+ 383:Src/main.c    ****         0x00F00000,
+ 384:Src/main.c    ****         0x00F00000,
+ 385:Src/main.c    ****         0x0FFF0000
+ 386:Src/main.c    ****     };
+ 387:Src/main.c    **** 
+ 388:Src/main.c    ****     uint32_t Char_P[] = {
+ 888              		.loc 1 388 14 view .LVU258
+ 889 01dc 04F19006 		add	r6, r4, #144
+ 377:Src/main.c    ****         0x00000000,
+ 890              		.loc 1 377 20 view .LVU259
+ 891 01e0 85E80F00 		stm	r5, {r0, r1, r2, r3}
+ 892              		.loc 1 388 5 is_stmt 1 view .LVU260
+ 893              		.loc 1 388 14 is_stmt 0 view .LVU261
+ 894 01e4 0FCE     		ldmia	r6!, {r0, r1, r2, r3}
+ 895 01e6 28AD     		add	r5, sp, #160
+ 896 01e8 0FC5     		stmia	r5!, {r0, r1, r2, r3}
+ 897 01ea 96E80F00 		ldm	r6, {r0, r1, r2, r3}
+ 389:Src/main.c    ****         0x00000000,
+ 390:Src/main.c    ****         0xFFFF0000,
+ 391:Src/main.c    ****         0xF000F000,
+ 392:Src/main.c    ****         0xF000F000,
+ 393:Src/main.c    ****         0xFFFF0000,
+ 394:Src/main.c    ****         0xF0000000,
+ 395:Src/main.c    ****         0xF0000000,
+ 396:Src/main.c    ****         0xF0000000
+ 397:Src/main.c    ****     };
  398:Src/main.c    **** 
- 399:Src/main.c    **** Work:
- 400:Src/main.c    **** 
- 401:Src/main.c    ****     /* переключаем выход PORTA8 в единицу */
- 402:Src/main.c    ****     // GPIOB->BSRR |= GPIO_BSRR_BS1;
- 403:Src/main.c    ****     GPIOB->ODR |= GPIO_ODR_OD1;
- 1299              		.loc 1 403 12 is_stmt 0 view .LVU398
- 1300 037e 214C     		ldr	r4, .L53+4
- 1301              	.LBB237:
- 404:Src/main.c    **** 
- 405:Src/main.c    ****     for(uint32_t i = 0; i<Top; i++) {
- 1302              		.loc 1 405 26 view .LVU399
- 1303 0380 214E     		ldr	r6, .L53+8
- 1304              	.LVL84:
- 1305              	.L29:
- 1306              		.loc 1 405 26 view .LVU400
- 1307              	.LBE237:
- 397:Src/main.c    **** 
- 1308              		.loc 1 397 5 is_stmt 1 view .LVU401
- 399:Src/main.c    **** 
- 1309              		.loc 1 399 1 view .LVU402
- 403:Src/main.c    **** 
- 1310              		.loc 1 403 5 view .LVU403
- 403:Src/main.c    **** 
- 1311              		.loc 1 403 12 is_stmt 0 view .LVU404
- 1312 0382 6369     		ldr	r3, [r4, #20]
- 403:Src/main.c    **** 
- 1313              		.loc 1 403 16 view .LVU405
- 1314 0384 43F00203 		orr	r3, r3, #2
- 1315 0388 6361     		str	r3, [r4, #20]
- 1316              		.loc 1 405 5 is_stmt 1 view .LVU406
- 1317              	.LVL85:
- 1318              	.LBB238:
- 1319              		.loc 1 405 18 is_stmt 0 view .LVU407
- 1320 038a 0023     		movs	r3, #0
- 1321              	.LVL86:
- 1322              	.L30:
- 1323              		.loc 1 405 26 is_stmt 1 discriminator 1 view .LVU408
- 1324 038c 3268     		ldr	r2, [r6]
- 1325 038e 9A42     		cmp	r2, r3
- 1326 0390 2FD8     		bhi	.L31
- 1327              	.LBE238:
-ARM GAS  /tmp/cc74Pu6s.s 			page 35
+ 399:Src/main.c    ****     const uint32_t char_mask[] = { //tmp, remove
+ 898              		.loc 1 399 20 view .LVU262
+ 899 01ee B034     		adds	r4, r4, #176
+ 388:Src/main.c    ****         0x00000000,
+ 900              		.loc 1 388 14 view .LVU263
+ 901 01f0 85E80F00 		stm	r5, {r0, r1, r2, r3}
+ 902              		.loc 1 399 5 is_stmt 1 view .LVU264
+ 903              		.loc 1 399 20 is_stmt 0 view .LVU265
+ 904 01f4 0FCC     		ldmia	r4!, {r0, r1, r2, r3}
+ 905 01f6 30AD     		add	r5, sp, #192
+ 906 01f8 0FC5     		stmia	r5!, {r0, r1, r2, r3}
+ 907 01fa 94E80F00 		ldm	r4, {r0, r1, r2, r3}
+ 908 01fe 85E80F00 		stm	r5, {r0, r1, r2, r3}
+ 400:Src/main.c    ****     0xFFFFFFFF,
+ 401:Src/main.c    ****     0xFFFFFFFF,
+ 402:Src/main.c    ****     0xFFFFFFFF,
+ 403:Src/main.c    ****     0xFFFFFFFF,
+ 404:Src/main.c    ****     0xFFFFFFFF,
+ 405:Src/main.c    ****     0xFFFFFFFF,
+ 406:Src/main.c    ****     0xFFFFFFFF,
+ 407:Src/main.c    ****     0xFFFFFFFF
+ 408:Src/main.c    ****     };
+ 409:Src/main.c    **** 
+ 410:Src/main.c    ****     for(int i = 0; i < 8; i++){ //tmp, checking
+ 909              		.loc 1 410 5 is_stmt 1 view .LVU266
+ 910              	.LVL61:
+ 911              	.LBB185:
+ 912              		.loc 1 410 22 view .LVU267
+ARM GAS  /tmp/ccxhKTgK.s 			page 26
 
 
- 406:Src/main.c    ****         __NOP();
- 407:Src/main.c    ****     }
- 408:Src/main.c    **** 
- 409:Src/main.c    ****     /* переключаем выход PORTA8 в ноль */
- 410:Src/main.c    ****     //GPIOB->BSRR |= GPIO_BSRR_BR1;
- 411:Src/main.c    ****     GPIOB->ODR &= ~GPIO_ODR_OD1;
- 1328              		.loc 1 411 5 view .LVU409
- 1329              		.loc 1 411 12 is_stmt 0 view .LVU410
- 1330 0392 6369     		ldr	r3, [r4, #20]
- 1331              	.LVL87:
- 1332              		.loc 1 411 16 view .LVU411
- 1333 0394 23F00203 		bic	r3, r3, #2
- 1334 0398 6361     		str	r3, [r4, #20]
- 412:Src/main.c    **** 
- 413:Src/main.c    ****     for(uint32_t i = 0; i<Top; i++) {
- 1335              		.loc 1 413 5 is_stmt 1 view .LVU412
- 1336              	.LVL88:
- 1337              	.LBB239:
- 1338              		.loc 1 413 18 is_stmt 0 view .LVU413
- 1339 039a 0023     		movs	r3, #0
- 1340              	.LVL89:
- 1341              	.L32:
- 1342              		.loc 1 413 26 is_stmt 1 discriminator 1 view .LVU414
- 1343 039c 3268     		ldr	r2, [r6]
- 1344 039e 9A42     		cmp	r2, r3
- 1345 03a0 2AD8     		bhi	.L33
- 1346              	.LBE239:
- 414:Src/main.c    ****         __NOP();
- 415:Src/main.c    ****     }
- 416:Src/main.c    **** 
- 417:Src/main.c    ****     if (GPIOB->IDR & GPIO_IDR_ID10) {
- 1347              		.loc 1 417 5 view .LVU415
- 1348              		.loc 1 417 16 is_stmt 0 view .LVU416
- 1349 03a2 2369     		ldr	r3, [r4, #16]
- 1350              	.LVL90:
- 418:Src/main.c    ****         Top = 50000;
- 1351              		.loc 1 418 13 view .LVU417
- 1352 03a4 4CF25032 		movw	r2, #50000
- 1353 03a8 13F4806F 		tst	r3, #1024
- 419:Src/main.c    ****     }
- 420:Src/main.c    ****     else {
- 421:Src/main.c    ****         Top = 10000;
- 422:Src/main.c    ****     }
+ 913 0202 28A9     		add	r1, sp, #160
+ 914 0204 30AC     		add	r4, sp, #192
+ 915              	.LBE185:
+ 399:Src/main.c    ****     0xFFFFFFFF,
+ 916              		.loc 1 399 20 is_stmt 0 view .LVU268
+ 917 0206 0A46     		mov	r2, r1
+ 918              	.LBB186:
+ 919              		.loc 1 410 13 view .LVU269
+ 920 0208 0023     		movs	r3, #0
+ 921              	.LVL62:
+ 922              	.L20:
+ 411:Src/main.c    ****         Char_P[i] ^= char_mask[i];
+ 923              		.loc 1 411 9 is_stmt 1 discriminator 3 view .LVU270
+ 924              		.loc 1 411 17 is_stmt 0 discriminator 3 view .LVU271
+ 925 020a 1068     		ldr	r0, [r2]
+ 926              		.loc 1 411 33 discriminator 3 view .LVU272
+ 927 020c 54F8045B 		ldr	r5, [r4], #4
+ 410:Src/main.c    ****         Char_P[i] ^= char_mask[i];
+ 928              		.loc 1 410 5 discriminator 3 view .LVU273
+ 929 0210 0133     		adds	r3, r3, #1
+ 930              	.LVL63:
+ 931              		.loc 1 411 19 discriminator 3 view .LVU274
+ 932 0212 6840     		eors	r0, r0, r5
+ 410:Src/main.c    ****         Char_P[i] ^= char_mask[i];
+ 933              		.loc 1 410 22 discriminator 3 view .LVU275
+ 934 0214 082B     		cmp	r3, #8
+ 935              		.loc 1 411 19 discriminator 3 view .LVU276
+ 936 0216 42F8040B 		str	r0, [r2], #4
+ 410:Src/main.c    ****         Char_P[i] ^= char_mask[i];
+ 937              		.loc 1 410 5 is_stmt 1 discriminator 3 view .LVU277
+ 938              	.LVL64:
+ 410:Src/main.c    ****         Char_P[i] ^= char_mask[i];
+ 939              		.loc 1 410 22 discriminator 3 view .LVU278
+ 940 021a F6D1     		bne	.L20
+ 410:Src/main.c    ****         Char_P[i] ^= char_mask[i];
+ 941              		.loc 1 410 22 is_stmt 0 view .LVU279
+ 942 021c 424B     		ldr	r3, .L46+8
+ 943              	.LVL65:
+ 410:Src/main.c    ****         Char_P[i] ^= char_mask[i];
+ 944              		.loc 1 410 22 view .LVU280
+ 945 021e 6C46     		mov	r4, sp
+ 946 0220 0022     		movs	r2, #0
+ 947              	.L21:
+ 948              	.LVL66:
+ 410:Src/main.c    ****         Char_P[i] ^= char_mask[i];
+ 949              		.loc 1 410 22 view .LVU281
+ 950              	.LBE186:
+ 951              	.LBB187:
+ 952              	.LBB188:
+ 953              	.LBB189:
+ 954              	.LBB190:
+ 199:Src/main.c    ****         OLED_Data[pos+1].DataW = Char[char_pos]>>16;
+ 955              		.loc 1 199 9 is_stmt 1 view .LVU282
+ 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
+ 956              		.loc 1 200 9 view .LVU283
+ 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
+ 957              		.loc 1 200 47 is_stmt 0 view .LVU284
+ARM GAS  /tmp/ccxhKTgK.s 			page 27
+
+
+ 958 0222 54F8040B 		ldr	r0, [r4], #4
+ 201:Src/main.c    ****     }
+ 959              		.loc 1 201 30 view .LVU285
+ 960 0226 A3F8FA04 		strh	r0, [r3, #1274]	@ movhi
+ 961              	.LBE190:
+ 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
+ 962              		.loc 1 198 22 view .LVU286
+ 963 022a 0132     		adds	r2, r2, #1
+ 964              	.LVL67:
+ 965              	.LBB191:
+ 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
+ 966              		.loc 1 200 48 view .LVU287
+ 967 022c 050C     		lsrs	r5, r0, #16
+ 968              	.LBE191:
+ 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
+ 969              		.loc 1 198 22 view .LVU288
+ 970 022e 082A     		cmp	r2, #8
+ 971              	.LBB192:
+ 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
+ 972              		.loc 1 200 32 view .LVU289
+ 973 0230 A3F8FC54 		strh	r5, [r3, #1276]	@ movhi
+ 201:Src/main.c    ****     }
+ 974              		.loc 1 201 9 is_stmt 1 view .LVU290
+ 201:Src/main.c    ****     }
+ 975              		.loc 1 201 9 is_stmt 0 view .LVU291
+ 976              	.LBE192:
+ 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
+ 977              		.loc 1 198 5 is_stmt 1 view .LVU292
+ 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
+ 978              		.loc 1 198 22 view .LVU293
+ 979 0234 A3F18003 		sub	r3, r3, #128
+ 980 0238 F3D1     		bne	.L21
+ 981 023a 3B4B     		ldr	r3, .L46+8
+ 982 023c 08AC     		add	r4, sp, #32
+ 983 023e 0022     		movs	r2, #0
+ 984              	.LVL68:
+ 985              	.L22:
+ 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
+ 986              		.loc 1 198 22 is_stmt 0 view .LVU294
+ 987              	.LBE189:
+ 988              	.LBE188:
+ 989              	.LBE187:
+ 990              	.LBB193:
+ 991              	.LBB194:
+ 992              	.LBB195:
+ 993              	.LBB196:
+ 199:Src/main.c    ****         OLED_Data[pos+1].DataW = Char[char_pos]>>16;
+ 994              		.loc 1 199 9 is_stmt 1 view .LVU295
+ 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
+ 995              		.loc 1 200 9 view .LVU296
+ 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
+ 996              		.loc 1 200 47 is_stmt 0 view .LVU297
+ 997 0240 54F8040B 		ldr	r0, [r4], #4
+ 201:Src/main.c    ****     }
+ 998              		.loc 1 201 30 view .LVU298
+ 999 0244 A3F8F604 		strh	r0, [r3, #1270]	@ movhi
+ 1000              	.LBE196:
+ARM GAS  /tmp/ccxhKTgK.s 			page 28
+
+
+ 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
+ 1001              		.loc 1 198 22 view .LVU299
+ 1002 0248 0132     		adds	r2, r2, #1
+ 1003              	.LVL69:
+ 1004              	.LBB197:
+ 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
+ 1005              		.loc 1 200 48 view .LVU300
+ 1006 024a 050C     		lsrs	r5, r0, #16
+ 1007              	.LBE197:
+ 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
+ 1008              		.loc 1 198 22 view .LVU301
+ 1009 024c 082A     		cmp	r2, #8
+ 1010              	.LBB198:
+ 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
+ 1011              		.loc 1 200 32 view .LVU302
+ 1012 024e A3F8F854 		strh	r5, [r3, #1272]	@ movhi
+ 201:Src/main.c    ****     }
+ 1013              		.loc 1 201 9 is_stmt 1 view .LVU303
+ 201:Src/main.c    ****     }
+ 1014              		.loc 1 201 9 is_stmt 0 view .LVU304
+ 1015              	.LBE198:
+ 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
+ 1016              		.loc 1 198 5 is_stmt 1 view .LVU305
+ 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
+ 1017              		.loc 1 198 22 view .LVU306
+ 1018 0252 A3F18003 		sub	r3, r3, #128
+ 1019 0256 F3D1     		bne	.L22
+ 1020 0258 334B     		ldr	r3, .L46+8
+ 1021 025a 10AC     		add	r4, sp, #64
+ 1022 025c 0022     		movs	r2, #0
+ 1023              	.LVL70:
+ 1024              	.L23:
+ 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
+ 1025              		.loc 1 198 22 is_stmt 0 view .LVU307
+ 1026              	.LBE195:
+ 1027              	.LBE194:
+ 1028              	.LBE193:
+ 1029              	.LBB199:
+ 1030              	.LBB200:
+ 1031              	.LBB201:
+ 1032              	.LBB202:
+ 199:Src/main.c    ****         OLED_Data[pos+1].DataW = Char[char_pos]>>16;
+ 1033              		.loc 1 199 9 is_stmt 1 view .LVU308
+ 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
+ 1034              		.loc 1 200 9 view .LVU309
+ 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
+ 1035              		.loc 1 200 47 is_stmt 0 view .LVU310
+ 1036 025e 54F8040B 		ldr	r0, [r4], #4
+ 201:Src/main.c    ****     }
+ 1037              		.loc 1 201 30 view .LVU311
+ 1038 0262 A3F8F204 		strh	r0, [r3, #1266]	@ movhi
+ 1039              	.LBE202:
+ 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
+ 1040              		.loc 1 198 22 view .LVU312
+ 1041 0266 0132     		adds	r2, r2, #1
+ 1042              	.LVL71:
+ 1043              	.LBB203:
+ARM GAS  /tmp/ccxhKTgK.s 			page 29
+
+
+ 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
+ 1044              		.loc 1 200 48 view .LVU313
+ 1045 0268 050C     		lsrs	r5, r0, #16
+ 1046              	.LBE203:
+ 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
+ 1047              		.loc 1 198 22 view .LVU314
+ 1048 026a 082A     		cmp	r2, #8
+ 1049              	.LBB204:
+ 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
+ 1050              		.loc 1 200 32 view .LVU315
+ 1051 026c A3F8F454 		strh	r5, [r3, #1268]	@ movhi
+ 201:Src/main.c    ****     }
+ 1052              		.loc 1 201 9 is_stmt 1 view .LVU316
+ 201:Src/main.c    ****     }
+ 1053              		.loc 1 201 9 is_stmt 0 view .LVU317
+ 1054              	.LBE204:
+ 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
+ 1055              		.loc 1 198 5 is_stmt 1 view .LVU318
+ 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
+ 1056              		.loc 1 198 22 view .LVU319
+ 1057 0270 A3F18003 		sub	r3, r3, #128
+ 1058 0274 F3D1     		bne	.L23
+ 1059 0276 2C4B     		ldr	r3, .L46+8
+ 1060 0278 18AC     		add	r4, sp, #96
+ 1061 027a 0022     		movs	r2, #0
+ 1062              	.LVL72:
+ 1063              	.L24:
+ 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
+ 1064              		.loc 1 198 22 is_stmt 0 view .LVU320
+ 1065              	.LBE201:
+ 1066              	.LBE200:
+ 1067              	.LBE199:
+ 1068              	.LBB205:
+ 1069              	.LBB206:
+ 1070              	.LBB207:
+ 1071              	.LBB208:
+ 199:Src/main.c    ****         OLED_Data[pos+1].DataW = Char[char_pos]>>16;
+ 1072              		.loc 1 199 9 is_stmt 1 view .LVU321
+ 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
+ 1073              		.loc 1 200 9 view .LVU322
+ 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
+ 1074              		.loc 1 200 47 is_stmt 0 view .LVU323
+ 1075 027c 54F8040B 		ldr	r0, [r4], #4
+ 201:Src/main.c    ****     }
+ 1076              		.loc 1 201 30 view .LVU324
+ 1077 0280 A3F8EE04 		strh	r0, [r3, #1262]	@ movhi
+ 1078              	.LBE208:
+ 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
+ 1079              		.loc 1 198 22 view .LVU325
+ 1080 0284 0132     		adds	r2, r2, #1
+ 1081              	.LVL73:
+ 1082              	.LBB209:
+ 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
+ 1083              		.loc 1 200 48 view .LVU326
+ 1084 0286 050C     		lsrs	r5, r0, #16
+ 1085              	.LBE209:
+ 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
+ARM GAS  /tmp/ccxhKTgK.s 			page 30
+
+
+ 1086              		.loc 1 198 22 view .LVU327
+ 1087 0288 082A     		cmp	r2, #8
+ 1088              	.LBB210:
+ 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
+ 1089              		.loc 1 200 32 view .LVU328
+ 1090 028a A3F8F054 		strh	r5, [r3, #1264]	@ movhi
+ 201:Src/main.c    ****     }
+ 1091              		.loc 1 201 9 is_stmt 1 view .LVU329
+ 201:Src/main.c    ****     }
+ 1092              		.loc 1 201 9 is_stmt 0 view .LVU330
+ 1093              	.LBE210:
+ 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
+ 1094              		.loc 1 198 5 is_stmt 1 view .LVU331
+ 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
+ 1095              		.loc 1 198 22 view .LVU332
+ 1096 028e A3F18003 		sub	r3, r3, #128
+ 1097 0292 F3D1     		bne	.L24
+ 1098 0294 244B     		ldr	r3, .L46+8
+ 1099 0296 20AC     		add	r4, sp, #128
+ 1100 0298 0022     		movs	r2, #0
+ 1101              	.LVL74:
+ 1102              	.L25:
+ 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
+ 1103              		.loc 1 198 22 is_stmt 0 view .LVU333
+ 1104              	.LBE207:
+ 1105              	.LBE206:
+ 1106              	.LBE205:
+ 1107              	.LBB211:
+ 1108              	.LBB212:
+ 1109              	.LBB213:
+ 1110              	.LBB214:
+ 199:Src/main.c    ****         OLED_Data[pos+1].DataW = Char[char_pos]>>16;
+ 1111              		.loc 1 199 9 is_stmt 1 view .LVU334
+ 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
+ 1112              		.loc 1 200 9 view .LVU335
+ 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
+ 1113              		.loc 1 200 47 is_stmt 0 view .LVU336
+ 1114 029a 54F8040B 		ldr	r0, [r4], #4
+ 201:Src/main.c    ****     }
+ 1115              		.loc 1 201 30 view .LVU337
+ 1116 029e A3F8EA04 		strh	r0, [r3, #1258]	@ movhi
+ 1117              	.LBE214:
+ 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
+ 1118              		.loc 1 198 22 view .LVU338
+ 1119 02a2 0132     		adds	r2, r2, #1
+ 1120              	.LVL75:
+ 1121              	.LBB215:
+ 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
+ 1122              		.loc 1 200 48 view .LVU339
+ 1123 02a4 050C     		lsrs	r5, r0, #16
+ 1124              	.LBE215:
+ 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
+ 1125              		.loc 1 198 22 view .LVU340
+ 1126 02a6 082A     		cmp	r2, #8
+ 1127              	.LBB216:
+ 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
+ 1128              		.loc 1 200 32 view .LVU341
+ARM GAS  /tmp/ccxhKTgK.s 			page 31
+
+
+ 1129 02a8 A3F8EC54 		strh	r5, [r3, #1260]	@ movhi
+ 201:Src/main.c    ****     }
+ 1130              		.loc 1 201 9 is_stmt 1 view .LVU342
+ 201:Src/main.c    ****     }
+ 1131              		.loc 1 201 9 is_stmt 0 view .LVU343
+ 1132              	.LBE216:
+ 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
+ 1133              		.loc 1 198 5 is_stmt 1 view .LVU344
+ 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
+ 1134              		.loc 1 198 22 view .LVU345
+ 1135 02ac A3F18003 		sub	r3, r3, #128
+ 1136 02b0 F3D1     		bne	.L25
+ 1137 02b2 1D4B     		ldr	r3, .L46+8
+ 1138 02b4 0022     		movs	r2, #0
+ 1139              	.LVL76:
+ 1140              	.L26:
+ 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
+ 1141              		.loc 1 198 22 is_stmt 0 view .LVU346
+ 1142              	.LBE213:
+ 1143              	.LBE212:
+ 1144              	.LBE211:
+ 1145              	.LBB217:
+ 1146              	.LBB218:
+ 1147              	.LBB219:
+ 1148              	.LBB220:
+ 199:Src/main.c    ****         OLED_Data[pos+1].DataW = Char[char_pos]>>16;
+ 1149              		.loc 1 199 9 is_stmt 1 view .LVU347
+ 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
+ 1150              		.loc 1 200 9 view .LVU348
+ 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
+ 1151              		.loc 1 200 47 is_stmt 0 view .LVU349
+ 1152 02b6 51F8040B 		ldr	r0, [r1], #4
+ 201:Src/main.c    ****     }
+ 1153              		.loc 1 201 30 view .LVU350
+ 1154 02ba A3F8E604 		strh	r0, [r3, #1254]	@ movhi
+ 1155              	.LBE220:
+ 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
+ 1156              		.loc 1 198 22 view .LVU351
+ 1157 02be 0132     		adds	r2, r2, #1
+ 1158              	.LVL77:
+ 1159              	.LBB221:
+ 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
+ 1160              		.loc 1 200 48 view .LVU352
+ 1161 02c0 040C     		lsrs	r4, r0, #16
+ 1162              	.LBE221:
+ 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
+ 1163              		.loc 1 198 22 view .LVU353
+ 1164 02c2 082A     		cmp	r2, #8
+ 1165              	.LBB222:
+ 200:Src/main.c    ****         OLED_Data[pos].DataW = Char[char_pos++];
+ 1166              		.loc 1 200 32 view .LVU354
+ 1167 02c4 A3F8E844 		strh	r4, [r3, #1256]	@ movhi
+ 201:Src/main.c    ****     }
+ 1168              		.loc 1 201 9 is_stmt 1 view .LVU355
+ 201:Src/main.c    ****     }
+ 1169              		.loc 1 201 9 is_stmt 0 view .LVU356
+ 1170              	.LBE222:
+ARM GAS  /tmp/ccxhKTgK.s 			page 32
+
+
+ 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
+ 1171              		.loc 1 198 5 is_stmt 1 view .LVU357
+ 198:Src/main.c    ****         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
+ 1172              		.loc 1 198 22 view .LVU358
+ 1173 02c8 A3F18003 		sub	r3, r3, #128
+ 1174 02cc F3D1     		bne	.L26
+ 1175              	.LBE219:
+ 1176              	.LBE218:
+ 1177              	.LBE217:
+ 412:Src/main.c    ****     }
+ 413:Src/main.c    **** 
+ 414:Src/main.c    ****     write_char(3,2, Char_R);
+ 415:Src/main.c    ****     write_char(5,2, Char_E);
+ 416:Src/main.c    ****     write_char(7,2, Char_G);
+ 417:Src/main.c    ****     write_char(9,2, Char_CLN);
+ 418:Src/main.c    ****     write_char(11,2, Char_I);
+ 419:Src/main.c    ****     write_char(13, 2, Char_P);
+ 420:Src/main.c    **** 
+ 421:Src/main.c    ****     static uint32_t Top = 50000;
+ 422:Src/main.c    **** 
+ 423:Src/main.c    **** Work:
+ 424:Src/main.c    **** 
+ 425:Src/main.c    ****     //PCB LED control
+ 426:Src/main.c    ****     /* переключаем выход PORTA8 в единицу */
+ 427:Src/main.c    ****     // GPIOB->BSRR |= GPIO_BSRR_BS1;
+ 428:Src/main.c    ****     GPIOB->ODR |= GPIO_ODR_OD1; //LED3 ORANGE
+ 1178              		.loc 1 428 12 is_stmt 0 view .LVU359
+ 1179 02ce 154C     		ldr	r4, .L46+4
+ 1180              	.LBB223:
+ 429:Src/main.c    ****     //GPIOB->ODR |= GPIO_ODR_OD5;
+ 430:Src/main.c    **** 
+ 431:Src/main.c    ****     for(uint32_t i = 0; i<Top; i++) {
+ 1181              		.loc 1 431 26 view .LVU360
+ 1182 02d0 174D     		ldr	r5, .L46+16
+ 1183              	.LVL78:
+ 1184              	.L27:
+ 1185              		.loc 1 431 26 view .LVU361
+ 1186              	.LBE223:
+ 421:Src/main.c    **** 
+ 1187              		.loc 1 421 5 is_stmt 1 view .LVU362
  423:Src/main.c    **** 
- 424:Src/main.c    ****     //static uint16_t tmp = 0;
- 425:Src/main.c    ****     //tmp++;
- 426:Src/main.c    ****     //Spi_Write_Data(tmp);
- 427:Src/main.c    ****     //SSD1322_SPI_Write_D(0xFF); // Полная засветка дисплея
- 428:Src/main.c    **** 
- 429:Src/main.c    ****     SSD1322_SPI_Write_CDD(0x15, 28, 91);// set column address, start, end
- 1354              		.loc 1 429 26 view .LVU418
- 1355 03ac 4FF01C01 		mov	r1, #28
- 418:Src/main.c    ****         Top = 50000;
- 1356              		.loc 1 418 13 view .LVU419
- 1357 03b0 42F21073 		movw	r3, #10000
- 1358              		.loc 1 429 26 view .LVU420
- 1359 03b4 4FF01500 		mov	r0, #21
-ARM GAS  /tmp/cc74Pu6s.s 			page 36
+ 1188              		.loc 1 423 1 view .LVU363
+ 428:Src/main.c    ****     //GPIOB->ODR |= GPIO_ODR_OD5;
+ 1189              		.loc 1 428 5 view .LVU364
+ 428:Src/main.c    ****     //GPIOB->ODR |= GPIO_ODR_OD5;
+ 1190              		.loc 1 428 12 is_stmt 0 view .LVU365
+ 1191 02d2 6369     		ldr	r3, [r4, #20]
+ 428:Src/main.c    ****     //GPIOB->ODR |= GPIO_ODR_OD5;
+ 1192              		.loc 1 428 16 view .LVU366
+ 1193 02d4 43F00203 		orr	r3, r3, #2
+ 1194 02d8 6361     		str	r3, [r4, #20]
+ 1195              		.loc 1 431 5 is_stmt 1 view .LVU367
+ 1196              	.LVL79:
+ 1197              	.LBB224:
+ 1198              		.loc 1 431 18 is_stmt 0 view .LVU368
+ 1199 02da 0023     		movs	r3, #0
+ 1200              	.LVL80:
+ARM GAS  /tmp/ccxhKTgK.s 			page 33
 
 
- 418:Src/main.c    ****         Top = 50000;
- 1360              		.loc 1 418 13 view .LVU421
- 1361 03b8 18BF     		it	ne
- 1362 03ba 1346     		movne	r3, r2
- 1363              		.loc 1 429 26 view .LVU422
- 1364 03bc 5B22     		movs	r2, #91
- 1365 03be 3360     		str	r3, [r6]
- 1366              		.loc 1 429 5 is_stmt 1 view .LVU423
- 1367              		.loc 1 429 26 is_stmt 0 view .LVU424
- 1368 03c0 FFF7FEFF 		bl	_Z21SSD1322_SPI_Write_CDDhhh
- 1369              	.LVL91:
- 430:Src/main.c    ****     SSD1322_SPI_Write_CDD(0x75, 0, 63); // set row address, moved out of the loop (issue 302)
- 1370              		.loc 1 430 5 is_stmt 1 view .LVU425
- 1371              		.loc 1 430 26 is_stmt 0 view .LVU426
- 1372 03c4 3F22     		movs	r2, #63
- 1373 03c6 0021     		movs	r1, #0
- 1374 03c8 7520     		movs	r0, #117
- 1375 03ca FFF7FEFF 		bl	_Z21SSD1322_SPI_Write_CDDhhh
- 1376              	.LVL92:
- 431:Src/main.c    ****     SSD1322_SPI_Write_C(0x5C); // Запись в RAM
- 1377              		.loc 1 431 5 is_stmt 1 view .LVU427
- 1378              	.LBB240:
- 1379              	.LBI240:
+ 1201              	.L28:
+ 1202              		.loc 1 431 26 is_stmt 1 discriminator 1 view .LVU369
+ 1203 02dc 2A68     		ldr	r2, [r5]
+ 1204 02de 9A42     		cmp	r2, r3
+ 1205 02e0 37D8     		bhi	.L29
+ 1206              	.LBE224:
+ 1207              	.LBB225:
+ 432:Src/main.c    ****         __NOP();
+ 433:Src/main.c    ****     }
+ 434:Src/main.c    **** 
+ 435:Src/main.c    ****     /* переключаем выход PORTA8 в ноль */
+ 436:Src/main.c    ****     //GPIOB->BSRR |= GPIO_BSRR_BR1;
+ 437:Src/main.c    ****     //GPIOB->ODR &= ~GPIO_ODR_OD1; //ORANGE
+ 438:Src/main.c    ****     //GPIOB->ODR &= ~GPIO_ODR_OD5;
+ 439:Src/main.c    **** 
+ 440:Src/main.c    ****     for(uint32_t i = 0; i<Top; i++) {
+ 1208              		.loc 1 440 18 is_stmt 0 view .LVU370
+ 1209 02e2 0023     		movs	r3, #0
+ 1210              	.LVL81:
+ 1211              	.L30:
+ 1212              		.loc 1 440 26 is_stmt 1 discriminator 1 view .LVU371
+ 1213 02e4 2A68     		ldr	r2, [r5]
+ 1214 02e6 9A42     		cmp	r2, r3
+ 1215 02e8 36D8     		bhi	.L31
+ 1216              	.LBE225:
+ 441:Src/main.c    ****         __NOP();
+ 442:Src/main.c    ****     }
+ 443:Src/main.c    **** 
+ 444:Src/main.c    ****     if (GPIOB->IDR & GPIO_IDR_ID10) {
+ 1217              		.loc 1 444 5 view .LVU372
+ 1218              		.loc 1 444 16 is_stmt 0 view .LVU373
+ 1219 02ea 2369     		ldr	r3, [r4, #16]
+ 1220              	.LVL82:
+ 445:Src/main.c    ****         Top = 500000;
+ 1221              		.loc 1 445 13 view .LVU374
+ 1222 02ec 114A     		ldr	r2, .L46+20
+ 1223 02ee 13F4806F 		tst	r3, #1024
+ 446:Src/main.c    ****     }
+ 447:Src/main.c    ****     else {
+ 448:Src/main.c    ****         Top = 10000;
+ 449:Src/main.c    ****     }
+ 450:Src/main.c    **** 
+ 451:Src/main.c    ****     //PCB LED end
+ 452:Src/main.c    **** 
+ 453:Src/main.c    ****     //static uint16_t tmp = 0;
+ 454:Src/main.c    ****     //tmp++;
+ 455:Src/main.c    ****     //Spi_Write_Data(tmp);
+ 456:Src/main.c    ****     //SSD1322_SPI_Write_D(0xFF); // Полная засветка дисплея
+ 457:Src/main.c    **** 
+ 458:Src/main.c    ****     SSD1322_SPI_Write_CDD(0x15, 28, 91);// set column address, start, end
+ 1224              		.loc 1 458 26 view .LVU375
+ 1225 02f2 4FF01C01 		mov	r1, #28
+ 445:Src/main.c    ****         Top = 500000;
+ 1226              		.loc 1 445 13 view .LVU376
+ 1227 02f6 42F21073 		movw	r3, #10000
+ 1228              		.loc 1 458 26 view .LVU377
+ 1229 02fa 4FF01500 		mov	r0, #21
+ARM GAS  /tmp/ccxhKTgK.s 			page 34
+
+
+ 445:Src/main.c    ****         Top = 500000;
+ 1230              		.loc 1 445 13 view .LVU378
+ 1231 02fe 18BF     		it	ne
+ 1232 0300 1346     		movne	r3, r2
+ 1233              		.loc 1 458 26 view .LVU379
+ 1234 0302 5B22     		movs	r2, #91
+ 1235 0304 2B60     		str	r3, [r5]
+ 1236              		.loc 1 458 5 is_stmt 1 view .LVU380
+ 1237              		.loc 1 458 26 is_stmt 0 view .LVU381
+ 1238 0306 FFF7FEFF 		bl	_Z21SSD1322_SPI_Write_CDDhhh
+ 1239              	.LVL83:
+ 459:Src/main.c    ****     SSD1322_SPI_Write_CDD(0x75, 0, 63); // set row address, moved out of the loop (issue 302)
+ 1240              		.loc 1 459 5 is_stmt 1 view .LVU382
+ 1241              		.loc 1 459 26 is_stmt 0 view .LVU383
+ 1242 030a 3F22     		movs	r2, #63
+ 1243 030c 0021     		movs	r1, #0
+ 1244 030e 7520     		movs	r0, #117
+ 1245 0310 FFF7FEFF 		bl	_Z21SSD1322_SPI_Write_CDDhhh
+ 1246              	.LVL84:
+ 460:Src/main.c    ****     SSD1322_SPI_Write_C(0x5C); // Запись в RAM
+ 1247              		.loc 1 460 5 is_stmt 1 view .LVU384
+ 1248              	.LBB226:
+ 1249              	.LBI226:
   73:Src/main.c    **** 
- 1380              		.loc 1 73 6 view .LVU428
- 1381              	.LBB241:
+ 1250              		.loc 1 73 6 view .LVU385
+ 1251              	.LBB227:
   75:Src/main.c    **** }
- 1382              		.loc 1 75 5 view .LVU429
+ 1252              		.loc 1 75 5 view .LVU386
   75:Src/main.c    **** }
- 1383              		.loc 1 75 19 is_stmt 0 view .LVU430
- 1384 03ce 5C20     		movs	r0, #92
- 1385 03d0 FFF7FEFF 		bl	_Z14Spi_Write_Datat
- 1386              	.LVL93:
+ 1253              		.loc 1 75 19 is_stmt 0 view .LVU387
+ 1254 0314 5C20     		movs	r0, #92
+ 1255 0316 FFF7FEFF 		bl	_Z14Spi_Write_Datat
+ 1256              	.LVL85:
   75:Src/main.c    **** }
- 1387              		.loc 1 75 19 view .LVU431
- 1388              	.LBE241:
- 1389              	.LBE240:
- 432:Src/main.c    **** 
- 433:Src/main.c    ****     for(uint16_t pos=0;pos<OLED_Data_Length;pos++) {
- 1390              		.loc 1 433 5 is_stmt 1 view .LVU432
- 1391              	.LBB243:
- 1392              		.loc 1 433 27 view .LVU433
- 1393              	.LBE243:
- 1394              	.LBB244:
- 1395              	.LBB242:
+ 1257              		.loc 1 75 19 view .LVU388
+ 1258              	.LBE227:
+ 1259              	.LBE226:
+ 461:Src/main.c    **** 
+ 462:Src/main.c    ****     for(uint16_t pos=0;pos<OLED_Data_Length;pos++) {
+ 1260              		.loc 1 462 5 is_stmt 1 view .LVU389
+ 1261              	.LBB229:
+ 1262              		.loc 1 462 27 view .LVU390
+ 1263              	.LBE229:
+ 1264              	.LBB230:
+ 1265              	.LBB228:
   75:Src/main.c    **** }
- 1396              		.loc 1 75 19 is_stmt 0 view .LVU434
- 1397 03d4 A846     		mov	r8, r5
- 1398 03d6 0027     		movs	r7, #0
- 1399              	.LVL94:
- 1400              	.L35:
+ 1266              		.loc 1 75 19 is_stmt 0 view .LVU391
+ 1267 031a B846     		mov	r8, r7
+ 1268 031c 0026     		movs	r6, #0
+ 1269 031e 0BE0     		b	.L47
+ 1270              	.L48:
+ 1271              		.align	2
+ 1272              	.L46:
+ 1273 0320 00100240 		.word	1073876992
+ 1274 0324 00040048 		.word	1207960576
+ 1275 0328 00000000 		.word	OLED_Data
+ 1276 032c 00000000 		.word	.LANCHOR0
+ARM GAS  /tmp/ccxhKTgK.s 			page 35
+
+
+ 1277 0330 00000000 		.word	_ZZ4mainE3Top
+ 1278 0334 20A10700 		.word	500000
+ 1279              	.L47:
+ 1280              	.LVL86:
+ 1281              	.L33:
   75:Src/main.c    **** }
- 1401              		.loc 1 75 19 view .LVU435
- 1402              	.LBE242:
- 1403              	.LBE244:
- 1404              	.LBB245:
- 434:Src/main.c    ****         SSD1322_SPI_Write_D(OLED_Data[pos].Data[1]); // Пишем два пикселя
-ARM GAS  /tmp/cc74Pu6s.s 			page 37
+ 1282              		.loc 1 75 19 view .LVU392
+ 1283              	.LBE228:
+ 1284              	.LBE230:
+ 1285              	.LBB231:
+ 463:Src/main.c    ****         SSD1322_SPI_Write_D(OLED_Data[pos].Data[1]); // Пишем два пикселя
+ 1286              		.loc 1 463 9 is_stmt 1 discriminator 3 view .LVU393
+ 1287              		.loc 1 463 28 is_stmt 0 discriminator 3 view .LVU394
+ 1288 0338 98F80100 		ldrb	r0, [r8, #1]	@ zero_extendqisi2
+ 1289 033c FFF7FEFF 		bl	_Z19SSD1322_SPI_Write_Dh
+ 1290              	.LVL87:
+ 464:Src/main.c    ****         SSD1322_SPI_Write_D(OLED_Data[pos].Data[0]); // Пишем два пикселя
+ 1291              		.loc 1 464 9 is_stmt 1 discriminator 3 view .LVU395
+ 462:Src/main.c    ****         SSD1322_SPI_Write_D(OLED_Data[pos].Data[1]); // Пишем два пикселя
+ 1292              		.loc 1 462 27 is_stmt 0 discriminator 3 view .LVU396
+ 1293 0340 0136     		adds	r6, r6, #1
+ 1294              	.LVL88:
+ 1295              		.loc 1 464 28 discriminator 3 view .LVU397
+ 1296 0342 18F8020B 		ldrb	r0, [r8], #2	@ zero_extendqisi2
+ 1297 0346 FFF7FEFF 		bl	_Z19SSD1322_SPI_Write_Dh
+ 1298              	.LVL89:
+ 462:Src/main.c    ****         SSD1322_SPI_Write_D(OLED_Data[pos].Data[1]); // Пишем два пикселя
+ 1299              		.loc 1 462 5 is_stmt 1 discriminator 3 view .LVU398
+ 462:Src/main.c    ****         SSD1322_SPI_Write_D(OLED_Data[pos].Data[1]); // Пишем два пикселя
+ 1300              		.loc 1 462 27 discriminator 3 view .LVU399
+ 1301 034a B6F5805F 		cmp	r6, #4096
+ 1302 034e F3D1     		bne	.L33
+ 1303 0350 BFE7     		b	.L27
+ 1304              	.LVL90:
+ 1305              	.L29:
+ 462:Src/main.c    ****         SSD1322_SPI_Write_D(OLED_Data[pos].Data[1]); // Пишем два пикселя
+ 1306              		.loc 1 462 27 is_stmt 0 discriminator 3 view .LVU400
+ 1307              	.LBE231:
+ 1308              	.LBB232:
+ 432:Src/main.c    ****     }
+ 1309              		.loc 1 432 9 is_stmt 1 discriminator 3 view .LVU401
+ 1310              		.syntax unified
+ 1311              	@ 432 "Src/main.c" 1
+ 1312 0352 00BF     		nop
+ 1313              	@ 0 "" 2
+ 431:Src/main.c    ****         __NOP();
+ 1314              		.loc 1 431 5 discriminator 3 view .LVU402
+ 1315              		.thumb
+ 1316              		.syntax unified
+ 1317 0354 0133     		adds	r3, r3, #1
+ 1318              	.LVL91:
+ 431:Src/main.c    ****         __NOP();
+ 1319              		.loc 1 431 5 is_stmt 0 discriminator 3 view .LVU403
+ 1320 0356 C1E7     		b	.L28
+ 1321              	.LVL92:
+ 1322              	.L31:
+ 431:Src/main.c    ****         __NOP();
+ARM GAS  /tmp/ccxhKTgK.s 			page 36
 
 
- 1405              		.loc 1 434 9 is_stmt 1 discriminator 3 view .LVU436
- 1406              		.loc 1 434 28 is_stmt 0 discriminator 3 view .LVU437
- 1407 03d8 98F80100 		ldrb	r0, [r8, #1]	@ zero_extendqisi2
- 1408 03dc FFF7FEFF 		bl	_Z19SSD1322_SPI_Write_Dh
- 1409              	.LVL95:
- 435:Src/main.c    ****         SSD1322_SPI_Write_D(OLED_Data[pos].Data[0]); // Пишем два пикселя
- 1410              		.loc 1 435 9 is_stmt 1 discriminator 3 view .LVU438
- 433:Src/main.c    ****         SSD1322_SPI_Write_D(OLED_Data[pos].Data[1]); // Пишем два пикселя
- 1411              		.loc 1 433 27 is_stmt 0 discriminator 3 view .LVU439
- 1412 03e0 0137     		adds	r7, r7, #1
- 1413              	.LVL96:
- 1414              		.loc 1 435 28 discriminator 3 view .LVU440
- 1415 03e2 18F8020B 		ldrb	r0, [r8], #2	@ zero_extendqisi2
- 1416 03e6 FFF7FEFF 		bl	_Z19SSD1322_SPI_Write_Dh
- 1417              	.LVL97:
- 433:Src/main.c    ****         SSD1322_SPI_Write_D(OLED_Data[pos].Data[1]); // Пишем два пикселя
- 1418              		.loc 1 433 5 is_stmt 1 discriminator 3 view .LVU441
- 433:Src/main.c    ****         SSD1322_SPI_Write_D(OLED_Data[pos].Data[1]); // Пишем два пикселя
- 1419              		.loc 1 433 27 discriminator 3 view .LVU442
- 1420 03ea B7F5805F 		cmp	r7, #4096
- 1421 03ee F3D1     		bne	.L35
- 1422 03f0 C7E7     		b	.L29
- 1423              	.LVL98:
- 1424              	.L31:
- 433:Src/main.c    ****         SSD1322_SPI_Write_D(OLED_Data[pos].Data[1]); // Пишем два пикселя
- 1425              		.loc 1 433 27 is_stmt 0 discriminator 3 view .LVU443
- 1426              	.LBE245:
- 1427              	.LBB246:
- 406:Src/main.c    ****     }
- 1428              		.loc 1 406 9 is_stmt 1 discriminator 3 view .LVU444
- 1429              		.syntax unified
- 1430              	@ 406 "Src/main.c" 1
- 1431 03f2 00BF     		nop
- 1432              	@ 0 "" 2
- 405:Src/main.c    ****         __NOP();
- 1433              		.loc 1 405 5 discriminator 3 view .LVU445
- 1434              		.thumb
- 1435              		.syntax unified
- 1436 03f4 0133     		adds	r3, r3, #1
- 1437              	.LVL99:
- 405:Src/main.c    ****         __NOP();
- 1438              		.loc 1 405 5 is_stmt 0 discriminator 3 view .LVU446
- 1439 03f6 C9E7     		b	.L30
- 1440              	.LVL100:
- 1441              	.L33:
- 405:Src/main.c    ****         __NOP();
- 1442              		.loc 1 405 5 discriminator 3 view .LVU447
- 1443              	.LBE246:
- 1444              	.LBB247:
- 414:Src/main.c    ****     }
- 1445              		.loc 1 414 9 is_stmt 1 discriminator 3 view .LVU448
- 1446              		.syntax unified
- 1447              	@ 414 "Src/main.c" 1
- 1448 03f8 00BF     		nop
- 1449              	@ 0 "" 2
- 413:Src/main.c    ****         __NOP();
- 1450              		.loc 1 413 5 discriminator 3 view .LVU449
-ARM GAS  /tmp/cc74Pu6s.s 			page 38
+ 1323              		.loc 1 431 5 discriminator 3 view .LVU404
+ 1324              	.LBE232:
+ 1325              	.LBB233:
+ 441:Src/main.c    ****     }
+ 1326              		.loc 1 441 9 is_stmt 1 discriminator 3 view .LVU405
+ 1327              		.syntax unified
+ 1328              	@ 441 "Src/main.c" 1
+ 1329 0358 00BF     		nop
+ 1330              	@ 0 "" 2
+ 440:Src/main.c    ****         __NOP();
+ 1331              		.loc 1 440 5 discriminator 3 view .LVU406
+ 1332              		.thumb
+ 1333              		.syntax unified
+ 1334 035a 0133     		adds	r3, r3, #1
+ 1335              	.LVL93:
+ 440:Src/main.c    ****         __NOP();
+ 1336              		.loc 1 440 5 is_stmt 0 discriminator 3 view .LVU407
+ 1337 035c C2E7     		b	.L30
+ 1338              	.LBE233:
+ 1339              		.cfi_endproc
+ 1340              	.LFE141:
+ 1341              		.cantunwind
+ 1342              		.fnend
+ 1344 035e 00BF     		.section	.data._ZZ4mainE3Top,"aw"
+ 1345              		.align	2
+ 1348              	_ZZ4mainE3Top:
+ 1349 0000 50C30000 		.word	50000
+ 1350              		.global	OLED_Data
+ 1351              		.section	.bss.OLED_Data,"aw",%nobits
+ 1352              		.align	1
+ 1355              	OLED_Data:
+ 1356 0000 00000000 		.space	8192
+ 1356      00000000 
+ 1356      00000000 
+ 1356      00000000 
+ 1356      00000000 
+ 1357              		.section	.rodata
+ 1358              		.align	2
+ 1359              		.set	.LANCHOR0,. + 0
+ 1360              	.LC0:
+ 1361 0000 00000000 		.word	0
+ 1362 0004 0000FFFF 		.word	-65536
+ 1363 0008 00F000F0 		.word	-268374016
+ 1364 000c 00F000F0 		.word	-268374016
+ 1365 0010 0000FFFF 		.word	-65536
+ 1366 0014 0000F0F0 		.word	-252706816
+ 1367 0018 00000FF0 		.word	-267452416
+ 1368 001c 00F000F0 		.word	-268374016
+ 1369              	.LC1:
+ 1370 0020 00000000 		.word	0
+ 1371 0024 00F0FFFF 		.word	-4096
+ 1372 0028 000000F0 		.word	-268435456
+ 1373 002c 000000F0 		.word	-268435456
+ 1374 0030 00F0FFFF 		.word	-4096
+ 1375 0034 000000F0 		.word	-268435456
+ 1376 0038 000000F0 		.word	-268435456
+ 1377 003c 00F0FFFF 		.word	-4096
+ARM GAS  /tmp/ccxhKTgK.s 			page 37
 
 
- 1451              		.thumb
- 1452              		.syntax unified
- 1453 03fa 0133     		adds	r3, r3, #1
- 1454              	.LVL101:
- 413:Src/main.c    ****         __NOP();
- 1455              		.loc 1 413 5 is_stmt 0 discriminator 3 view .LVU450
- 1456 03fc CEE7     		b	.L32
- 1457              	.L54:
- 1458 03fe 00BF     		.align	2
- 1459              	.L53:
- 1460 0400 00000000 		.word	OLED_Data
- 1461 0404 00040048 		.word	1207960576
- 1462 0408 00000000 		.word	_ZZ4mainE3Top
- 1463              	.LBE247:
- 1464              		.cfi_endproc
- 1465              	.LFE141:
- 1466              		.cantunwind
- 1467              		.fnend
- 1469              		.section	.data._ZZ4mainE3Top,"aw"
- 1470              		.align	2
- 1473              	_ZZ4mainE3Top:
- 1474 0000 50C30000 		.word	50000
- 1475              		.global	OLED_Data
- 1476              		.section	.bss.OLED_Data,"aw",%nobits
- 1477              		.align	1
- 1480              	OLED_Data:
- 1481 0000 00000000 		.space	8192
- 1481      00000000 
- 1481      00000000 
- 1481      00000000 
- 1481      00000000 
- 1482              		.section	.rodata
- 1483              		.align	2
- 1484              		.set	.LANCHOR0,. + 0
- 1485              	.LC0:
- 1486 0000 00000000 		.word	0
- 1487 0004 0000FFFF 		.word	-65536
- 1488 0008 00F000F0 		.word	-268374016
- 1489 000c 00F000F0 		.word	-268374016
- 1490 0010 0000FFFF 		.word	-65536
- 1491 0014 0000F0F0 		.word	-252706816
- 1492 0018 00000FF0 		.word	-267452416
- 1493 001c 00F000F0 		.word	-268374016
- 1494              	.LC1:
- 1495 0020 00000000 		.word	0
- 1496 0024 00F0FFFF 		.word	-4096
- 1497 0028 000000F0 		.word	-268435456
- 1498 002c 000000F0 		.word	-268435456
- 1499 0030 00F0FFFF 		.word	-4096
- 1500 0034 000000F0 		.word	-268435456
- 1501 0038 000000F0 		.word	-268435456
- 1502 003c 00F0FFFF 		.word	-4096
- 1503              	.LC2:
- 1504 0040 00000000 		.word	0
- 1505 0044 0000FF0F 		.word	268369920
- 1506 0048 00F000F0 		.word	-268374016
- 1507 004c 000000F0 		.word	-268435456
-ARM GAS  /tmp/cc74Pu6s.s 			page 39
-
-
- 1508 0050 000000F0 		.word	-268435456
- 1509 0054 00F00FF0 		.word	-267390976
- 1510 0058 00F000F0 		.word	-268374016
- 1511 005c 0000FF0F 		.word	268369920
- 1512              	.LC3:
- 1513 0060 00000000 		.word	0
- 1514 0064 00000000 		.word	0
- 1515 0068 0000FF00 		.word	16711680
- 1516 006c 0000FF00 		.word	16711680
- 1517 0070 00000000 		.word	0
- 1518 0074 0000FF00 		.word	16711680
- 1519 0078 0000FF00 		.word	16711680
- 1520 007c 00000000 		.word	0
- 1521              	.LC4:
- 1522 0080 00000000 		.word	0
- 1523 0084 0000FF0F 		.word	268369920
- 1524 0088 0000F000 		.word	15728640
- 1525 008c 0000F000 		.word	15728640
- 1526 0090 0000F000 		.word	15728640
- 1527 0094 0000F000 		.word	15728640
- 1528 0098 0000F000 		.word	15728640
- 1529 009c 0000FF0F 		.word	268369920
- 1530              	.LC5:
- 1531 00a0 00000000 		.word	0
- 1532 00a4 0000FFFF 		.word	-65536
- 1533 00a8 00F000F0 		.word	-268374016
- 1534 00ac 00F000F0 		.word	-268374016
- 1535 00b0 0000FFFF 		.word	-65536
- 1536 00b4 000000F0 		.word	-268435456
- 1537 00b8 000000F0 		.word	-268435456
- 1538 00bc 000000F0 		.word	-268435456
- 1539              		.text
- 1540              	.Letext0:
- 1541              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
- 1542              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
- 1543              		.file 4 "./Src/Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h"
-ARM GAS  /tmp/cc74Pu6s.s 			page 40
+ 1378              	.LC2:
+ 1379 0040 00000000 		.word	0
+ 1380 0044 0000FF0F 		.word	268369920
+ 1381 0048 00F000F0 		.word	-268374016
+ 1382 004c 000000F0 		.word	-268435456
+ 1383 0050 000000F0 		.word	-268435456
+ 1384 0054 00F00FF0 		.word	-267390976
+ 1385 0058 00F000F0 		.word	-268374016
+ 1386 005c 0000FF0F 		.word	268369920
+ 1387              	.LC3:
+ 1388 0060 00000000 		.word	0
+ 1389 0064 00000000 		.word	0
+ 1390 0068 0000FF00 		.word	16711680
+ 1391 006c 0000FF00 		.word	16711680
+ 1392 0070 00000000 		.word	0
+ 1393 0074 0000FF00 		.word	16711680
+ 1394 0078 0000FF00 		.word	16711680
+ 1395 007c 00000000 		.word	0
+ 1396              	.LC4:
+ 1397 0080 00000000 		.word	0
+ 1398 0084 0000FF0F 		.word	268369920
+ 1399 0088 0000F000 		.word	15728640
+ 1400 008c 0000F000 		.word	15728640
+ 1401 0090 0000F000 		.word	15728640
+ 1402 0094 0000F000 		.word	15728640
+ 1403 0098 0000F000 		.word	15728640
+ 1404 009c 0000FF0F 		.word	268369920
+ 1405              	.LC5:
+ 1406 00a0 00000000 		.word	0
+ 1407 00a4 0000FFFF 		.word	-65536
+ 1408 00a8 00F000F0 		.word	-268374016
+ 1409 00ac 00F000F0 		.word	-268374016
+ 1410 00b0 0000FFFF 		.word	-65536
+ 1411 00b4 000000F0 		.word	-268435456
+ 1412 00b8 000000F0 		.word	-268435456
+ 1413 00bc 000000F0 		.word	-268435456
+ 1414              	.LC6:
+ 1415 00c0 FFFFFFFF 		.word	-1
+ 1416 00c4 FFFFFFFF 		.word	-1
+ 1417 00c8 FFFFFFFF 		.word	-1
+ 1418 00cc FFFFFFFF 		.word	-1
+ 1419 00d0 FFFFFFFF 		.word	-1
+ 1420 00d4 FFFFFFFF 		.word	-1
+ 1421 00d8 FFFFFFFF 		.word	-1
+ 1422 00dc FFFFFFFF 		.word	-1
+ 1423              		.text
+ 1424              	.Letext0:
+ 1425              		.file 2 "/usr/arm-none-eabi/include/machine/_default_types.h"
+ 1426              		.file 3 "/usr/arm-none-eabi/include/sys/_stdint.h"
+ 1427              		.file 4 "./Src/Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h"
+ARM GAS  /tmp/ccxhKTgK.s 			page 38
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 main.c
-     /tmp/cc74Pu6s.s:21     .text._Z14Spi_Write_Datat:00000000 $t
-     /tmp/cc74Pu6s.s:27     .text._Z14Spi_Write_Datat:00000000 _Z14Spi_Write_Datat
-     /tmp/cc74Pu6s.s:76     .text._Z14Spi_Write_Datat:00000024 $d
+     /tmp/ccxhKTgK.s:21     .text._Z14Spi_Write_Datat:00000000 $t
+     /tmp/ccxhKTgK.s:27     .text._Z14Spi_Write_Datat:00000000 _Z14Spi_Write_Datat
+     /tmp/ccxhKTgK.s:76     .text._Z14Spi_Write_Datat:00000024 $d
 .ARM.exidx.text._Z14Spi_Write_Datat:00000000 $d
-     /tmp/cc74Pu6s.s:84     .text._Z19SSD1322_SPI_Write_Dh:00000000 $t
-     /tmp/cc74Pu6s.s:90     .text._Z19SSD1322_SPI_Write_Dh:00000000 _Z19SSD1322_SPI_Write_Dh
+     /tmp/ccxhKTgK.s:84     .text._Z19SSD1322_SPI_Write_Dh:00000000 $t
+     /tmp/ccxhKTgK.s:90     .text._Z19SSD1322_SPI_Write_Dh:00000000 _Z19SSD1322_SPI_Write_Dh
 .ARM.exidx.text._Z19SSD1322_SPI_Write_Dh:00000000 $d
-     /tmp/cc74Pu6s.s:112    .text._Z19SSD1322_SPI_Write_Ch:00000000 $t
-     /tmp/cc74Pu6s.s:118    .text._Z19SSD1322_SPI_Write_Ch:00000000 _Z19SSD1322_SPI_Write_Ch
+     /tmp/ccxhKTgK.s:112    .text._Z19SSD1322_SPI_Write_Ch:00000000 $t
+     /tmp/ccxhKTgK.s:118    .text._Z19SSD1322_SPI_Write_Ch:00000000 _Z19SSD1322_SPI_Write_Ch
 .ARM.exidx.text._Z19SSD1322_SPI_Write_Ch:00000000 $d
-     /tmp/cc74Pu6s.s:138    .text._Z20SSD1322_SPI_Write_CDhh:00000000 $t
-     /tmp/cc74Pu6s.s:144    .text._Z20SSD1322_SPI_Write_CDhh:00000000 _Z20SSD1322_SPI_Write_CDhh
+     /tmp/ccxhKTgK.s:138    .text._Z20SSD1322_SPI_Write_CDhh:00000000 $t
+     /tmp/ccxhKTgK.s:144    .text._Z20SSD1322_SPI_Write_CDhh:00000000 _Z20SSD1322_SPI_Write_CDhh
 .ARM.exidx.text._Z20SSD1322_SPI_Write_CDhh:00000000 $d
-     /tmp/cc74Pu6s.s:194    .text._Z21SSD1322_SPI_Write_CDDhhh:00000000 $t
-     /tmp/cc74Pu6s.s:200    .text._Z21SSD1322_SPI_Write_CDDhhh:00000000 _Z21SSD1322_SPI_Write_CDDhhh
+     /tmp/ccxhKTgK.s:194    .text._Z21SSD1322_SPI_Write_CDDhhh:00000000 $t
+     /tmp/ccxhKTgK.s:200    .text._Z21SSD1322_SPI_Write_CDDhhh:00000000 _Z21SSD1322_SPI_Write_CDDhhh
 .ARM.exidx.text._Z21SSD1322_SPI_Write_CDDhhh:00000000 $d
-     /tmp/cc74Pu6s.s:260    .text._Z22SSD1322_SPI_Write_CDDDhhhh:00000000 $t
-     /tmp/cc74Pu6s.s:266    .text._Z22SSD1322_SPI_Write_CDDDhhhh:00000000 _Z22SSD1322_SPI_Write_CDDDhhhh
+     /tmp/ccxhKTgK.s:260    .text._Z22SSD1322_SPI_Write_CDDDhhhh:00000000 $t
+     /tmp/ccxhKTgK.s:266    .text._Z22SSD1322_SPI_Write_CDDDhhhh:00000000 _Z22SSD1322_SPI_Write_CDDDhhhh
 .ARM.exidx.text._Z22SSD1322_SPI_Write_CDDDhhhh:00000000 $d
-     /tmp/cc74Pu6s.s:332    .text._Z23SSD1322_SPI_Write_CDDDDhhhhh:00000000 $t
-     /tmp/cc74Pu6s.s:338    .text._Z23SSD1322_SPI_Write_CDDDDhhhhh:00000000 _Z23SSD1322_SPI_Write_CDDDDhhhhh
+     /tmp/ccxhKTgK.s:332    .text._Z23SSD1322_SPI_Write_CDDDDhhhhh:00000000 $t
+     /tmp/ccxhKTgK.s:338    .text._Z23SSD1322_SPI_Write_CDDDDhhhhh:00000000 _Z23SSD1322_SPI_Write_CDDDDhhhhh
 .ARM.exidx.text._Z23SSD1322_SPI_Write_CDDDDhhhhh:00000000 $d
-     /tmp/cc74Pu6s.s:415    .text.startup.main:00000000 $t
-     /tmp/cc74Pu6s.s:421    .text.startup.main:00000000 main
-     /tmp/cc74Pu6s.s:1216   .text.startup.main:00000338 $d
-     /tmp/cc74Pu6s.s:1480   .bss.OLED_Data:00000000 OLED_Data
-     /tmp/cc74Pu6s.s:1234   .text.startup.main:00000348 $t
-     /tmp/cc74Pu6s.s:1460   .text.startup.main:00000400 $d
-     /tmp/cc74Pu6s.s:1473   .data._ZZ4mainE3Top:00000000 _ZZ4mainE3Top
+     /tmp/ccxhKTgK.s:415    .text.startup.main:00000000 $t
+     /tmp/ccxhKTgK.s:421    .text.startup.main:00000000 main
+     /tmp/ccxhKTgK.s:1273   .text.startup.main:00000320 $d
+     /tmp/ccxhKTgK.s:1355   .bss.OLED_Data:00000000 OLED_Data
+     /tmp/ccxhKTgK.s:1348   .data._ZZ4mainE3Top:00000000 _ZZ4mainE3Top
+     /tmp/ccxhKTgK.s:1288   .text.startup.main:00000338 $t
      .ARM.exidx.text.startup.main:00000000 $d
-     /tmp/cc74Pu6s.s:1470   .data._ZZ4mainE3Top:00000000 $d
-     /tmp/cc74Pu6s.s:1477   .bss.OLED_Data:00000000 $d
-     /tmp/cc74Pu6s.s:1483   .rodata:00000000 $d
+     /tmp/ccxhKTgK.s:1345   .data._ZZ4mainE3Top:00000000 $d
+     /tmp/ccxhKTgK.s:1352   .bss.OLED_Data:00000000 $d
+     /tmp/ccxhKTgK.s:1358   .rodata:00000000 $d
 
 NO UNDEFINED SYMBOLS

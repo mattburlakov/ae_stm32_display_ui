@@ -259,7 +259,7 @@ int main()
     SSD1322_SPI_Write_C(0x5C); // Запись в RAM
 
 
-    for(uint16_t pos=0;pos<OLED_Data_Length;pos++) {
+    for(uint16_t pos=0;pos<OLED_Data_Length;pos++) { //?
         SSD1322_SPI_Write_D(OLED_Data[pos].Data[1]); // Пишем два пикселя
         SSD1322_SPI_Write_D(OLED_Data[pos].Data[0]); // Пишем два пикселя
     }
@@ -272,6 +272,7 @@ int main()
     }
     */
     // Точки по углам
+    /*
     OLED_Data[0].pix0 = 0x0F;
     OLED_Data[0].pix1 = 0x09;
     OLED_Data[0].pix2 = 0x05;
@@ -282,33 +283,40 @@ int main()
     OLED_Data[3*256/4].pix0 = 0x01;
     //OLED_Data[(256/4)*63].pix0 = 0x0F;
     //OLED_Data[(256/4)*64-1].pix3 = 0x0F;
+    */
 
 
-    for(uint8_t x=0;x<256/4;x++) {
+    for(uint8_t x=0;x<256/4;x++) { //top border
         uint16_t pos_x = (256/4)*10;
+        /*
         OLED_Data[pos_x + x].pix0 = 0x0F;
         OLED_Data[pos_x + x].pix1 = 0x0F;
         OLED_Data[pos_x + x].pix2 = 0x0F;
         OLED_Data[pos_x + x].pix3 = 0x0F;
+        */
     }
 
-    for(uint8_t x=0;x<256/4;x++) {
+    for(uint8_t x=0;x<256/4;x++) { //bottom border
         uint16_t pos_x = (256/4)*0;
+        /*
         OLED_Data[pos_x + x].pix0 = 0x0F;
         OLED_Data[pos_x + x].pix1 = 0x0F;
         OLED_Data[pos_x + x].pix2 = 0x0F;
         OLED_Data[pos_x + x].pix3 = 0x0F;
+        */
     }
 
 
-    for(uint8_t x=0;x<10;x++) {
+    for(uint8_t x=0;x<10;x++) { //table separators
         uint16_t pos = (256/4)*x;
+        /*
         OLED_Data[pos].pix0 = 0x0F;
         OLED_Data[pos+12].pix0 = 0x0F;
         OLED_Data[pos+25].pix0 = 0x0F;
         OLED_Data[pos+38].pix0 = 0x0F;
         OLED_Data[pos+51].pix3 = 0x0F;
         OLED_Data[pos+63].pix3 = 0x0F;
+        */
     }
 
     const uint32_t Char_R[] = {
@@ -377,7 +385,7 @@ int main()
         0x0FFF0000
     };
 
-    const uint32_t Char_P[] = {
+    uint32_t Char_P[] = {
         0x00000000,
         0xFFFF0000,
         0xF000F000,
@@ -387,6 +395,21 @@ int main()
         0xF0000000,
         0xF0000000
     };
+
+    const uint32_t char_mask[] = { //tmp, remove
+    0xFFFFFFFF,
+    0xFFFFFFFF,
+    0xFFFFFFFF,
+    0xFFFFFFFF,
+    0xFFFFFFFF,
+    0xFFFFFFFF,
+    0xFFFFFFFF,
+    0xFFFFFFFF
+    };
+
+    for(int i = 0; i < 8; i++){ //tmp, checking
+        Char_P[i] ^= char_mask[i];
+    }
 
     write_char(3,2, Char_R);
     write_char(5,2, Char_E);
@@ -399,9 +422,11 @@ int main()
 
 Work:
 
+    //PCB LED control
     /* переключаем выход PORTA8 в единицу */
     // GPIOB->BSRR |= GPIO_BSRR_BS1;
-    GPIOB->ODR |= GPIO_ODR_OD1;
+    GPIOB->ODR |= GPIO_ODR_OD1; //LED3 ORANGE
+    //GPIOB->ODR |= GPIO_ODR_OD5;
 
     for(uint32_t i = 0; i<Top; i++) {
         __NOP();
@@ -409,18 +434,21 @@ Work:
 
     /* переключаем выход PORTA8 в ноль */
     //GPIOB->BSRR |= GPIO_BSRR_BR1;
-    GPIOB->ODR &= ~GPIO_ODR_OD1;
+    //GPIOB->ODR &= ~GPIO_ODR_OD1; //ORANGE
+    //GPIOB->ODR &= ~GPIO_ODR_OD5;
 
     for(uint32_t i = 0; i<Top; i++) {
         __NOP();
     }
 
     if (GPIOB->IDR & GPIO_IDR_ID10) {
-        Top = 50000;
+        Top = 500000;
     }
     else {
         Top = 10000;
     }
+
+    //PCB LED end
 
     //static uint16_t tmp = 0;
     //tmp++;
