@@ -97,6 +97,7 @@ AS_INCLUDES =
 # C includes
 C_INCLUDES =  \
 -I. \
+-I include \
 -I$(STD_PERIPH_LIBS)/CMSIS/Device/ST/STM32G4xx/Include/ \
 -I$(STD_PERIPH_LIBS)/CMSIS/Core/Include/
 

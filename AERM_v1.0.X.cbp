@@ -50,7 +50,12 @@
 		</Linker>
 		<Unit filename="Makefile" />
 		<Unit filename="Src/Drivers/CMSIS/Device/ST/STM32G4xx/Include/stm32g474xx.h" />
+		<Unit filename="Src/include/FONT_A.h" />
+		<Unit filename="Src/include/Font.h" />
 		<Unit filename="Src/include/Glyph.h" />
+		<Unit filename="Src/include/Label.h" />
+		<Unit filename="Src/include/SPI_Connection.h" />
+		<Unit filename="Src/include/ScreenControl.h" />
 		<Unit filename="Src/main.c">
 			<Option compilerVar="CC" />
 		</Unit>

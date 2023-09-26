@@ -2,26 +2,18 @@
 #define GLYPH_H
 
 #include <utility>
-
-const uint32_t char_mask[] = {
-    0xFFFFFFFF,
-    0xFFFFFFFF,
-    0xFFFFFFFF,
-    0xFFFFFFFF,
-    0xFFFFFFFF,
-    0xFFFFFFFF,
-    0xFFFFFFFF,
-    0xFFFFFFFF
-};
+#include <Font.h>
 
 class Glyph {
 private:
-    //const char* character;
-    const uint32_t* data;
+    char* character;
+    uint32_t* data;
+
+    Font* font;
 
 public:
-    Glyph(const char* d){
-        data = std::move(d);
+    Glyph(char* d){
+
     }
     ~Glyph(){}
 

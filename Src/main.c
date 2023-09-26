@@ -1,5 +1,15 @@
 #include <stm32g474xx.h>
 
+#include "include/ScreenControl.h"
+
+#include "include/FONT_A.h" //test font
+
+#include "include/Font.h"
+#include "include/Label.h"
+#include "include/ScreenControl.h"
+
+#include "include/SPI_Connection.h"
+
     // =========== OLED SPI ======================
     // PA5 -- SCK
     // PA7 -- MOSI
@@ -44,6 +54,31 @@ static inline void Spi_Init(void)
     }
 
     GPIOB->BSRR |= GPIO_BSRR_BS14; // отключаем сброс
+}
+
+static inline void joystickInit(){
+/* настраиваем GPI10 */
+    GPIOB->MODER &= ~GPIO_MODER_MODER10;    //Up             /* MODE10=00 */
+    GPIOB->PUPDR |=  GPIO_PUPDR_PUPD10_0;                    /* PUPD10=01 */
+
+    GPIOB->MODER &= ~GPIO_MODER_MODER2;     //Right
+    GPIOB->PUPDR |=  GPIO_PUPDR_PUPD2_0;
+
+    GPIOC->MODER &= ~GPIO_MODER_MODER4;     //Left
+    GPIOC->PUPDR |=  GPIO_PUPDR_PUPD4_0;
+
+    GPIOC->MODER &= ~GPIO_MODER_MODER5;     //Down
+    GPIOC->PUPDR |=  GPIO_PUPDR_PUPD5_0;
+
+    GPIOC->MODER &= ~GPIO_MODER_MODER13;    //Center
+    GPIOC->PUPDR |=  GPIO_PUPDR_PUPD13_0;
+
+    /*
+        00: No pull-up, pull-down
+        01: Pull-up
+        10: Pull-down
+        11: Reserved
+    */
 }
 
 uint16_t Spi_Write_Data(uint16_t data)
@@ -192,19 +227,25 @@ const uint16_t OLED_Data_Length = 256*64/4;
 PixU8_t OLED_Data[OLED_Data_Length] = {0};
 
 static void write_char(const uint8_t x_pos, const uint8_t y_pos, const uint32_t *Char) {
-
     uint8_t char_pos = 0;
     // Выводим символ
-    for(uint8_t i=0;i<8;i++) {
+    for(uint8_t i=0;i<8;i++) {// i - symbol height
         uint16_t pos = (256/4)*(7-i+y_pos)+(256/4-x_pos);
         OLED_Data[pos+1].DataW = Char[char_pos]>>16;
         OLED_Data[pos].DataW = Char[char_pos++];
     }
 }
 
+void invertChar(uint32_t *character){
+    for(int i = 0; i < 8; i++){ //invert
+        character[i] ^= 0xFFFFFFFF;
+    }
+
+    write_char(13, 2, character);
+}
+
 int main()
 {
-    //
 
 // PortInit:
 
@@ -214,17 +255,83 @@ int main()
     // PB10 -- Кнопка Вверх
 
     RCC->AHB2ENR |= RCC_AHB2ENR_GPIOBEN;     /* включаем тактирование PortB */
+    RCC->AHB2ENR |= RCC_AHB2ENR_GPIOCEN;
     /* настраиваем GPIO1 */
     // GPIOB->MODER |=  GPIO_MODER_MODER1_0;    /* MODE1=01 */
     // GPIOB->MODER &= ~GPIO_MODER_MODER1_1;    /* MODE1=01 */
     GPIOB->MODER = (GPIOB->MODER & ~GPIO_MODER_MODER1) | GPIO_MODER_MODER1_0;    /* MODE1=01 */
+    GPIOB->MODER = (GPIOB->MODER & ~GPIO_MODER_MODER7) | GPIO_MODER_MODER7_0;    /* MODE7=01 */ //set GPIO port B bit(pin?) 7 to output mode
+
+    /*
+        00: Input mode
+        01: General purpose output mode
+        10: Alternate function mode
+        11: Analog mode (reset state)
+    */
 
     /* настраиваем GPI10 */
-    GPIOB->MODER &= ~GPIO_MODER_MODER10;      /* MODE10=00 */
-    GPIOB->PUPDR |=  GPIO_PUPDR_PUPD10_0;    /* PUPD10=01 */
+    /*
+    GPIOB->MODER &= ~GPIO_MODER_MODER10;     // MODE10=00
+    GPIOB->PUPDR |=  GPIO_PUPDR_PUPD10_0;    // PUPD10=01
+    */
+    joystickInit();
 
+    /*
+        00: No pull-up, pull-down
+        01: Pull-up
+        10: Pull-down
+        11: Reserved
+    */
 
-    Spi_Init();
+#define TESTn
+
+#ifndef TEST
+
+    //EXPERIMANTAL \/----------------------------------------------\/
+
+    SPI_Connection connection;              //Create SPI2 connection object
+    ScreenControl screen(&connection);      //Create Screen control handler and bind to SPI2 connection obj
+
+    connection.SSD1322_write_CD(0xfd, 0x12);                 // unlock
+    connection.SSD1322_write_C(0xae);                        // display off
+    connection.SSD1322_write_CD(0xb3, 0x91);                 // set display clock divide ratio/oscillator frequency (set clock as 80 frames/sec)
+    connection.SSD1322_write_CD(0xca, 0x3f);                 // multiplex ratio 1/64 Duty (0x0F~0x3F)
+    connection.SSD1322_write_CD(0xa2, 0x00);                 // display offset, shift mapping ram counter
+    connection.SSD1322_write_CD(0xa1, 0x00);                 // display start line
+    // SSD1322_SPI_Write_CDD(0xa0, 0x14, 0x11);           // Set Re-Map / Dual COM Line Mode
+    //SSD1322_SPI_Write_CDD(0xa0, 0x06, 0x11);          // Set Re-Map / Dual COM Line Mode
+    connection.SSD1322_write_C2D(0xa0, 0x02, 0x11);          // Set Re-Map / Dual COM Line Mode
+    connection.SSD1322_write_CD(0xab, 0x01);                 // Enable Internal VDD Regulator
+    connection.SSD1322_write_C2D(0xb4, 0xa0, 0x05|0xfd);    // Display Enhancement A
+    connection.SSD1322_write_CD(0xc1, 0xAf);                 // contrast
+    connection.SSD1322_write_CD(0xc7, 0x0f);                 // Set Scale Factor of Segment Output Current Control
+    connection.SSD1322_write_C(0xb9);                        // linear grayscale
+    connection.SSD1322_write_CD(0xb1, 0xe2);                 // Phase 1 (Reset) & Phase 2 (Pre-Charge) Period Adjustment
+    connection.SSD1322_write_C2D(0xd1, 0x82|0x20, 0x20);   // Display Enhancement B
+    connection.SSD1322_write_CD(0xbb, 0x1f);                 // precharge  voltage
+    connection.SSD1322_write_CD(0xb6, 0x08);                 // precharge  period
+    connection.SSD1322_write_CD(0xbe, 0x07);                 // vcomh
+    connection.SSD1322_write_C(0xa6);                        // normal display
+    connection.SSD1322_write_C(0xa9);                        // exit partial display
+
+    connection.SSD1322_write_C(0xAF);                        // Включаем экран
+
+    for(uint32_t i = 0; i<1000; i++) {
+        __NOP();
+    }
+
+    Work1:
+        screen.draw();
+
+    goto Work1;
+
+    //EXPERIMENTAL /\----------------------------------------------/\
+
+#endif
+
+#ifdef TEST
+
+        Spi_Init();
 
     SSD1322_SPI_Write_CD(0xfd, 0x12);                 // unlock
     SSD1322_SPI_Write_C(0xae);                        // display off
@@ -321,11 +428,11 @@ int main()
 
     const uint32_t Char_R[] = {
         0x00000000,
-        0xFFFF0000,
+        0xFFFF1000,
         0xF000F000,
         0xF000F000,
-        0xFFFF0000,
-        0xF0F00000,
+        0xFFFF1000,
+        0xF1F00000,
         0xF00F0000,
         0xF000F000
     };
@@ -341,7 +448,7 @@ int main()
         0xFFFFF000
     };
 
-    const uint32_t Char_G[] = {
+    uint32_t Char_G[] = {
         0x00000000,
         0x0FFF0000,
         0xF000F000,
@@ -363,7 +470,7 @@ int main()
         0x00000000
     };
 
-    const uint32_t Char_U[] = {
+    uint32_t Char_U[] = {
         0x00000000,
         0xF000F000,
         0xF000F000,
@@ -374,7 +481,7 @@ int main()
         0x0FFF0000
     };
 
-    const uint32_t Char_I[] = {
+    uint32_t Char_I[] = {
         0x00000000,
         0x0FFF0000,
         0x00F00000,
@@ -396,19 +503,8 @@ int main()
         0xF0000000
     };
 
-    const uint32_t char_mask[] = { //tmp, remove
-    0xFFFFFFFF,
-    0xFFFFFFFF,
-    0xFFFFFFFF,
-    0xFFFFFFFF,
-    0xFFFFFFFF,
-    0xFFFFFFFF,
-    0xFFFFFFFF,
-    0xFFFFFFFF
-    };
-
-    for(int i = 0; i < 8; i++){ //tmp, checking
-        Char_P[i] ^= char_mask[i];
+    for(int i = 0; i < 8; i++){ //invert
+        Char_P[i] ^= 0x00000000;
     }
 
     write_char(3,2, Char_R);
@@ -422,11 +518,11 @@ int main()
 
 Work:
 
-    //PCB LED control
+    //PCB LED control --------------------------
     /* переключаем выход PORTA8 в единицу */
     // GPIOB->BSRR |= GPIO_BSRR_BS1;
     GPIOB->ODR |= GPIO_ODR_OD1; //LED3 ORANGE
-    //GPIOB->ODR |= GPIO_ODR_OD5;
+    GPIOB->ODR |= GPIO_ODR_OD7; //LED4 GREEN
 
     for(uint32_t i = 0; i<Top; i++) {
         __NOP();
@@ -434,27 +530,34 @@ Work:
 
     /* переключаем выход PORTA8 в ноль */
     //GPIOB->BSRR |= GPIO_BSRR_BR1;
-    //GPIOB->ODR &= ~GPIO_ODR_OD1; //ORANGE
-    //GPIOB->ODR &= ~GPIO_ODR_OD5;
+    GPIOB->ODR &= ~GPIO_ODR_OD1; //ORANGE
+    GPIOB->ODR &= ~GPIO_ODR_OD7; //GREEN
 
     for(uint32_t i = 0; i<Top; i++) {
         __NOP();
     }
 
-    if (GPIOB->IDR & GPIO_IDR_ID10) {
-        Top = 500000;
+    if (~GPIOB->IDR & GPIO_IDR_ID10) {
+        invertChar(Char_P);
     }
-    else {
-        Top = 10000;
+    else if (~GPIOB->IDR & GPIO_IDR_ID2) {
+        invertChar(Char_I);
+    }
+    else if (~GPIOC->IDR & GPIO_IDR_ID5) {
+        invertChar(Char_U);
+    }
+    else if (~GPIOC->IDR & GPIO_IDR_ID4) {
+        invertChar(Char_G);
     }
 
-    //PCB LED end
+    //PCB LED end ----------------------------
 
     //static uint16_t tmp = 0;
     //tmp++;
     //Spi_Write_Data(tmp);
     //SSD1322_SPI_Write_D(0xFF); // Полная засветка дисплея
 
+    //OLED ------------------------------------------------------
     SSD1322_SPI_Write_CDD(0x15, 28, 91);// set column address, start, end
     SSD1322_SPI_Write_CDD(0x75, 0, 63); // set row address, moved out of the loop (issue 302)
     SSD1322_SPI_Write_C(0x5C); // Запись в RAM
@@ -465,5 +568,6 @@ Work:
     }
 
     goto Work; //replace with while?
+#endif
 
 }
