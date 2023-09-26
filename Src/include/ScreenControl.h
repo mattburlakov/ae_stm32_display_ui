@@ -21,13 +21,12 @@ private:
     uint8_t labelNum = 4;
     Label* labels[4] = {nullptr, nullptr, nullptr, nullptr}; //tmp, remove
 
-    //std::vector<Label> labels; //unsafe
-    const uint8_t pixels = 256*64/2;
-    uint8_t visualData[256*64] {0};
+    const uint16_t dataLen = 256*64/2;
+    uint8_t visualData[256*64/2] = {0};
 
 public:
-    ScreenControl(SPI_Connection* con){
-        connection = con;
+    ScreenControl(SPI_Connection* c){
+        connection = c;
 
         //testing
         /*
@@ -52,8 +51,7 @@ public:
     }
 
     void assembleFrame(){
-        //testing
-        for(uint8_t i = 0; i < labelNum; i++){
+        for(uint16_t i = 0; i < dataLen; i++){
 
         }
     }
@@ -63,29 +61,14 @@ public:
         connection->SSD1322_write_C2D(0x75, 0, 63);     // set row address, moved out of the loop (issue 302)
         connection->SSD1322_write_C(0x5C);              // Запись в RAM
 
-        /*
-        //REMOVE------------------------------
-        GPIOB->ODR |= GPIO_ODR_OD1; //LED3 ORANGE
-        for(uint32_t i = 0; i < 100000; i++) {
-            __NOP();
-        }
-
-        GPIOB->ODR &= ~GPIO_ODR_OD1; //ORANGE
-        for(uint32_t i = 0; i < 100000; i++) {
-            __NOP();
-        }
-
-        //REMOVE------------------------------
-        */
-
-        for(uint16_t i = 0; i < pixels; i++){
-            connection->SSD1322_write_D(0b11111111);
+        for(uint16_t i = 0; i < dataLen; i++){
+            connection->SSD1322_write_D(visualData[i]);
         }
 
     }
 
     void clearScreen(){
-        for(uint16_t i = 0; i < pixels; i++){
+        for(uint16_t i = 0; i < dataLen; i++){
             visualData[i] = 0b00000000;
         }
     }

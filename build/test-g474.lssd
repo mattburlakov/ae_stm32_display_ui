@@ -5,49 +5,49 @@ Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
   0 .isr_vector   000001d8  08000000  08000000  00001000  2**0
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  1 .text         000003a8  080001d8  080001d8  000011d8  2**2
+  1 .text         000003e8  080001d8  080001d8  000011d8  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .rodata       00000000  08000580  08000590  00001590  2**0
+  2 .rodata       00000000  080005c0  080005d0  000015d0  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  3 .ARM.extab    00000000  08000580  08000580  00001580  2**0
+  3 .ARM.extab    00000000  080005c0  080005c0  000015c0  2**0
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  4 .ARM          00000008  08000580  08000580  00001580  2**2
+  4 .ARM          00000008  080005c0  080005c0  000015c0  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  5 .preinit_array 00000000  08000588  08000590  00001590  2**0
+  5 .preinit_array 00000000  080005c8  080005d0  000015d0  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  6 .init_array   00000004  08000588  08000588  00001588  2**2
+  6 .init_array   00000004  080005c8  080005c8  000015c8  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  7 .fini_array   00000004  0800058c  0800058c  0000158c  2**2
+  7 .fini_array   00000004  080005cc  080005cc  000015cc  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  8 .data         00000000  20000000  20000000  00001590  2**0
+  8 .data         00000000  20000000  20000000  000015d0  2**0
                   CONTENTS, ALLOC, LOAD, DATA
-  9 .bss          0000001c  20000000  08000590  00002000  2**2
+  9 .bss          0000001c  20000000  080005d0  00002000  2**2
                   ALLOC
- 10 ._user_heap_stack 00000604  2000001c  08000590  0000201c  2**0
+ 10 ._user_heap_stack 00000604  2000001c  080005d0  0000201c  2**0
                   ALLOC
- 11 .ARM.attributes 00000030  00000000  00000000  00001590  2**0
+ 11 .ARM.attributes 00000030  00000000  00000000  000015d0  2**0
                   CONTENTS, READONLY
- 12 .comment      00000046  00000000  00000000  000015c0  2**0
+ 12 .comment      00000046  00000000  00000000  00001600  2**0
                   CONTENTS, READONLY
- 13 .debug_info   00002c8e  00000000  00000000  00001606  2**0
+ 13 .debug_info   00002df0  00000000  00000000  00001646  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_abbrev 00000730  00000000  00000000  00004294  2**0
+ 14 .debug_abbrev 000007ff  00000000  00000000  00004436  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_loc    00000b04  00000000  00000000  000049c4  2**0
+ 15 .debug_loc    00000b75  00000000  00000000  00004c35  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_aranges 000000f0  00000000  00000000  000054c8  2**3
+ 16 .debug_aranges 00000110  00000000  00000000  000057b0  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_ranges 000001c8  00000000  00000000  000055b8  2**3
+ 17 .debug_ranges 000001e0  00000000  00000000  000058c0  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   00000b78  00000000  00000000  00005780  2**0
+ 18 .debug_line   00000ca7  00000000  00000000  00005aa0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    00000c54  00000000  00000000  000062f8  2**0
+ 19 .debug_str    00000cf5  00000000  00000000  00006747  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_frame  000001b8  00000000  00000000  00006f4c  2**2
+ 20 .debug_frame  000001e4  00000000  00000000  0000743c  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_loclists 00000044  00000000  00000000  00007104  2**0
+ 21 .debug_loclists 0000008b  00000000  00000000  00007620  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_rnglists 00000013  00000000  00000000  00007148  2**0
+ 22 .debug_rnglists 00000026  00000000  00000000  000076ab  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -96,7 +96,7 @@ Disassembly of section .text:
  8000232:	bd10      	pop	{r4, pc}
  8000234:	20000000 	.word	0x20000000
  8000238:	00000000 	.word	0x00000000
- 800023c:	08000568 	.word	0x08000568
+ 800023c:	080005a8 	.word	0x080005a8
 
 08000240 <frame_dummy>:
  8000240:	b508      	push	{r3, lr}
@@ -109,7 +109,7 @@ Disassembly of section .text:
  8000252:	e7cf      	b.n	80001f4 <register_tm_clones>
  8000254:	00000000 	.word	0x00000000
  8000258:	20000004 	.word	0x20000004
- 800025c:	08000568 	.word	0x08000568
+ 800025c:	080005a8 	.word	0x080005a8
 
 08000260 <_ZN14SPI_Connection10write_dataEt.isra.0>:
  8000260:	4b08      	ldr	r3, [pc, #32]	@ (8000284 <_ZN14SPI_Connection10write_dataEt.isra.0+0x24>)
@@ -206,15 +206,15 @@ Disassembly of section .text:
  800034c:	40003800 	.word	0x40003800
 
 08000350 <main>:
- 8000350:	4b57      	ldr	r3, [pc, #348]	@ (80004b0 <main+0x160>)
- 8000352:	b507      	push	{r0, r1, r2, lr}
- 8000354:	6cda      	ldr	r2, [r3, #76]	@ 0x4c
- 8000356:	f042 0202 	orr.w	r2, r2, #2
+ 8000350:	4b63      	ldr	r3, [pc, #396]	@ (80004e0 <main+0x190>)
+ 8000352:	6cda      	ldr	r2, [r3, #76]	@ 0x4c
+ 8000354:	f042 0202 	orr.w	r2, r2, #2
+ 8000358:	b530      	push	{r4, r5, lr}
  800035a:	64da      	str	r2, [r3, #76]	@ 0x4c
  800035c:	6cda      	ldr	r2, [r3, #76]	@ 0x4c
  800035e:	f042 0204 	orr.w	r2, r2, #4
  8000362:	64da      	str	r2, [r3, #76]	@ 0x4c
- 8000364:	4b53      	ldr	r3, [pc, #332]	@ (80004b4 <main+0x164>)
+ 8000364:	4b5f      	ldr	r3, [pc, #380]	@ (80004e4 <main+0x194>)
  8000366:	681a      	ldr	r2, [r3, #0]
  8000368:	f022 020c 	bic.w	r2, r2, #12
  800036c:	f042 0204 	orr.w	r2, r2, #4
@@ -251,185 +251,209 @@ Disassembly of section .text:
  80003d2:	f022 6240 	bic.w	r2, r2, #201326592	@ 0xc000000
  80003d6:	f8c3 2400 	str.w	r2, [r3, #1024]	@ 0x400
  80003da:	f8d3 240c 	ldr.w	r2, [r3, #1036]	@ 0x40c
- 80003de:	f042 6280 	orr.w	r2, r2, #67108864	@ 0x4000000
- 80003e2:	f8c3 240c 	str.w	r2, [r3, #1036]	@ 0x40c
- 80003e6:	a801      	add	r0, sp, #4
- 80003e8:	f7ff ff6a 	bl	80002c0 <_ZN14SPI_ConnectionC1Ev>
- 80003ec:	2112      	movs	r1, #18
- 80003ee:	20fd      	movs	r0, #253	@ 0xfd
- 80003f0:	f7ff ff4c 	bl	800028c <_ZN14SPI_Connection16SSD1322_write_CDEhh.isra.0>
- 80003f4:	20ae      	movs	r0, #174	@ 0xae
- 80003f6:	f7ff ff33 	bl	8000260 <_ZN14SPI_Connection10write_dataEt.isra.0>
- 80003fa:	2191      	movs	r1, #145	@ 0x91
- 80003fc:	20b3      	movs	r0, #179	@ 0xb3
- 80003fe:	f7ff ff45 	bl	800028c <_ZN14SPI_Connection16SSD1322_write_CDEhh.isra.0>
- 8000402:	213f      	movs	r1, #63	@ 0x3f
- 8000404:	20ca      	movs	r0, #202	@ 0xca
- 8000406:	f7ff ff41 	bl	800028c <_ZN14SPI_Connection16SSD1322_write_CDEhh.isra.0>
- 800040a:	2100      	movs	r1, #0
- 800040c:	20a2      	movs	r0, #162	@ 0xa2
- 800040e:	f7ff ff3d 	bl	800028c <_ZN14SPI_Connection16SSD1322_write_CDEhh.isra.0>
- 8000412:	2100      	movs	r1, #0
- 8000414:	20a1      	movs	r0, #161	@ 0xa1
- 8000416:	f7ff ff39 	bl	800028c <_ZN14SPI_Connection16SSD1322_write_CDEhh.isra.0>
- 800041a:	2211      	movs	r2, #17
- 800041c:	2102      	movs	r1, #2
- 800041e:	20a0      	movs	r0, #160	@ 0xa0
- 8000420:	f7ff ff3e 	bl	80002a0 <_ZN14SPI_Connection17SSD1322_write_C2DEhhh.isra.0>
- 8000424:	2101      	movs	r1, #1
- 8000426:	20ab      	movs	r0, #171	@ 0xab
- 8000428:	f7ff ff30 	bl	800028c <_ZN14SPI_Connection16SSD1322_write_CDEhh.isra.0>
- 800042c:	22fd      	movs	r2, #253	@ 0xfd
- 800042e:	21a0      	movs	r1, #160	@ 0xa0
- 8000430:	20b4      	movs	r0, #180	@ 0xb4
- 8000432:	f7ff ff35 	bl	80002a0 <_ZN14SPI_Connection17SSD1322_write_C2DEhhh.isra.0>
- 8000436:	21af      	movs	r1, #175	@ 0xaf
- 8000438:	20c1      	movs	r0, #193	@ 0xc1
- 800043a:	f7ff ff27 	bl	800028c <_ZN14SPI_Connection16SSD1322_write_CDEhh.isra.0>
- 800043e:	210f      	movs	r1, #15
- 8000440:	20c7      	movs	r0, #199	@ 0xc7
- 8000442:	f7ff ff23 	bl	800028c <_ZN14SPI_Connection16SSD1322_write_CDEhh.isra.0>
- 8000446:	20b9      	movs	r0, #185	@ 0xb9
- 8000448:	f7ff ff0a 	bl	8000260 <_ZN14SPI_Connection10write_dataEt.isra.0>
- 800044c:	21e2      	movs	r1, #226	@ 0xe2
- 800044e:	20b1      	movs	r0, #177	@ 0xb1
- 8000450:	f7ff ff1c 	bl	800028c <_ZN14SPI_Connection16SSD1322_write_CDEhh.isra.0>
- 8000454:	2220      	movs	r2, #32
- 8000456:	21a2      	movs	r1, #162	@ 0xa2
- 8000458:	20d1      	movs	r0, #209	@ 0xd1
- 800045a:	f7ff ff21 	bl	80002a0 <_ZN14SPI_Connection17SSD1322_write_C2DEhhh.isra.0>
- 800045e:	211f      	movs	r1, #31
- 8000460:	20bb      	movs	r0, #187	@ 0xbb
- 8000462:	f7ff ff13 	bl	800028c <_ZN14SPI_Connection16SSD1322_write_CDEhh.isra.0>
- 8000466:	2108      	movs	r1, #8
- 8000468:	20b6      	movs	r0, #182	@ 0xb6
- 800046a:	f7ff ff0f 	bl	800028c <_ZN14SPI_Connection16SSD1322_write_CDEhh.isra.0>
- 800046e:	2107      	movs	r1, #7
- 8000470:	20be      	movs	r0, #190	@ 0xbe
- 8000472:	f7ff ff0b 	bl	800028c <_ZN14SPI_Connection16SSD1322_write_CDEhh.isra.0>
- 8000476:	20a6      	movs	r0, #166	@ 0xa6
- 8000478:	f7ff fef2 	bl	8000260 <_ZN14SPI_Connection10write_dataEt.isra.0>
- 800047c:	20a9      	movs	r0, #169	@ 0xa9
- 800047e:	f7ff feef 	bl	8000260 <_ZN14SPI_Connection10write_dataEt.isra.0>
- 8000482:	20af      	movs	r0, #175	@ 0xaf
- 8000484:	f7ff feec 	bl	8000260 <_ZN14SPI_Connection10write_dataEt.isra.0>
- 8000488:	f44f 737a 	mov.w	r3, #1000	@ 0x3e8
- 800048c:	bf00      	nop
- 800048e:	3b01      	subs	r3, #1
- 8000490:	d1fc      	bne.n	800048c <main+0x13c>
- 8000492:	225b      	movs	r2, #91	@ 0x5b
- 8000494:	211c      	movs	r1, #28
- 8000496:	2015      	movs	r0, #21
- 8000498:	f7ff ff02 	bl	80002a0 <_ZN14SPI_Connection17SSD1322_write_C2DEhhh.isra.0>
- 800049c:	223f      	movs	r2, #63	@ 0x3f
- 800049e:	2100      	movs	r1, #0
- 80004a0:	2075      	movs	r0, #117	@ 0x75
- 80004a2:	f7ff fefd 	bl	80002a0 <_ZN14SPI_Connection17SSD1322_write_C2DEhhh.isra.0>
- 80004a6:	205c      	movs	r0, #92	@ 0x5c
- 80004a8:	f7ff feda 	bl	8000260 <_ZN14SPI_Connection10write_dataEt.isra.0>
- 80004ac:	e7f1      	b.n	8000492 <main+0x142>
- 80004ae:	bf00      	nop
- 80004b0:	40021000 	.word	0x40021000
- 80004b4:	48000400 	.word	0x48000400
+ 80003de:	f5ad 5d00 	sub.w	sp, sp, #8192	@ 0x2000
+ 80003e2:	b089      	sub	sp, #36	@ 0x24
+ 80003e4:	f042 6280 	orr.w	r2, r2, #67108864	@ 0x4000000
+ 80003e8:	f8c3 240c 	str.w	r2, [r3, #1036]	@ 0x40c
+ 80003ec:	4668      	mov	r0, sp
+ 80003ee:	f7ff ff67 	bl	80002c0 <_ZN14SPI_ConnectionC1Ev>
+ 80003f2:	f44f 5200 	mov.w	r2, #8192	@ 0x2000
+ 80003f6:	2100      	movs	r1, #0
+ 80003f8:	f10d 001e 	add.w	r0, sp, #30
+ 80003fc:	f000 f8cc 	bl	8000598 <memset>
+ 8000400:	2112      	movs	r1, #18
+ 8000402:	20fd      	movs	r0, #253	@ 0xfd
+ 8000404:	f7ff ff42 	bl	800028c <_ZN14SPI_Connection16SSD1322_write_CDEhh.isra.0>
+ 8000408:	20ae      	movs	r0, #174	@ 0xae
+ 800040a:	f7ff ff29 	bl	8000260 <_ZN14SPI_Connection10write_dataEt.isra.0>
+ 800040e:	2191      	movs	r1, #145	@ 0x91
+ 8000410:	20b3      	movs	r0, #179	@ 0xb3
+ 8000412:	f7ff ff3b 	bl	800028c <_ZN14SPI_Connection16SSD1322_write_CDEhh.isra.0>
+ 8000416:	213f      	movs	r1, #63	@ 0x3f
+ 8000418:	20ca      	movs	r0, #202	@ 0xca
+ 800041a:	f7ff ff37 	bl	800028c <_ZN14SPI_Connection16SSD1322_write_CDEhh.isra.0>
+ 800041e:	2100      	movs	r1, #0
+ 8000420:	20a2      	movs	r0, #162	@ 0xa2
+ 8000422:	f7ff ff33 	bl	800028c <_ZN14SPI_Connection16SSD1322_write_CDEhh.isra.0>
+ 8000426:	2100      	movs	r1, #0
+ 8000428:	20a1      	movs	r0, #161	@ 0xa1
+ 800042a:	f7ff ff2f 	bl	800028c <_ZN14SPI_Connection16SSD1322_write_CDEhh.isra.0>
+ 800042e:	2211      	movs	r2, #17
+ 8000430:	2102      	movs	r1, #2
+ 8000432:	20a0      	movs	r0, #160	@ 0xa0
+ 8000434:	f7ff ff34 	bl	80002a0 <_ZN14SPI_Connection17SSD1322_write_C2DEhhh.isra.0>
+ 8000438:	2101      	movs	r1, #1
+ 800043a:	20ab      	movs	r0, #171	@ 0xab
+ 800043c:	f7ff ff26 	bl	800028c <_ZN14SPI_Connection16SSD1322_write_CDEhh.isra.0>
+ 8000440:	22fd      	movs	r2, #253	@ 0xfd
+ 8000442:	21a0      	movs	r1, #160	@ 0xa0
+ 8000444:	20b4      	movs	r0, #180	@ 0xb4
+ 8000446:	f7ff ff2b 	bl	80002a0 <_ZN14SPI_Connection17SSD1322_write_C2DEhhh.isra.0>
+ 800044a:	21af      	movs	r1, #175	@ 0xaf
+ 800044c:	20c1      	movs	r0, #193	@ 0xc1
+ 800044e:	f7ff ff1d 	bl	800028c <_ZN14SPI_Connection16SSD1322_write_CDEhh.isra.0>
+ 8000452:	210f      	movs	r1, #15
+ 8000454:	20c7      	movs	r0, #199	@ 0xc7
+ 8000456:	f7ff ff19 	bl	800028c <_ZN14SPI_Connection16SSD1322_write_CDEhh.isra.0>
+ 800045a:	20b9      	movs	r0, #185	@ 0xb9
+ 800045c:	f7ff ff00 	bl	8000260 <_ZN14SPI_Connection10write_dataEt.isra.0>
+ 8000460:	21e2      	movs	r1, #226	@ 0xe2
+ 8000462:	20b1      	movs	r0, #177	@ 0xb1
+ 8000464:	f7ff ff12 	bl	800028c <_ZN14SPI_Connection16SSD1322_write_CDEhh.isra.0>
+ 8000468:	2220      	movs	r2, #32
+ 800046a:	21a2      	movs	r1, #162	@ 0xa2
+ 800046c:	20d1      	movs	r0, #209	@ 0xd1
+ 800046e:	f7ff ff17 	bl	80002a0 <_ZN14SPI_Connection17SSD1322_write_C2DEhhh.isra.0>
+ 8000472:	211f      	movs	r1, #31
+ 8000474:	20bb      	movs	r0, #187	@ 0xbb
+ 8000476:	f7ff ff09 	bl	800028c <_ZN14SPI_Connection16SSD1322_write_CDEhh.isra.0>
+ 800047a:	2108      	movs	r1, #8
+ 800047c:	20b6      	movs	r0, #182	@ 0xb6
+ 800047e:	f7ff ff05 	bl	800028c <_ZN14SPI_Connection16SSD1322_write_CDEhh.isra.0>
+ 8000482:	2107      	movs	r1, #7
+ 8000484:	20be      	movs	r0, #190	@ 0xbe
+ 8000486:	f7ff ff01 	bl	800028c <_ZN14SPI_Connection16SSD1322_write_CDEhh.isra.0>
+ 800048a:	20a6      	movs	r0, #166	@ 0xa6
+ 800048c:	f7ff fee8 	bl	8000260 <_ZN14SPI_Connection10write_dataEt.isra.0>
+ 8000490:	20a9      	movs	r0, #169	@ 0xa9
+ 8000492:	f7ff fee5 	bl	8000260 <_ZN14SPI_Connection10write_dataEt.isra.0>
+ 8000496:	20af      	movs	r0, #175	@ 0xaf
+ 8000498:	f7ff fee2 	bl	8000260 <_ZN14SPI_Connection10write_dataEt.isra.0>
+ 800049c:	f44f 737a 	mov.w	r3, #1000	@ 0x3e8
+ 80004a0:	bf00      	nop
+ 80004a2:	3b01      	subs	r3, #1
+ 80004a4:	d1fc      	bne.n	80004a0 <main+0x150>
+ 80004a6:	225b      	movs	r2, #91	@ 0x5b
+ 80004a8:	211c      	movs	r1, #28
+ 80004aa:	2015      	movs	r0, #21
+ 80004ac:	f7ff fef8 	bl	80002a0 <_ZN14SPI_Connection17SSD1322_write_C2DEhhh.isra.0>
+ 80004b0:	223f      	movs	r2, #63	@ 0x3f
+ 80004b2:	2100      	movs	r1, #0
+ 80004b4:	2075      	movs	r0, #117	@ 0x75
+ 80004b6:	f7ff fef3 	bl	80002a0 <_ZN14SPI_Connection17SSD1322_write_C2DEhhh.isra.0>
+ 80004ba:	205c      	movs	r0, #92	@ 0x5c
+ 80004bc:	f7ff fed0 	bl	8000260 <_ZN14SPI_Connection10write_dataEt.isra.0>
+ 80004c0:	f10d 051d 	add.w	r5, sp, #29
+ 80004c4:	f242 0401 	movw	r4, #8193	@ 0x2001
+ 80004c8:	3c01      	subs	r4, #1
+ 80004ca:	b2a4      	uxth	r4, r4
+ 80004cc:	2c00      	cmp	r4, #0
+ 80004ce:	d0ea      	beq.n	80004a6 <main+0x156>
+ 80004d0:	f815 0f01 	ldrb.w	r0, [r5, #1]!
+ 80004d4:	f440 7080 	orr.w	r0, r0, #256	@ 0x100
+ 80004d8:	f7ff fec2 	bl	8000260 <_ZN14SPI_Connection10write_dataEt.isra.0>
+ 80004dc:	e7f4      	b.n	80004c8 <main+0x178>
+ 80004de:	bf00      	nop
+ 80004e0:	40021000 	.word	0x40021000
+ 80004e4:	48000400 	.word	0x48000400
 
-080004b8 <SystemInit>:
- 80004b8:	4a03      	ldr	r2, [pc, #12]	@ (80004c8 <SystemInit+0x10>)
- 80004ba:	f8d2 3088 	ldr.w	r3, [r2, #136]	@ 0x88
- 80004be:	f443 0370 	orr.w	r3, r3, #15728640	@ 0xf00000
- 80004c2:	f8c2 3088 	str.w	r3, [r2, #136]	@ 0x88
- 80004c6:	4770      	bx	lr
- 80004c8:	e000ed00 	.word	0xe000ed00
+080004e8 <SystemInit>:
+ 80004e8:	4a03      	ldr	r2, [pc, #12]	@ (80004f8 <SystemInit+0x10>)
+ 80004ea:	f8d2 3088 	ldr.w	r3, [r2, #136]	@ 0x88
+ 80004ee:	f443 0370 	orr.w	r3, r3, #15728640	@ 0xf00000
+ 80004f2:	f8c2 3088 	str.w	r3, [r2, #136]	@ 0x88
+ 80004f6:	4770      	bx	lr
+ 80004f8:	e000ed00 	.word	0xe000ed00
 
-080004cc <Reset_Handler>:
- 80004cc:	480d      	ldr	r0, [pc, #52]	@ (8000504 <LoopForever+0x2>)
- 80004ce:	4685      	mov	sp, r0
- 80004d0:	480d      	ldr	r0, [pc, #52]	@ (8000508 <LoopForever+0x6>)
- 80004d2:	490e      	ldr	r1, [pc, #56]	@ (800050c <LoopForever+0xa>)
- 80004d4:	4a0e      	ldr	r2, [pc, #56]	@ (8000510 <LoopForever+0xe>)
- 80004d6:	2300      	movs	r3, #0
- 80004d8:	e002      	b.n	80004e0 <LoopCopyDataInit>
+080004fc <Reset_Handler>:
+ 80004fc:	480d      	ldr	r0, [pc, #52]	@ (8000534 <LoopForever+0x2>)
+ 80004fe:	4685      	mov	sp, r0
+ 8000500:	480d      	ldr	r0, [pc, #52]	@ (8000538 <LoopForever+0x6>)
+ 8000502:	490e      	ldr	r1, [pc, #56]	@ (800053c <LoopForever+0xa>)
+ 8000504:	4a0e      	ldr	r2, [pc, #56]	@ (8000540 <LoopForever+0xe>)
+ 8000506:	2300      	movs	r3, #0
+ 8000508:	e002      	b.n	8000510 <LoopCopyDataInit>
 
-080004da <CopyDataInit>:
- 80004da:	58d4      	ldr	r4, [r2, r3]
- 80004dc:	50c4      	str	r4, [r0, r3]
- 80004de:	3304      	adds	r3, #4
+0800050a <CopyDataInit>:
+ 800050a:	58d4      	ldr	r4, [r2, r3]
+ 800050c:	50c4      	str	r4, [r0, r3]
+ 800050e:	3304      	adds	r3, #4
 
-080004e0 <LoopCopyDataInit>:
- 80004e0:	18c4      	adds	r4, r0, r3
- 80004e2:	428c      	cmp	r4, r1
- 80004e4:	d3f9      	bcc.n	80004da <CopyDataInit>
- 80004e6:	4a0b      	ldr	r2, [pc, #44]	@ (8000514 <LoopForever+0x12>)
- 80004e8:	4c0b      	ldr	r4, [pc, #44]	@ (8000518 <LoopForever+0x16>)
- 80004ea:	2300      	movs	r3, #0
- 80004ec:	e001      	b.n	80004f2 <LoopFillZerobss>
+08000510 <LoopCopyDataInit>:
+ 8000510:	18c4      	adds	r4, r0, r3
+ 8000512:	428c      	cmp	r4, r1
+ 8000514:	d3f9      	bcc.n	800050a <CopyDataInit>
+ 8000516:	4a0b      	ldr	r2, [pc, #44]	@ (8000544 <LoopForever+0x12>)
+ 8000518:	4c0b      	ldr	r4, [pc, #44]	@ (8000548 <LoopForever+0x16>)
+ 800051a:	2300      	movs	r3, #0
+ 800051c:	e001      	b.n	8000522 <LoopFillZerobss>
 
-080004ee <FillZerobss>:
- 80004ee:	6013      	str	r3, [r2, #0]
- 80004f0:	3204      	adds	r2, #4
+0800051e <FillZerobss>:
+ 800051e:	6013      	str	r3, [r2, #0]
+ 8000520:	3204      	adds	r2, #4
 
-080004f2 <LoopFillZerobss>:
- 80004f2:	42a2      	cmp	r2, r4
- 80004f4:	d3fb      	bcc.n	80004ee <FillZerobss>
- 80004f6:	f7ff ffdf 	bl	80004b8 <SystemInit>
- 80004fa:	f000 f811 	bl	8000520 <__libc_init_array>
- 80004fe:	f7ff ff27 	bl	8000350 <main>
+08000522 <LoopFillZerobss>:
+ 8000522:	42a2      	cmp	r2, r4
+ 8000524:	d3fb      	bcc.n	800051e <FillZerobss>
+ 8000526:	f7ff ffdf 	bl	80004e8 <SystemInit>
+ 800052a:	f000 f811 	bl	8000550 <__libc_init_array>
+ 800052e:	f7ff ff0f 	bl	8000350 <main>
 
-08000502 <LoopForever>:
- 8000502:	e7fe      	b.n	8000502 <LoopForever>
- 8000504:	20020000 	.word	0x20020000
- 8000508:	20000000 	.word	0x20000000
- 800050c:	20000000 	.word	0x20000000
- 8000510:	08000590 	.word	0x08000590
- 8000514:	20000000 	.word	0x20000000
- 8000518:	2000001c 	.word	0x2000001c
+08000532 <LoopForever>:
+ 8000532:	e7fe      	b.n	8000532 <LoopForever>
+ 8000534:	20020000 	.word	0x20020000
+ 8000538:	20000000 	.word	0x20000000
+ 800053c:	20000000 	.word	0x20000000
+ 8000540:	080005d0 	.word	0x080005d0
+ 8000544:	20000000 	.word	0x20000000
+ 8000548:	2000001c 	.word	0x2000001c
 
-0800051c <ADC1_2_IRQHandler>:
- 800051c:	e7fe      	b.n	800051c <ADC1_2_IRQHandler>
+0800054c <ADC1_2_IRQHandler>:
+ 800054c:	e7fe      	b.n	800054c <ADC1_2_IRQHandler>
 	...
 
-08000520 <__libc_init_array>:
- 8000520:	b570      	push	{r4, r5, r6, lr}
- 8000522:	4d0d      	ldr	r5, [pc, #52]	@ (8000558 <__libc_init_array+0x38>)
- 8000524:	4c0d      	ldr	r4, [pc, #52]	@ (800055c <__libc_init_array+0x3c>)
- 8000526:	1b64      	subs	r4, r4, r5
- 8000528:	10a4      	asrs	r4, r4, #2
- 800052a:	2600      	movs	r6, #0
- 800052c:	42a6      	cmp	r6, r4
- 800052e:	d109      	bne.n	8000544 <__libc_init_array+0x24>
- 8000530:	4d0b      	ldr	r5, [pc, #44]	@ (8000560 <__libc_init_array+0x40>)
- 8000532:	4c0c      	ldr	r4, [pc, #48]	@ (8000564 <__libc_init_array+0x44>)
- 8000534:	f000 f818 	bl	8000568 <_init>
- 8000538:	1b64      	subs	r4, r4, r5
- 800053a:	10a4      	asrs	r4, r4, #2
- 800053c:	2600      	movs	r6, #0
- 800053e:	42a6      	cmp	r6, r4
- 8000540:	d105      	bne.n	800054e <__libc_init_array+0x2e>
- 8000542:	bd70      	pop	{r4, r5, r6, pc}
- 8000544:	f855 3b04 	ldr.w	r3, [r5], #4
- 8000548:	4798      	blx	r3
- 800054a:	3601      	adds	r6, #1
- 800054c:	e7ee      	b.n	800052c <__libc_init_array+0xc>
- 800054e:	f855 3b04 	ldr.w	r3, [r5], #4
- 8000552:	4798      	blx	r3
- 8000554:	3601      	adds	r6, #1
- 8000556:	e7f2      	b.n	800053e <__libc_init_array+0x1e>
- 8000558:	08000588 	.word	0x08000588
- 800055c:	08000588 	.word	0x08000588
- 8000560:	08000588 	.word	0x08000588
- 8000564:	0800058c 	.word	0x0800058c
+08000550 <__libc_init_array>:
+ 8000550:	b570      	push	{r4, r5, r6, lr}
+ 8000552:	4d0d      	ldr	r5, [pc, #52]	@ (8000588 <__libc_init_array+0x38>)
+ 8000554:	4c0d      	ldr	r4, [pc, #52]	@ (800058c <__libc_init_array+0x3c>)
+ 8000556:	1b64      	subs	r4, r4, r5
+ 8000558:	10a4      	asrs	r4, r4, #2
+ 800055a:	2600      	movs	r6, #0
+ 800055c:	42a6      	cmp	r6, r4
+ 800055e:	d109      	bne.n	8000574 <__libc_init_array+0x24>
+ 8000560:	4d0b      	ldr	r5, [pc, #44]	@ (8000590 <__libc_init_array+0x40>)
+ 8000562:	4c0c      	ldr	r4, [pc, #48]	@ (8000594 <__libc_init_array+0x44>)
+ 8000564:	f000 f820 	bl	80005a8 <_init>
+ 8000568:	1b64      	subs	r4, r4, r5
+ 800056a:	10a4      	asrs	r4, r4, #2
+ 800056c:	2600      	movs	r6, #0
+ 800056e:	42a6      	cmp	r6, r4
+ 8000570:	d105      	bne.n	800057e <__libc_init_array+0x2e>
+ 8000572:	bd70      	pop	{r4, r5, r6, pc}
+ 8000574:	f855 3b04 	ldr.w	r3, [r5], #4
+ 8000578:	4798      	blx	r3
+ 800057a:	3601      	adds	r6, #1
+ 800057c:	e7ee      	b.n	800055c <__libc_init_array+0xc>
+ 800057e:	f855 3b04 	ldr.w	r3, [r5], #4
+ 8000582:	4798      	blx	r3
+ 8000584:	3601      	adds	r6, #1
+ 8000586:	e7f2      	b.n	800056e <__libc_init_array+0x1e>
+ 8000588:	080005c8 	.word	0x080005c8
+ 800058c:	080005c8 	.word	0x080005c8
+ 8000590:	080005c8 	.word	0x080005c8
+ 8000594:	080005cc 	.word	0x080005cc
 
-08000568 <_init>:
- 8000568:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
- 800056a:	bf00      	nop
- 800056c:	bcf8      	pop	{r3, r4, r5, r6, r7}
- 800056e:	bc08      	pop	{r3}
- 8000570:	469e      	mov	lr, r3
- 8000572:	4770      	bx	lr
+08000598 <memset>:
+ 8000598:	4402      	add	r2, r0
+ 800059a:	4603      	mov	r3, r0
+ 800059c:	4293      	cmp	r3, r2
+ 800059e:	d100      	bne.n	80005a2 <memset+0xa>
+ 80005a0:	4770      	bx	lr
+ 80005a2:	f803 1b01 	strb.w	r1, [r3], #1
+ 80005a6:	e7f9      	b.n	800059c <memset+0x4>
 
-08000574 <_fini>:
- 8000574:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
- 8000576:	bf00      	nop
- 8000578:	bcf8      	pop	{r3, r4, r5, r6, r7}
- 800057a:	bc08      	pop	{r3}
- 800057c:	469e      	mov	lr, r3
- 800057e:	4770      	bx	lr
+080005a8 <_init>:
+ 80005a8:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 80005aa:	bf00      	nop
+ 80005ac:	bcf8      	pop	{r3, r4, r5, r6, r7}
+ 80005ae:	bc08      	pop	{r3}
+ 80005b0:	469e      	mov	lr, r3
+ 80005b2:	4770      	bx	lr
+
+080005b4 <_fini>:
+ 80005b4:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 80005b6:	bf00      	nop
+ 80005b8:	bcf8      	pop	{r3, r4, r5, r6, r7}
+ 80005ba:	bc08      	pop	{r3}
+ 80005bc:	469e      	mov	lr, r3
+ 80005be:	4770      	bx	lr
