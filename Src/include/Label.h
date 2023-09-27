@@ -1,55 +1,33 @@
 #ifndef LABEL_H
 #define LABEL_H
 
-#include "Font.h"
-
 class Label{
 private:
-    uint8_t* data  = nullptr;
-    Font* font;
 
-    uint8_t width   = 0;
-    uint8_t length  = 0;
-    uint8_t dataLen = 0;
+public:
+    uint8_t* data = nullptr;
+
+    uint8_t dataLen      = 0;
+    uint8_t width        = 0;
+    uint8_t height       = 0;
 
     uint8_t xPos = 0;
     uint8_t yPos = 0;
 
-public:
-    Label(Font* f, const char* text, uint8_t len, uint8_t x, uint8_t y){
-        font    = f;
-        width   = len * font->width;
-        length  = len;
-        dataLen = len * font->height;
+    Label(uint8_t* d, uint8_t dL, uint8_t w, uint8_t h, uint8_t x, uint8_t y){
+        data = d;
 
-        xPos = x;
-        yPos = y;
+        dataLen = dL;
 
-        setData(text);
-    }
+        width   = w;
+        height  = h;
 
-    Label(uint8_t len, uint8_t x, uint8_t y){
-        dataLen = len * 8;
-        length  = len;
-        width   = len * 4;
         xPos    = x;
         yPos    = y;
 
     }
 
-    ~Label(){
-        delete data;
-    }
-
-    void setData(const char* text){
-        data = new uint8_t[dataLen]; // attention
-
-        for(uint8_t i = 0; i < length; i++){
-            for(uint8_t j = 0; j < font->height; j++){
-                data[i] = font->data[text[i] + j - 20];
-            }
-        }
-    }
+    ~Label(){}
 
     uint8_t* getData(){
         return data;
