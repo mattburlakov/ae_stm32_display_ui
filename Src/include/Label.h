@@ -27,6 +27,12 @@ public:
         xPos    = x;
         yPos    = y;
 
+        setGlyph(tf::char_0, 3, 6, 1, 1);
+        setGlyph(tf::char_0, 3, 6, 4, 1);
+        setGlyph(tf::char_0, 3, 6, 7, 1);
+        setGlyph(tf::char_0, 3, 6, 10, 1);
+        setGlyph(tf::char_0, 3, 6, 13, 1);
+
     }
 
     ~Label(){}
@@ -35,9 +41,17 @@ public:
         return data;
     }
 
+    void setGlyph(const uint8_t* g, uint8_t w, uint8_t h, uint8_t x, uint8_t y){
+        for(uint8_t i = 0; i < h; i++){
+            for(uint8_t j = 0; j < w; j++){
+                data[x + width/2*(i + y) + j] = g[i*w + j];
+            }
+        }
+    }
+
     void invert(){
-        for(uint8_t i = 0; i < dataLen; i++){
-            data[i] ^= 0b00000000;
+        for(uint16_t i = 0; i < dataLen; i++){
+            data[i] ^= 0x00;
         }
     }
 };
