@@ -1,8 +1,17 @@
 #ifndef FONT_A_H
 #define FONT_A_H
 
-const uint8_t data[]{
+namespace tf{                   //6x6 chars on 3x6 matrix
 
-};
+    const uint8_t char_0[]{     // 0
+        0x08, 0xF8, 0x00,
+        0x80, 0x00, 0x80,
+        0xF0, 0x0F, 0xF0,
+        0xF0, 0xF0, 0xF0,
+        0x8F, 0x00, 0x80,
+        0x08, 0xF8, 0x00
+    };
+
+}
 
 #endif

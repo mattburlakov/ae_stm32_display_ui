@@ -15,9 +15,9 @@
         uint8_t testData[8*32/2] = {0b11111111};
 
         Label l1(testData, t, 32, 8, 0, 0);
-        Label l2(testData, t, 32, 8, 0, 32);
+        Label l2(testData, t, 16, 8, 0, 32);
         Label l3(testData, t, 32, 8, 64, 0);
-        Label l4(testData, t, 32, 8, 64, 32);
+        Label l4(testData, t, 32, 4, 64, 32);
 
 class ScreenControl{
 private:
@@ -47,10 +47,11 @@ public:
     ~ScreenControl(){}
 
     void placeLabel(Label* label){
-        uint8_t row = 0;
+        uint16_t c = 0;
         for(uint8_t i = 0; i < label->height; i++){
             for(uint8_t j = 0; j < label->width/2; j++){
-                visualData[dataLen - 1 - (label->xPos/2 + label->yPos*screenWidth + screenWidth*i + j)] = 0b11111111;
+                visualData[dataLen - 1 - (label->xPos/2 + label->yPos*screenWidth + screenWidth*i + j)] = label->data[0];
+                c++;
             }
         }
     }

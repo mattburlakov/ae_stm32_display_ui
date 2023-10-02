@@ -1,7 +1,9 @@
 #ifndef LABEL_H
 #define LABEL_H
 
-class Label{
+#include "FONT_A.h"
+
+class Label{    //separate into geometry and text obj later
 private:
 
 public:
