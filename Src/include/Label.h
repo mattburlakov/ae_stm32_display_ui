@@ -27,6 +27,8 @@ public:
         xPos    = x;
         yPos    = y;
 
+        invert();
+
         setGlyph(tf::char_0, 3, 6, 1, 1);
         setGlyph(tf::char_0, 3, 6, 4, 1);
         setGlyph(tf::char_0, 3, 6, 7, 1);

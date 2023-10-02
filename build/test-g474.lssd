@@ -13,41 +13,41 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
   4 .ARM          00000008  0800094c  0800094c  0000194c  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  5 .preinit_array 00000000  08000954  08000954  0000210c  2**0
+  5 .preinit_array 00000000  08000954  08000954  0000208c  2**0
                   CONTENTS, ALLOC, LOAD, DATA
   6 .init_array   00000008  08000954  08000954  00001954  2**2
                   CONTENTS, ALLOC, LOAD, DATA
   7 .fini_array   00000004  0800095c  0800095c  0000195c  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  8 .data         0000010c  20000000  08000960  00002000  2**2
+  8 .data         0000008c  20000000  08000960  00002000  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  9 .bss          000001e8  2000010c  08000a6c  0000210c  2**2
+  9 .bss          00000268  2000008c  080009ec  0000208c  2**2
                   ALLOC
- 10 ._user_heap_stack 00000604  200002f4  08000a6c  000022f4  2**0
+ 10 ._user_heap_stack 00000604  200002f4  080009ec  000022f4  2**0
                   ALLOC
- 11 .ARM.attributes 00000030  00000000  00000000  0000210c  2**0
+ 11 .ARM.attributes 00000030  00000000  00000000  0000208c  2**0
                   CONTENTS, READONLY
- 12 .comment      00000046  00000000  00000000  0000213c  2**0
+ 12 .comment      00000046  00000000  00000000  000020bc  2**0
                   CONTENTS, READONLY
- 13 .debug_info   00003191  00000000  00000000  00002182  2**0
+ 13 .debug_info   000031dd  00000000  00000000  00002102  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_abbrev 00000f88  00000000  00000000  00005313  2**0
+ 14 .debug_abbrev 00000f88  00000000  00000000  000052df  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_loc    00000ebd  00000000  00000000  0000629b  2**0
+ 15 .debug_loc    00000ed2  00000000  00000000  00006267  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_aranges 00000218  00000000  00000000  00007158  2**3
+ 16 .debug_aranges 00000218  00000000  00000000  00007140  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_ranges 000002b8  00000000  00000000  00007370  2**3
+ 17 .debug_ranges 000002b8  00000000  00000000  00007358  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_line   00001675  00000000  00000000  00007628  2**0
+ 18 .debug_line   00001685  00000000  00000000  00007610  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_str    00001230  00000000  00000000  00008c9d  2**0
+ 19 .debug_str    00001230  00000000  00000000  00008c95  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_frame  000003ec  00000000  00000000  00009ed0  2**2
+ 20 .debug_frame  000003ec  00000000  00000000  00009ec8  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_loclists 0000027d  00000000  00000000  0000a2bc  2**0
+ 21 .debug_loclists 0000027d  00000000  00000000  0000a2b4  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_rnglists 000000bd  00000000  00000000  0000a539  2**0
+ 22 .debug_rnglists 000000bd  00000000  00000000  0000a531  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -61,8 +61,8 @@ Disassembly of section .text:
  80001e2:	b103      	cbz	r3, 80001e6 <deregister_tm_clones+0xe>
  80001e4:	4718      	bx	r3
  80001e6:	4770      	bx	lr
- 80001e8:	2000010c 	.word	0x2000010c
- 80001ec:	2000010c 	.word	0x2000010c
+ 80001e8:	2000008c 	.word	0x2000008c
+ 80001ec:	2000008c 	.word	0x2000008c
  80001f0:	00000000 	.word	0x00000000
 
 080001f4 <register_tm_clones>:
@@ -77,8 +77,8 @@ Disassembly of section .text:
  8000206:	b103      	cbz	r3, 800020a <register_tm_clones+0x16>
  8000208:	4718      	bx	r3
  800020a:	4770      	bx	lr
- 800020c:	2000010c 	.word	0x2000010c
- 8000210:	2000010c 	.word	0x2000010c
+ 800020c:	2000008c 	.word	0x2000008c
+ 8000210:	2000008c 	.word	0x2000008c
  8000214:	00000000 	.word	0x00000000
 
 08000218 <__do_global_dtors_aux>:
@@ -94,7 +94,7 @@ Disassembly of section .text:
  800022e:	2301      	movs	r3, #1
  8000230:	7023      	strb	r3, [r4, #0]
  8000232:	bd10      	pop	{r4, pc}
- 8000234:	2000010c 	.word	0x2000010c
+ 8000234:	2000008c 	.word	0x2000008c
  8000238:	00000000 	.word	0x00000000
  800023c:	0800091c 	.word	0x0800091c
 
@@ -108,7 +108,7 @@ Disassembly of section .text:
  800024e:	e8bd 4008 	ldmia.w	sp!, {r3, lr}
  8000252:	e7cf      	b.n	80001f4 <register_tm_clones>
  8000254:	00000000 	.word	0x00000000
- 8000258:	20000110 	.word	0x20000110
+ 8000258:	20000090 	.word	0x20000090
  800025c:	0800091c 	.word	0x0800091c
 
 08000260 <_ZN5LabelD1Ev>:
@@ -514,10 +514,10 @@ Disassembly of section .text:
  800068a:	bf00      	nop
  800068c:	40021000 	.word	0x40021000
  8000690:	48000400 	.word	0x48000400
- 8000694:	2000014c 	.word	0x2000014c
- 8000698:	20000140 	.word	0x20000140
- 800069c:	20000134 	.word	0x20000134
- 80006a0:	20000128 	.word	0x20000128
+ 8000694:	200000cc 	.word	0x200000cc
+ 8000698:	200000c0 	.word	0x200000c0
+ 800069c:	200000b4 	.word	0x200000b4
+ 80006a0:	200000a8 	.word	0x200000a8
 
 080006a4 <_GLOBAL__sub_I_t>:
  80006a4:	e92d 4ff0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
@@ -582,15 +582,15 @@ Disassembly of section .text:
  8000746:	e8bd 4ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, lr}
  800074a:	f000 b846 	b.w	80007da <__aeabi_atexit>
  800074e:	bf00      	nop
- 8000750:	20000104 	.word	0x20000104
- 8000754:	2000014c 	.word	0x2000014c
+ 8000750:	20000084 	.word	0x20000084
+ 8000754:	200000cc 	.word	0x200000cc
  8000758:	20000000 	.word	0x20000000
  800075c:	08000261 	.word	0x08000261
- 8000760:	20000084 	.word	0x20000084
+ 8000760:	200000d8 	.word	0x200000d8
  8000764:	20000004 	.word	0x20000004
- 8000768:	20000140 	.word	0x20000140
- 800076c:	20000134 	.word	0x20000134
- 8000770:	20000128 	.word	0x20000128
+ 8000768:	200000c0 	.word	0x200000c0
+ 800076c:	200000b4 	.word	0x200000b4
+ 8000770:	200000a8 	.word	0x200000a8
 
 08000774 <SystemInit>:
  8000774:	4a03      	ldr	r2, [pc, #12]	@ (8000784 <SystemInit+0x10>)
@@ -638,9 +638,9 @@ Disassembly of section .text:
  80007be:	e7fe      	b.n	80007be <LoopForever>
  80007c0:	20020000 	.word	0x20020000
  80007c4:	20000000 	.word	0x20000000
- 80007c8:	2000010c 	.word	0x2000010c
+ 80007c8:	2000008c 	.word	0x2000008c
  80007cc:	08000960 	.word	0x08000960
- 80007d0:	2000010c 	.word	0x2000010c
+ 80007d0:	2000008c 	.word	0x2000008c
  80007d4:	200002f4 	.word	0x200002f4
 
 080007d8 <ADC1_2_IRQHandler>:
@@ -770,7 +770,7 @@ Disassembly of section .text:
  80008f8:	f000 f80e 	bl	8000918 <__retarget_lock_release_recursive>
  80008fc:	2000      	movs	r0, #0
  80008fe:	e7c8      	b.n	8000892 <__register_exitproc+0x3a>
- 8000900:	20000108 	.word	0x20000108
+ 8000900:	20000088 	.word	0x20000088
  8000904:	200002ec 	.word	0x200002ec
  8000908:	20000260 	.word	0x20000260
  800090c:	08000948 	.word	0x08000948
