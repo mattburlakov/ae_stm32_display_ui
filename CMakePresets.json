@@ -1,0 +1,35 @@
+{
+     "version": 6,
+     "cmakeMinimumRequired": {
+          "major": 3,
+          "minor": 16,
+          "patch": 0
+     },
+     "configurePresets": [
+          {
+               "name": "dev",
+               "displayName": "development",
+               "description": "Default development build",
+               "generator": "Unix Makefiles",
+               "binaryDir": "${sourceDir}/build/dev",
+               "cacheVariables": {
+                    "CMAKE_BUILD_TYPE": "Debug",
+                    "IS_COMPILED_ON_LINUX": "ON"
+               }
+          },
+          {
+               "name": "dev-win",
+               "inherits": "dev",
+               "generator": "MinGW Makefiles",
+               "cacheVariables": {
+                    "IS_COMPILED_ON_LINUX": "OFF"
+               }
+          }
+     ],
+     "buildPresets": [
+          {
+               "name": "dev",
+               "configurePreset": "dev"
+          }
+     ]
+}
