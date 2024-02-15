@@ -3,11 +3,11 @@ project(firmware)
 
 set(HEADER_LIST
     ${CMAKE_CURRENT_SOURCE_DIR}/FONT_A.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/Font.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/Glyph.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/Label.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/ScreenControl.h
     ${CMAKE_CURRENT_SOURCE_DIR}/SPI_Connection.h
+
+    ${CMAKE_CURRENT_SOURCE_DIR}/Canvas.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/GraphicsManager.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/Parameter.h
 )
 
 # set(SOURCE_LIST
