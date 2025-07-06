@@ -24,12 +24,35 @@
                "cacheVariables": {
                     "IS_COMPILED_ON_LINUX": "OFF"
                }
+          },
+          {
+               "name": "release",
+               "displayName": "release",
+               "description": "Default release build",
+               "generator": "Unix Makefiles",
+               "binaryDir": "${sourceDir}/build/release",
+               "cacheVariables": {
+                    "CMAKE_BUILD_TYPE": "Release",
+                    "IS_COMPILED_ON_LINUX": "ON"
+               }
+          },
+          {
+               "name": "release-win",
+               "inherits": "release",
+               "generator": "MinGW Makefiles",
+               "cacheVariables": {
+                    "IS_COMPILED_ON_LINUX": "OFF"
+               }
           }
      ],
      "buildPresets": [
           {
                "name": "dev",
                "configurePreset": "dev"
+          },
+          {
+               "name": "release",
+               "configurePreset": "release"
           }
      ]
 }
