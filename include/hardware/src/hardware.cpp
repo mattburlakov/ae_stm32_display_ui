@@ -1,12 +1,12 @@
 #include "hardware.h"
 
-#include "encoder.h"
-#include "exti.h"
-#include "gpio.h"
-#include "spi.h"
-#include "uart.h"
+#include "hardware_encoder.h"
+#include "hardware_exti.h"
+#include "hardware_gpio.h"
+#include "hardware_spi.h"
+#include "hardware_uart.h"
 
-#include "ssd1322.h"
+#include "hardware_ssd1322.h"
 
 #include <stm32f10x.h>
 

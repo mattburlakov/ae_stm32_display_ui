@@ -1,4 +1,4 @@
-#include "spi.h"
+#include "hardware_spi.h"
 
 #include <stm32f10x.h>
 #include <stdbool.h>

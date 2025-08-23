@@ -1,4 +1,4 @@
-#include "exti.h"
+#include "hardware_exti.h"
 
 #include <stm32f10x.h>
 

@@ -3,7 +3,7 @@
 
 // TODO: Rename to font_zero_mono.h.
 
-#include "font.h"
+#include "core_font.h"
 
 extern const struct FontData font_zero;
 

@@ -5,27 +5,29 @@ project(hardware CXX)
 add_subdirectory(${CMAKE_SOURCE_DIR}/vendor/CMSIS ${CMAKE_BINARY_DIR}/cmsis)
 
 set(HEADER_LIST
-     ${CMAKE_CURRENT_SOURCE_DIR}/button.h
-     ${CMAKE_CURRENT_SOURCE_DIR}/encoder.h
-     ${CMAKE_CURRENT_SOURCE_DIR}/exti.h
-     ${CMAKE_CURRENT_SOURCE_DIR}/gpio.h
+     ${CMAKE_CURRENT_SOURCE_DIR}/hardware_button.h
+     ${CMAKE_CURRENT_SOURCE_DIR}/hardware_encoder.h
+     ${CMAKE_CURRENT_SOURCE_DIR}/hardware_exti.h
+     ${CMAKE_CURRENT_SOURCE_DIR}/hardware_gpio.h
+     ${CMAKE_CURRENT_SOURCE_DIR}/hardware_led.h
+     ${CMAKE_CURRENT_SOURCE_DIR}/hardware_spi.h
+     ${CMAKE_CURRENT_SOURCE_DIR}/hardware_ssd1322.h
+     ${CMAKE_CURRENT_SOURCE_DIR}/hardware_uart.h
+
      ${CMAKE_CURRENT_SOURCE_DIR}/hardware.h
-     ${CMAKE_CURRENT_SOURCE_DIR}/led.h
-     ${CMAKE_CURRENT_SOURCE_DIR}/spi.h
-     ${CMAKE_CURRENT_SOURCE_DIR}/ssd1322.h
-     ${CMAKE_CURRENT_SOURCE_DIR}/uart.h
 )
 
 set(SOURCE_LIST
-     ${CMAKE_CURRENT_SOURCE_DIR}/src/button.cpp
-     ${CMAKE_CURRENT_SOURCE_DIR}/src/encoder.cpp
-     ${CMAKE_CURRENT_SOURCE_DIR}/src/exti.cpp
-     ${CMAKE_CURRENT_SOURCE_DIR}/src/gpio.cpp
+     ${CMAKE_CURRENT_SOURCE_DIR}/src/hardware_button.cpp
+     ${CMAKE_CURRENT_SOURCE_DIR}/src/hardware_encoder.cpp
+     ${CMAKE_CURRENT_SOURCE_DIR}/src/hardware_exti.cpp
+     ${CMAKE_CURRENT_SOURCE_DIR}/src/hardware_gpio.cpp
+     ${CMAKE_CURRENT_SOURCE_DIR}/src/hardware_led.cpp
+     ${CMAKE_CURRENT_SOURCE_DIR}/src/hardware_spi.cpp
+     ${CMAKE_CURRENT_SOURCE_DIR}/src/hardware_ssd1322.cpp
+     ${CMAKE_CURRENT_SOURCE_DIR}/src/hardware_uart.cpp
+
      ${CMAKE_CURRENT_SOURCE_DIR}/src/hardware.cpp
-     ${CMAKE_CURRENT_SOURCE_DIR}/src/led.cpp
-     ${CMAKE_CURRENT_SOURCE_DIR}/src/spi.cpp
-     ${CMAKE_CURRENT_SOURCE_DIR}/src/ssd1322.cpp
-     ${CMAKE_CURRENT_SOURCE_DIR}/src/uart.cpp
 )
 
 add_library(${PROJECT_NAME} STATIC ${SOURCE_LIST} ${HEADER_LIST})
