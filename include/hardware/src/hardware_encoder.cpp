@@ -1,7 +1,7 @@
-#include "encoder.h"
+#include "hardware_encoder.h"
 
-#include "exti.h"
-#include "gpio.h"
+#include "hardware_exti.h"
+#include "hardware_gpio.h"
 
 #include <stdint.h>
 

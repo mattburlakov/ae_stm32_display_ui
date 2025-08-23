@@ -1,4 +1,4 @@
-#include "gpio.h"
+#include "hardware_gpio.h"
 
 #include <stm32f10x.h>
 #include <stdint.h>

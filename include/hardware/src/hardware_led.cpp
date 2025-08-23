@@ -1,6 +1,6 @@
-#include "led.h"
+#include "hardware_led.h"
 
-#include "gpio.h"
+#include "hardware_gpio.h"
 
 #include <stdint.h>
 

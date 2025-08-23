@@ -1,6 +1,6 @@
-#include "button.h"
+#include "hardware_button.h"
 
-#include "gpio.h"
+#include "hardware_gpio.h"
 
 #include <stdint.h>
 

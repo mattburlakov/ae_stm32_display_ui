@@ -1,4 +1,4 @@
-#include "ssd1322.h"
+#include "hardware_ssd1322.h"
 
 #define GRAYSCALE_TABLE_SIZE 15
 

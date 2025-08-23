@@ -1,4 +1,4 @@
-#include "graphics.h"
+#include "core_graphics.h"
 
 #include <memory.h>
 
@@ -12,9 +12,18 @@ static uint8_t brightness = 0;
 
 const struct FontData* font = nullptr;
 
-static void draw_character( const uint8_t* data, 
-                              uint8_t pos_x, uint8_t pos_y,
-                              uint8_t width, uint8_t height ) {
+// CURSED SECTION ==============================================================
+
+typedef void ( *DrawCharacterFunction )( const uint8_t*, uint16_t, uint16_t, uint16_t, uint16_t );
+DrawCharacterFunction draw_character = nullptr;
+
+static void pos_bit_to_byte( uint16_t* pos ) {
+     *pos = ( *pos % 2 == 0 ) ? *pos / 2 : ( *pos + 1 ) / 2;
+}
+
+static void draw_character_origin_even( const uint8_t* data, 
+                              uint16_t pos_x, uint16_t pos_y,
+                              uint16_t width, uint16_t height ) {
      enum {
           BYTE_MASK = 0xff,
      };
@@ -28,6 +37,32 @@ static void draw_character( const uint8_t* data,
           }
      }
 }
+
+static void draw_character_origin_odd( const uint8_t* data, 
+                              uint16_t pos_x, uint16_t pos_y,
+                              uint16_t width, uint16_t height ) {
+     enum {
+          HALFBYTE_SHIFT = 4,
+     };
+     
+     uint16_t shift_buffer = 0x0000;
+
+     for( uint16_t idx = 0; idx < height; ++idx ) {
+          for( uint16_t jdx = 0; jdx < width; ++jdx ) {
+               shift_buffer = ( uint16_t )data[ jdx + idx * width ] << HALFBYTE_SHIFT;
+               uint8_t tmp = ( shift_buffer >> 8 );
+               shift_buffer = ( shift_buffer << 8 ) | tmp;
+
+               uint16_t offset = pos_x - 1 + jdx + ( pos_y + idx ) * canvas_buffer_width;
+               
+               *( ( uint16_t* )( canvas_buffer + offset ) ) &= ~shift_buffer;
+               *( ( uint16_t* )( canvas_buffer + offset ) ) |= shift_buffer &
+                    ( uint16_t )( ( brightness << 12 ) | brightness );
+          }
+     }
+}
+
+// CURSED SECTION OVER =========================================================
 
 void graphics_clear_buffer( void ) {
      if( !canvas_buffer ) {
@@ -141,17 +176,32 @@ void graphics_draw_text( const char* text, uint16_t size,
      }
 
      enum {
-          CHAR_CODE_SPACE = 32,
+          CHAR_CODE_NEWLINE = 0x0a,
+          CHAR_CODE_SPACE = 0x20,
      };
 
-     for( uint8_t idx = 0; idx < size; ++idx ) {
+     draw_character = draw_character_origin_odd;
+     if( pos_x % 2 == 0 ) {
+          draw_character = draw_character_origin_even;
+     }
+
+     pos_bit_to_byte( &pos_x );
+     
+     for( uint16_t idx = 0; idx < size; ++idx ) {
           if( text[ idx ] == CHAR_CODE_SPACE ) {
                continue;
           }
+          if( text[ idx ] == CHAR_CODE_NEWLINE ) {
+               ++pos_y;
+               continue;
+          }
 
-          draw_character( 
-               font->font_data[ text[ idx ] - FONT_CHAR_OFFSET ], 
-               pos_x + font->width * idx, 
-               pos_y, font->width, font->height );
+          if( draw_character ) {
+               draw_character( 
+                    font->font_data[ text[ idx ] - FONT_CHAR_OFFSET ], 
+                    pos_x + font->width * idx, 
+                    pos_y, font->width, font->height );
+          }
+
      }
 }

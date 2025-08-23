@@ -4,7 +4,9 @@
 #include <stdbool.h>
 #include <stdint.h>
 
-#include "font.h"
+#include "core_font.h"
+
+/// @todo ADD BUFFER PROTECTION!
 
 /// @brief Pixel brightenss level [0..14].
 enum GraphicsBrightness {
