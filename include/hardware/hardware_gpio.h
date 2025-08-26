@@ -45,19 +45,19 @@ enum GpioPin {
 };
 
 /// @brief Initialize device GPIOs.
-void gpio_init( void );
+void hardware_gpio_init( void );
 
 /// @brief Get pin state.
 /// @param[in] pin Pin name.
 /// @return true - pin HIGH state, false - pin LOW state.
-bool gpio_pin_get( enum GpioPin pin );
+bool hardware_gpio_pin_get( enum GpioPin pin );
 
 /// @brief Set pin to HIGH state.
 /// @param[in] pin Pin name.
-void gpio_pin_set( enum GpioPin pin );
+void hardware_gpio_pin_set( enum GpioPin pin );
 
 /// @brief Reset pin to LOW state.
 /// @param[in] pin Pin name.
-void gpio_pin_reset( enum GpioPin pin );
+void hardware_gpio_pin_reset( enum GpioPin pin );
 
 #endif

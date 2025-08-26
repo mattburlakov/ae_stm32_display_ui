@@ -62,14 +62,14 @@ static const struct LedConfig leds[] = {
 
 static uint16_t bitmask = 0x0000;
 
-void led_null( void ) {
-     gpio_pin_reset( GPIO_PIN_LED_1 );
-     gpio_pin_reset( GPIO_PIN_LED_2 );
-     gpio_pin_reset( GPIO_PIN_LED_3 );
-     gpio_pin_reset( GPIO_PIN_LED_4 );
+void hardware_led_null( void ) {
+     hardware_gpio_pin_reset( GPIO_PIN_LED_1 );
+     hardware_gpio_pin_reset( GPIO_PIN_LED_2 );
+     hardware_gpio_pin_reset( GPIO_PIN_LED_3 );
+     hardware_gpio_pin_reset( GPIO_PIN_LED_4 );
 }
 
-void led_set_state( enum Led led, bool state ) {
+void hardware_led_set_state( enum Led led, bool state ) {
      if( state ) {
           bitmask |= 1 << led;
      }
@@ -78,13 +78,13 @@ void led_set_state( enum Led led, bool state ) {
      }
 }
 
-void led_update( void ) {
+void hardware_led_update( void ) {
      for( uint8_t idx = 0; idx < LED_COUNT; ++idx ) {
           if( bitmask & ( 1 << idx ) ) {
-               gpio_pin_set( leds[ idx ].pin_common );
-               gpio_pin_set( leds[ idx ].pin_led );
+               hardware_gpio_pin_set( leds[ idx ].pin_common );
+               hardware_gpio_pin_set( leds[ idx ].pin_led );
                continue;
           }
-          gpio_pin_reset( leds[ idx ].pin_led );
+          hardware_gpio_pin_reset( leds[ idx ].pin_led );
      }
 }

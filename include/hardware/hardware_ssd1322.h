@@ -24,11 +24,11 @@ struct Ssd1322Interface {
 
 /// @brief Initialize Winstar SSD1322 Display.
 /// @param[in] interface Device interface.
-void ssd1322_init( struct Ssd1322Interface* interface_ptr );
+void hardware_ssd1322_init( struct Ssd1322Interface* interface_ptr );
 
 /// @brief Draw a buffer to SSD1322 screen.
 /// @param buffer Buffer.
 /// @param size Buffer length.
-void ssd1322_draw( uint8_t* buffer, size_t size );
+void hardware_ssd1322_draw( uint8_t* buffer, size_t size );
 
 #endif

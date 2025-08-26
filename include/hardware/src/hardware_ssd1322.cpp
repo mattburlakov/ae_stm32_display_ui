@@ -79,7 +79,7 @@ static void prepare_buffer( uint8_t* buffer, size_t size ) {
      }
 }
 
-void ssd1322_init( struct Ssd1322Interface* interface_ptr ) {
+void hardware_ssd1322_init( struct Ssd1322Interface* interface_ptr ) {
      interface = interface_ptr;
 
      interface->reset( true );
@@ -120,7 +120,7 @@ void ssd1322_init( struct Ssd1322Interface* interface_ptr ) {
      interface->delay( TIME_LIGHT_ON );
 }
 
-void ssd1322_draw( uint8_t* buffer, size_t size ) {
+void hardware_ssd1322_draw( uint8_t* buffer, size_t size ) {
      write_C2D( COMMAND_SET_COLUMN_ADDRESS, 28, 91 );  // Set column address, start, end.
      write_C2D( COMMAND_SET_ROW_ADDRESS, 0, 63 );     // Set row address, moved out of the loop ( issue 302 ).
      write_command( COMMAND_WRITE_RAM );              // Write to RAM.

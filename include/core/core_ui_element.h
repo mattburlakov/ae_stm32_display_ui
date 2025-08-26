@@ -11,7 +11,6 @@ protected:
 
 public:
      void render( void );
-     void press( void );
 
      void set_origin( uint16_t x, uint16_t y );
 

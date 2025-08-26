@@ -238,7 +238,7 @@ static void pin_init( const Gpio* instance ) {
      }
 }
 
-void gpio_init( void ) {
+void hardware_gpio_init( void ) {
      jtag_pin_disable();
 
      for( uint8_t idx = 0; idx < GPIO_PIN_COUNT; ++idx ) {
@@ -246,14 +246,14 @@ void gpio_init( void ) {
      }
 }
 
-bool gpio_pin_get( enum GpioPin pin ) {
+bool hardware_gpio_pin_get( enum GpioPin pin ) {
      return Pins[ pin ].port->IDR & ( 0x01 << Pins[ pin ].pin_number );
 }
 
-void gpio_pin_set( enum GpioPin pin ) {
+void hardware_gpio_pin_set( enum GpioPin pin ) {
      Pins[ pin ].port->BSRR |= 0x01 << Pins[ pin ].pin_number;
 }
 
-void gpio_pin_reset( enum GpioPin pin ) {
+void hardware_gpio_pin_reset( enum GpioPin pin ) {
      Pins[ pin ].port->BSRR |= 0x01 << ( Pins[ pin ].pin_number + 0x10 );
 }

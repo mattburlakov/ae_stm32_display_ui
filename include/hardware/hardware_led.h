@@ -24,14 +24,14 @@ enum Led {
 };
 
 /// @brief Disable all LED pins. 
-void led_null( void );
+void hardware_led_null( void );
 
 /// @brief Set corresponding LED state.
 /// @param[in] led LED name.
 /// @param state new LED state.
-void led_set_state( enum Led led, bool state );
+void hardware_led_set_state( enum Led led, bool state );
 
 /// @brief Set LEDs to their assigned values.
-void led_update( void );
+void hardware_led_update( void );
 
 #endif

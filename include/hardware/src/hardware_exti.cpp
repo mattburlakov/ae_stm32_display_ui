@@ -49,7 +49,7 @@ static void init_exti( const struct ExtiConfig* instance ) {
      EXTI->PR = instance->interrupt_mask;
 }
 
-void exti_init( void ) {
+void hardware_exti_init( void ) {
      RCC->APB2ENR |= RCC_APB2ENR_AFIOEN;
 
      for( uint8_t idx = 0; idx < EXTI_COUNTER; ++idx ) {
@@ -57,7 +57,7 @@ void exti_init( void ) {
      }
 }
 
-void exti_set_callback( HandlerCallback function ) {
+void hardware_exti_set_callback( HandlerCallback function ) {
      handler_callback = function;
 }
 
