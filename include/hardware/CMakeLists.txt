@@ -5,6 +5,7 @@ project(hardware CXX)
 add_subdirectory(${CMAKE_SOURCE_DIR}/vendor/CMSIS ${CMAKE_BINARY_DIR}/cmsis)
 
 set(HEADER_LIST
+     ${CMAKE_CURRENT_SOURCE_DIR}/hardware_beeper.h
      ${CMAKE_CURRENT_SOURCE_DIR}/hardware_button.h
      ${CMAKE_CURRENT_SOURCE_DIR}/hardware_encoder.h
      ${CMAKE_CURRENT_SOURCE_DIR}/hardware_exti.h
@@ -18,6 +19,7 @@ set(HEADER_LIST
 )
 
 set(SOURCE_LIST
+     ${CMAKE_CURRENT_SOURCE_DIR}/src/hardware_beeper.cpp
      ${CMAKE_CURRENT_SOURCE_DIR}/src/hardware_button.cpp
      ${CMAKE_CURRENT_SOURCE_DIR}/src/hardware_encoder.cpp
      ${CMAKE_CURRENT_SOURCE_DIR}/src/hardware_exti.cpp

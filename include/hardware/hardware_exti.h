@@ -6,10 +6,10 @@
 typedef void ( *HandlerCallback )( void );
 
 /// @brief Initialize external interrupts.
-void exti_init( void );
+void hardware_exti_init( void );
 
 /// @brief Set external interrupt handler function.
 /// @param[in] function handler function.
-void exti_set_callback( HandlerCallback function );
+void hardware_exti_set_callback( HandlerCallback function );
 
 #endif

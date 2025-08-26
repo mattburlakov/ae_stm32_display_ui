@@ -5,6 +5,6 @@
 #include <stdint.h>
 
 /// @brief Initilaize encoder. 
-void encoder_init( void );
+void hardware_encoder_init( void );
 
 #endif

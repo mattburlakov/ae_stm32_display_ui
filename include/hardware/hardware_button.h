@@ -5,28 +5,28 @@
 
 /// @brief Button names.
 enum Button {
-     BUTTON_1,
-     BUTTON_2,
-     BUTTON_3,
-     BUTTON_4,
-     BUTTON_5,
+     HARDWARE_BUTTON_1,
+     HARDWARE_BUTTON_2,
+     HARDWARE_BUTTON_3,
+     HARDWARE_BUTTON_4,
+     HARDWARE_BUTTON_5,
 
-     BUTTON_TIMER,
-     BUTTON_SET,
-     BUTTON_MENU,
+     HARDWARE_BUTTON_TIMER,
+     HARDWARE_BUTTON_SET,
+     HARDWARE_BUTTON_MENU,
 
-     BUTTON_ON,
-     BUTTON_OFF,
+     HARDWARE_BUTTON_ON,
+     HARDWARE_BUTTON_OFF,
 
-     BUTTON_COUNT,  ///< Total amount of buttons.
+     HARDWARE_BUTTON_COUNT,  ///< Total amount of buttons.
 };
 
 /// @brief Check button state.
 /// @param[in] button button name.
 /// @return true - button is pressed, false - button is idle.
-bool button_check_state( enum Button button );
+bool hardware_button_check_state( enum Button button );
 
 /// @brief Update button states.
-void button_update( void );
+void hardware_button_update( void );
 
 #endif

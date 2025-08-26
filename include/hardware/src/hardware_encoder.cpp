@@ -1,5 +1,6 @@
 #include "hardware_encoder.h"
 
+#include "hardware_beeper.h"
 #include "hardware_exti.h"
 #include "hardware_gpio.h"
 
@@ -19,12 +20,12 @@ static void signal_handler( void ) {
           0,  +1,  -1,   0,
      };
 
-     bool a = gpio_pin_get( GPIO_PIN_ENCODER_A );
-     bool b = gpio_pin_get( GPIO_PIN_ENCODER_B );
+     bool a = hardware_gpio_pin_get( GPIO_PIN_ENCODER_A );
+     bool b = hardware_gpio_pin_get( GPIO_PIN_ENCODER_B );
 
      for( uint16_t idx = 0; idx < DEBOUNCE_TIME; ++idx ) {
-          if( a != gpio_pin_get( GPIO_PIN_ENCODER_A ) ||
-               b != gpio_pin_get( GPIO_PIN_ENCODER_B ) ) {
+          if( a != hardware_gpio_pin_get( GPIO_PIN_ENCODER_A ) ||
+               b != hardware_gpio_pin_get( GPIO_PIN_ENCODER_B ) ) {
                return;
           }
      }
@@ -33,12 +34,10 @@ static void signal_handler( void ) {
      uint8_t state = ( prev_state << 2 ) | current_state;
 
      if( state_table[ state ] == 1 ) {  // stub.
-          gpio_pin_set( GPIO_PIN_ZUM );
-          for( uint16_t idx = 0; idx < 0xff; ++idx ){}
-          gpio_pin_reset( GPIO_PIN_ZUM );
+          hardware_beeper_beep( 0xff );
      }
 }
 
-void encoder_init( void ) {
-     exti_set_callback( signal_handler );
+void hardware_encoder_init( void ) {
+     hardware_exti_set_callback( signal_handler );
 }

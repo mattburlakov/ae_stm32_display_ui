@@ -1,10 +1,10 @@
 #ifndef HARDWARE_BEEPER_H
 #define HARDWARE_BEEPER_H
 
-#include <stdbool.h>
+#include <stdint.h>
 
-/// @brief Set beeper state.
-/// @param state true - beeper is ON, false - beeper is OFF.
-void beeper_state_set( bool state );
+/// @brief Produce beeper sound.
+/// @param time_ms Pitch time in ms.
+void hardware_beeper_beep( uint16_t time_ms );
 
 #endif
